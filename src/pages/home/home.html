@@ -1,13 +1,14 @@
 <ion-content>
-      <ion-chip menuToggle>
-          <ion-avatar>
-            <img src="assets/images/icons/user.jpg">
-          </ion-avatar>
-          <ion-label>Entrar</ion-label>
-        </ion-chip>
-  
-  <div #map id="map" style="height:100%;"></div>
+  <!--<ion-chip menuToggle>
+    <ion-avatar>
+        <img src="assets/images/icons/marcio.png" alt="">        
+    </ion-avatar>
+    <ion-label>Entrar</ion-label>
+  </ion-chip>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+  <google-map (mapClick)="onMapClick($event)" (mapReady)="onMapReady($event)" [options]="options"></google-map>
 </ion-content>
+
 <ion-menu [content]="content">
   <ion-content>
     <ion-list>
@@ -17,5 +18,4 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>

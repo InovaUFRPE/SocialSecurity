@@ -1,7 +1,4 @@
 page-home {
-  .gmnoprint {
-    display: none;
-  }
   .chip {
     position: absolute !important;
     background: #fff;
@@ -10,7 +7,7 @@ page-home {
     z-index: 9999999999;
   }
   .chip-md {
-    top: 5%;
+    top: 12%;
   }
   .chip-ios {
     top: 8%;

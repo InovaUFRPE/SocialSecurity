@@ -17,10 +17,13 @@ import { BeforeLoginPage } from '../pages/before-login/before-login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
-import {GoogleMaps} from '@ionic-native/google-maps';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { MovieProvider } from '../providers/movie/movie';
 import { UsersProvider } from '../providers/users/users';
 import { MapsProvider } from '../providers/maps/maps';
+import { GoogleMapComponent } from "../components/google-map/google-map";
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { MapsProvider } from '../providers/maps/maps';
     IntroPage,
     LoginPage,
     BeforeLoginPage,
+    GoogleMapComponent,    
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { MapsProvider } from '../providers/maps/maps';
   providers: [
     StatusBar,
     GoogleMaps,
+    Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieProvider,
