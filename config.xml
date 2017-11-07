@@ -90,7 +90,7 @@
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDprtwhsBk0oonfHN1i0QJF51b_jeWTx6A" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyDprtwhsBk0oonfHN1i0QJF51b_jeWTx6A" />
     </plugin>
-    <plugin name="cordova-plugin-geolocation" spec="~2.4.3">
+    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Using to find danger zones" />
     </plugin>
 </widget>
