@@ -7,6 +7,7 @@ import { ConfigProvider } from '../providers/config/config';
 import { TabsPage } from '../pages/tabs/tabs';
 import { IntroPage } from '../pages/intro/intro';
 import { LoginPage } from '../pages/login/login';
+import { DatabaseProvider } from '../providers/database/database';
 
 
 @Component({
