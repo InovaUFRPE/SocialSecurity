@@ -31,5 +31,11 @@ page-before-login {
     width: 70%;
     box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
   }
+  .content .btns button:focus{
+    background-color: gray;
+  }
+  .content a:focus{
+    background-color: gray;
+  }
 
 }
