@@ -13,17 +13,33 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html',
 })
 export class MyApp {
-  rootPage = IntroPage;
-  
+  rootPage: any = null;
+
   constructor(
-    platform: Platform, 
-    statusBar: StatusBar, 
-    splashScreen: SplashScreen) {
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen,
+    dbProvider: DatabaseProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.      
-      statusBar.backgroundColorByHexString('#141e30');      
-      splashScreen.hide();
-    });
+      // Here you can do any higher level native things you might need.
+      statusBar.backgroundColorByHexString('#141e30');
+      //splashScreen.hide();
+      //Criando o banco de dados
+      dbProvider.createDatabase()
+      .then(() => {
+        // fechando a SplashScreen somente quando o banco for criado
+        this.openHomePage(splashScreen);
+      })
+      .catch(() => {
+        // ou se houver erro na criação do banco
+        this.openHomePage(splashScreen);
+      });
+  });
+}
+
+private openHomePage(splashScreen: SplashScreen) {
+  splashScreen.hide();
+  this.rootPage = IntroPage;
   }
 }

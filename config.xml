@@ -93,4 +93,5 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Using to find danger zones" />
     </plugin>
     <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-sqlite-storage" spec="^2.1.2" />
 </widget>

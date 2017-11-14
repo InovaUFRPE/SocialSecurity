@@ -25,6 +25,9 @@ import { UsersProvider } from '../providers/users/users';
 import { MapsProvider } from '../providers/maps/maps';
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
+import { SQLite } from '@ionic-native/sqlite';
+import { DatabaseProvider } from '../providers/database/database';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -35,7 +38,7 @@ import { GoogleMapComponent } from "../components/google-map/google-map";
     IntroPage,
     LoginPage,
     BeforeLoginPage,
-    GoogleMapComponent,    
+    GoogleMapComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,10 @@ import { GoogleMapComponent } from "../components/google-map/google-map";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieProvider,
     UsersProvider,
-    MapsProvider
+    MapsProvider,
+    DatabaseProvider,
+    SQLite,
+    DatabaseProvider
   ]
 })
 export class AppModule {}
