@@ -27,6 +27,7 @@ import { GoogleMapComponent } from "../components/google-map/google-map";
 
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../providers/database/database';
+import { CoordinatesProvider } from '../providers/coordinates/coordinates';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { DatabaseProvider } from '../providers/database/database';
     MapsProvider,
     DatabaseProvider,
     SQLite,
-    DatabaseProvider
+    DatabaseProvider,
+    CoordinatesProvider
   ]
 })
 export class AppModule {}
