@@ -25,7 +25,6 @@ page-before-login {
     padding-bottom: 23px;
     font-size: 20px;
     font-weight: bold;
-    
     color: #fff;
     border: none;
     width: 70%;
@@ -34,7 +33,7 @@ page-before-login {
   .content .btns button:focus{
     background-color: gray;
   }
-  .content a:focus{
+  .content .btns a:focus{
     background-color: gray;
   }
 
