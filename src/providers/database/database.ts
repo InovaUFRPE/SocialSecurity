@@ -51,7 +51,8 @@ private createTables(db: SQLiteObject) {
   db.sqlBatch([
     ['CREATE TABLE IF NOT EXISTS usuarios (codigo_usuario INTEGER primary key AUTOINCREMENT NOT NULL, nome_usuario VARCHAR(100), email_usuario VARCHAR(150), sennha_usuario VARCHAR(32), sexo_usuario CHAR)'],
     ['CREATE TABLE IF NOT EXISTS tipos_de_ocorrencia (codigo_tipo_ocorrencia INTEGER primary key AUTOINCREMENT NOT NULL, descricao_ocorrencia TEXT)'],
-    ['CREATE TABLE IF NOT EXISTS ocorrencias (codigo_ocorrencia INTEGER primary key AUTOINCREMENT NOT NULL, codigo_usuario INTEGER, codigo_tipo_ocorrencia INTEGER, titulo_ocorrencia TEXT, data_ocorrencia DATE, hora_ocorrencia DATETIME, boletim_ocorrencia BOOLEAN, FOREIGN KEY(codigo_usuario) REFERENCES usuarios(codigo_usuario), FOREIGN KEY(codigo_usuario) REFERENCES tipos_de_ocorrencia(codigo_tipo_ocorrencia))']
+    ['CREATE TABLE IF NOT EXISTS ocorrencias (codigo_ocorrencia INTEGER primary key AUTOINCREMENT NOT NULL, codigo_usuario INTEGER, codigo_tipo_ocorrencia INTEGER, titulo_ocorrencia TEXT, data_ocorrencia DATE, hora_ocorrencia DATETIME, boletim_ocorrencia BOOLEAN, FOREIGN KEY(codigo_usuario) REFERENCES usuarios(codigo_usuario), FOREIGN KEY(codigo_tipo_ocorrencia) REFERENCES tipos_de_ocorrencia(codigo_tipo_ocorrencia))']
+    ['CREATE TABLE IF   NOT EXISTS sessao (codigo_sessao INTEGER primary key AUTOINCREMENT NOT NULL, codigo_usuario INTEGER, data_hora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, isLogged BOOLEAN, FOREIGN KEY(codigo_usuario) REFERENCES usuarios(codigo_usuario))']
   ])
     .then(() => console.log('Tabelas criadas'))
     .catch(e => console.error('Erro ao criar as tabelas', e));
