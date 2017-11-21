@@ -28,6 +28,7 @@ import { GoogleMapComponent } from "../components/google-map/google-map";
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/coordinates/coordinates';
+import { OccurrencesPage } from '../pages/occurrences/occurrences';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CoordinatesProvider } from '../providers/coordinates/coordinates';
     LoginPage,
     BeforeLoginPage,
     GoogleMapComponent,
+    OccurrencesPage
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,7 @@ import { CoordinatesProvider } from '../providers/coordinates/coordinates';
     IntroPage,
     LoginPage,
     BeforeLoginPage,
+    OccurrencesPage
   ],
   providers: [
     StatusBar,
@@ -67,7 +70,6 @@ import { CoordinatesProvider } from '../providers/coordinates/coordinates';
     MovieProvider,
     UsersProvider,
     MapsProvider,
-    DatabaseProvider,
     SQLite,
     DatabaseProvider,
     CoordinatesProvider

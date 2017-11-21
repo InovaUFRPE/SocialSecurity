@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { IntroPage } from '../pages/intro/intro';
 import { LoginPage } from '../pages/login/login';
 import { DatabaseProvider } from '../providers/database/database';
+import { OccurrencesPage } from '../pages/occurrences/occurrences';
 
 
 @Component({
@@ -41,6 +42,6 @@ export class MyApp {
 
 private openHomePage(splashScreen: SplashScreen) {
   splashScreen.hide();
-  this.rootPage = IntroPage;
+  this.rootPage = OccurrencesPage;
   }
 }
