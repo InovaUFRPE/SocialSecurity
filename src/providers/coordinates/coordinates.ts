@@ -12,12 +12,12 @@ export class CoordinatesProvider {
     return [
       {
         "id":85760,
-        "endereco":"R. Estado de Israel, 140-228 - Ilha do Leite, Recife - PE, 50070-420, Brasil",
+        "endereco": "R.+Estado+de+Israel,+140-228+-+Ilha+do+Leite,+Recife+-+PE,+50070-420,+Brasil",
         "position": {
           "lat": -8.0645935,
           "lng": -34.8942482
         },
-        "data_hora_registro": null, 
+        "data_hora_registro": null,
         "icon": "./img/starbucks.png",
         "created_at": "2017-11-01T08:54:36.716-02:00",
         "updated_at": "2017-11-01T08:54:36.716-02:00",
@@ -32,7 +32,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85762,
-        "endereco": "R. Francisco Alves, 212 - Paissandu, Recife - PE, 50070-490, Brasil",
+        "endereco": "R.+Francisco+Alves,+212+-+Paissandu,+Recife+-+PE,+50070-490,+Brasil",
         "position": {
           "lat": -8.0672909,
           "lng": -34.893405
@@ -51,7 +51,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85717,
-        "endereco": "R. Guilherme Pinto, 50 - Derby, Recife - PE, 52010-210, Brasil",
+        "endereco": "R.+Guilherme+Pinto,+50+-+Derby,+Recife+-+PE,+52010-210,+Brasil",
         "position": {
           "lat": -8.0510999,
           "lng": -34.9020686
@@ -70,7 +70,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85629,
-        "endereco": "Condomínio da Galeria Top Center Graça - Av. Rui Barbosa, 896 - Graças, Recife - PE, 52011-040, Brasil",
+        "endereco": "Condomínio+da+Galeria+Top+Center+Graça+-+Av.+Rui+Barbosa,+896+-+Graças,+Recife+-+PE,+52011-040,+Brasil",
         "position": {
           "lat": -8.04515,
           "lng": -34.9019685
@@ -89,7 +89,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85584,
-        "endereco": "R. Ten. Domingos de Brito, 348-448 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "R.+Ten.+Domingos+de+Brito,+348-448+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1246401,
           "lng": -34.9052959
@@ -108,7 +108,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85585,
-        "endereco": "Condomínio do Edifício Santos Dumont - R. Cap. Zuzinha, 381 - Setubal, Recife - PE, 51030-420, Brasil",
+        "endereco": "Condomínio+do+Edifício+Santos+Dumont+-+R.+Cap.+Zuzinha,+381+-+Setubal,+Recife+-+PE,+51030-420,+Brasil",
         "position": {
           "lat": -8.1348201,
           "lng": -34.9060107
@@ -127,7 +127,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85484,
-        "endereco": "Condomínio do Edifício Santa Angélica - R. dos Navegantes, 2862 - Boa Viagem, Recife - PE, 51111-080, Brasil",
+        "endereco": "Condomínio+do+Edifício+Santa+Angélica+-+R.+dos+Navegantes,+2862+-+Boa+Viagem,+Recife+-+PE,+51111-080,+Brasil",
         "position": {
           "lat": -8.109608,
           "lng": -34.8897369
@@ -146,7 +146,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85493,
-        "endereco": "Rua João Sales de Menezes, 816-890 - Várzea, Recife - PE, Brasil",
+        "endereco": "Rua+João+Sales+de+Menezes,+816-890+-+Várzea,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0379491,
           "lng": -34.9482689
@@ -166,12 +166,12 @@ export class CoordinatesProvider {
       },
       {
         "id": 85411,
-        "endereco": "Condomínio do Edifício Lousene - R. Agenor Lopes, 399 - Boa Viagem, Recife - PE, 51021-110, Brasil",
+        "endereco": "Condomínio+do+Edifício+Lousene+-+R.+Agenor+Lopes,+399+-+Boa+Viagem,+Recife+-+PE,+51021-110,+Brasil",
         "position": {
           "lat": -8.1246465,
           "lng": -34.9057137
         },
-        "data_hora_registro": null, 
+        "data_hora_registro": null,
         "icon": "./img/starbucks.png",
         "created_at": "2017-10-15T14:05:27.514-02:00",
         "updated_at": "2017-10-15T14:05:27.514-02:00",
@@ -186,7 +186,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85418,
-        "endereco": "Av. Boa Viagem, 42-836 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "Av.+Boa+Viagem,+42-836+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1364505,
           "lng": -34.9017016
@@ -205,7 +205,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85422,
-        "endereco": "R. Cel. Célio Regueira, 2-104 - Várzea, Recife - PE, 50740-510, Brasil",
+        "endereco": "R.+Cel.+Célio+Regueira,+2-104+-+Várzea,+Recife+-+PE,+50740-510,+Brasil",
         "position": {
           "lat": -8.0447868,
           "lng": -34.9449109
@@ -224,7 +224,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85207,
-        "endereco": "R. Benfica, 413-415 - Madalena, Recife - PE, 50720-001, Brasil",
+        "endereco": "R.+Benfica,+413-415+-+Madalena,+Recife+-+PE,+50720-001,+Brasil",
         "position": {
           "lat": -8.0587494,
           "lng": -34.9031148
@@ -243,7 +243,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85228,
-        "endereco": "Condomínio do Edifício Interlaken - R. Dom José Lopes, 640 - Boa Viagem, Recife - PE, 51021-370, Brasil",
+        "endereco": "Condomínio+do+Edifício+Interlaken+-+R.+Dom+José+Lopes,+640+-+Boa+Viagem,+Recife+-+PE,+51021-370,+Brasil",
         "position": {
           "lat": -8.1265274,
           "lng": -34.9044748
@@ -262,7 +262,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85099,
-        "endereco": "R. Francisco Bezerra Monteiro, 316 - Engenho do Meio, Recife - PE, 50730-250, Brasil",
+        "endereco": "R.+Francisco+Bezerra+Monteiro,+316+-+Engenho+do+Meio,+Recife+-+PE,+50730-250,+Brasil",
         "position": {
           "lat": -8.0546016,
           "lng": -34.9424853
@@ -281,7 +281,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85068,
-        "endereco": "R. Visc. de Pelotas, 135-161 - Afogados, Recife - PE, Brasil",
+        "endereco": "R.+Visc.+de+Pelotas,+135-161+-+Afogados,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0783472,
           "lng": -34.90941
@@ -300,7 +300,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84994,
-        "endereco": "R. 1º de Março, 67 - Santo Antônio, Recife - PE, 50010-070, Brasil",
+        "endereco": "R.+1º+de+Março,+67+-+Santo+Antônio,+Recife+-+PE,+50010-070,+Brasil",
         "position": {
           "lat": -8.0642744,
           "lng": -34.8770196
@@ -319,7 +319,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84846,
-        "endereco": "R. Dr. Ascânio Peixoto, 230-286 - Recife, PE, Brasil",
+        "endereco": "R.+Dr.+Ascânio+Peixoto,+230-286+-+Recife,+PE,+Brasil",
         "position": {
           "lat": -8.0515136,
           "lng": -34.8711242
@@ -338,7 +338,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84874,
-        "endereco": "Av. Mário Alvares Pereira de Lyra, 802-910 - Cordeiro, Recife - PE, 50721-430, Brasil",
+        "endereco": "Av.+Mário+Alvares+Pereira+de+Lyra,+802-910+-+Cordeiro,+Recife+-+PE,+50721-430,+Brasil",
         "position": {
           "lat": -8.0468868,
           "lng": -34.9379656
@@ -357,7 +357,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84868,
-        "endereco": "Condomínio do Edifício La Bruyere - R. Solidônio Leite, 90 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "Condomínio+do+Edifício+La+Bruyere+-+R.+Solidônio+Leite,+90+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1062242,
           "lng": -34.8883676
@@ -376,7 +376,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84873,
-        "endereco": "R. Cap. Araújo Miranda, 121 - Iputinga, Recife - PE, 50721-450, Brasil",
+        "endereco": "R.+Cap.+Araújo+Miranda,+121+-+Iputinga,+Recife+-+PE,+50721-450,+Brasil",
         "position": {
           "lat": -8.0466453,
           "lng": -34.9336566
@@ -395,7 +395,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84871,
-        "endereco": "R. Odon Rodrigues de Morais Rêgo, 247 - Várzea, Recife - PE, 50740-440, Brasil",
+        "endereco": "R.+Odon+Rodrigues+de+Morais+Rêgo,+247+-+Várzea,+Recife+-+PE,+50740-440,+Brasil",
         "position": {
           "lat": -8.0418404,
           "lng": -34.9466712
@@ -414,7 +414,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85147,
-        "endereco": "Praça da Independência, 176-232 - Santana, Recife - PE, 50010-080, Brasil",
+        "endereco": "Praça+da+Independência,+176-232+-+Santana,+Recife+-+PE,+50010-080,+Brasil",
         "position": {
           "lat": -8.0643876,
           "lng": -34.8781741
@@ -433,7 +433,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84808,
-        "endereco": "R. André Rebouças, 91 - Encruzilhada, Recife - PE, 52041-030, Brasil",
+        "endereco": "R.+André+Rebouças,+91+-+Encruzilhada,+Recife+-+PE,+52041-030,+Brasil",
         "position": {
           "lat": -8.0330858,
           "lng": -34.8975147
@@ -452,7 +452,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84809,
-        "endereco": "R. André Rebouças, 91 - Encruzilhada, Recife - PE, 52041-030, Brasil",
+        "endereco": "R.+André+Rebouças,+91+-+Encruzilhada,+Recife+-+PE,+52041-030,+Brasil",
         "position": {
           "lat": -8.0330858,
           "lng": -34.8975147
@@ -471,7 +471,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84822,
-        "endereco": "Estrada das Ubaias, 356 - Casa Forte, Recife - PE, 52061-080, Brasil",
+        "endereco": "Estrada+das+Ubaias,+356+-+Casa+Forte,+Recife+-+PE,+52061-080,+Brasil",
         "position": {
           "lat": -8.0313964,
           "lng": -34.9194079
@@ -490,7 +490,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85227,
-        "endereco": "R. Pedro Bérgamo, 130-276 - Boa Viagem, Recife - PE, 51021-320, Brasil",
+        "endereco": "R.+Pedro+Bérgamo,+130-276+-+Boa+Viagem,+Recife+-+PE,+51021-320,+Brasil",
         "position": {
           "lat": -8.1240374,
           "lng": -34.9007854
@@ -509,7 +509,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84734,
-        "endereco": "R. Aprígio Guimarães, 308 - Tejipio, Recife - PE, 50920-640, Brasil",
+        "endereco": "R.+Aprígio+Guimarães,+308+-+Tejipio,+Recife+-+PE,+50920-640,+Brasil",
         "position": {
           "lat": -8.0879352,
           "lng": -34.9591161
@@ -528,7 +528,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84708,
-        "endereco": "R. Pesqueira, 133-159 - Areias, Recife - PE, 50780-130, Brasil",
+        "endereco": "R.+Pesqueira,+133-159+-+Areias,+Recife+-+PE,+50780-130,+Brasil",
         "position": {
           "lat": -8.0946982,
           "lng": -34.938202
@@ -547,7 +547,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84764,
-        "endereco": "R. Retiro Saudoso, 2-46 - Hipódromo, Recife - PE, 52041-581, Brasil",
+        "endereco": "R.+Retiro+Saudoso,+2-46+-+Hipódromo,+Recife+-+PE,+52041-581,+Brasil",
         "position": {
           "lat": -8.0345456,
           "lng": -34.8888178
@@ -566,7 +566,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84844,
-        "endereco": "R. Volta Grande, 2-164 - San Martin, Recife - PE, 50761-510, Brasil",
+        "endereco": "R.+Volta+Grande,+2-164+-+San+Martin,+Recife+-+PE,+50761-510,+Brasil",
         "position": {
           "lat": -8.0743642,
           "lng": -34.928325
@@ -585,7 +585,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84603,
-        "endereco": "Praça do Entroncamento, 104 - Graças, Recife - PE, 52011-300, Brasil",
+        "endereco": "Praça+do+Entroncamento,+104+-+Graças,+Recife+-+PE,+52011-300,+Brasil",
         "position": {
           "lat": -8.05004,
           "lng": -34.897375
@@ -604,7 +604,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85097,
-        "endereco": "Praça Min. Salgado Filho, 243-381 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "Praça+Min.+Salgado+Filho,+243-381+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1332986,
           "lng": -34.9175418
@@ -623,7 +623,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84499,
-        "endereco": "Av. Conselheiro Aguiar, 2423 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "Av.+Conselheiro+Aguiar,+2423+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1111334,
           "lng": -34.8914222
@@ -642,7 +642,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84412,
-        "endereco": "Condomínio Tipuana - R. Afonso Célso, 182 - Parnamirim, Recife - PE, 52060-110, Brasil",
+        "endereco": "Condomínio+Tipuana+-+R.+Afonso+Célso,+182+-+Parnamirim,+Recife+-+PE,+52060-110,+Brasil",
         "position": {
           "lat": -8.031677,
           "lng": -34.9073605
@@ -661,7 +661,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84885,
-        "endereco": "Rua Conde de Irajá, 219 - Torre, Recife - PE, Brasil",
+        "endereco": "Rua+Conde+de+Irajá,+219+-+Torre,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0459974,
           "lng": -34.9057108
@@ -680,7 +680,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84245,
-        "endereco": "R. da Jaqueira, 61 - Marcos Freire, Jaboatão dos Guararapes - PE, 54360-045, Brasil",
+        "endereco": "R.+da+Jaqueira,+61+-+Marcos+Freire,+Jaboatão+dos+Guararapes+-+PE,+54360-045,+Brasil",
         "position": {
           "lat": -8.1383322,
           "lng": -34.9687971
@@ -699,7 +699,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84246,
-        "endereco": "R. da Jaqueira, 61 - Marcos Freire, Jaboatão dos Guararapes - PE, 54360-045, Brasil",
+        "endereco": "R.+da+Jaqueira,+61+-+Marcos+Freire,+Jaboatão+dos+Guararapes+-+PE,+54360-045,+Brasil",
         "position": {
           "lat": -8.1383322,
           "lng": -34.9687971
@@ -718,7 +718,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84247,
-        "endereco": "Rua Dr. Nilo Dornelas Câmara, 120-172 - Boa Viagem, Recife - PE, Brasil",
+        "endereco": "Rua+Dr.+Nilo+Dornelas+Câmara,+120-172+-+Boa+Viagem,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1320139,
           "lng": -34.8999219
@@ -737,7 +737,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84486,
-        "endereco": "R. Dr. Miguel Viêira Ferreira, 682 - Torrões, Recife - PE, 50721-230, Brasil",
+        "endereco": "R.+Dr.+Miguel+Viêira+Ferreira,+682+-+Torrões,+Recife+-+PE,+50721-230,+Brasil",
         "position": {
           "lat": -8.0509902,
           "lng": -34.9345148
@@ -756,7 +756,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84482,
-        "endereco": "R. Pandiá Calógeras, 250 - Prado, Recife - PE, 50720-160, Brasil",
+        "endereco": "R.+Pandiá+Calógeras,+250+-+Prado,+Recife+-+PE,+50720-160,+Brasil",
         "position": {
           "lat": -8.0611878,
           "lng": -34.9103656
@@ -775,7 +775,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84180,
-        "endereco": "Rua Conselheiro Theodoro, 535 - Zumbi, Recife - PE, 50711-030, Brasil",
+        "endereco": "Rua+Conselheiro+Theodoro,+535+-+Zumbi,+Recife+-+PE,+50711-030,+Brasil",
         "position": {
           "lat": -8.052463,
           "lng": -34.9160089
@@ -794,7 +794,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84353,
-        "endereco": "R. Itajaí, 357 - Imbiribeira, Recife - PE, 51200-020, Brasil",
+        "endereco": "R.+Itajaí,+357+-+Imbiribeira,+Recife+-+PE,+51200-020,+Brasil",
         "position": {
           "lat": -8.1093819,
           "lng": -34.9133959
@@ -813,7 +813,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84121,
-        "endereco": "Av. Boa Viagem, 3196 - Boa Viagem, Recife - PE, 51020-000, Brasil",
+        "endereco": "Av.+Boa+Viagem,+3196+-+Boa+Viagem,+Recife+-+PE,+51020-000,+Brasil",
         "position": {
           "lat": -8.1182828,
           "lng": -34.8937995
@@ -832,7 +832,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84147,
-        "endereco": "R. dos Palmares, 396-714 - Santo Amaro, Recife - PE, 74970-240, Brasil",
+        "endereco": "R.+dos+Palmares,+396-714+-+Santo+Amaro,+Recife+-+PE,+74970-240,+Brasil",
         "position": {
           "lat": -8.0511245,
           "lng": -34.8855631
@@ -851,7 +851,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84120,
-        "endereco": "Av. Boa Viagem, 3196 - Boa Viagem, Recife - PE, 51020-000, Brasil",
+        "endereco": "Av.+Boa+Viagem,+3196+-+Boa+Viagem,+Recife+-+PE,+51020-000,+Brasil",
         "position": {
           "lat": -8.1182828,
           "lng": -34.8937995
@@ -870,7 +870,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84258,
-        "endereco": "R. Francisco Lacerda, 274 - Várzea, Recife - PE, 50741-150, Brasil",
+        "endereco": "R.+Francisco+Lacerda,+274+-+Várzea,+Recife+-+PE,+50741-150,+Brasil",
         "position": {
           "lat": -8.0494045,
           "lng": -34.9580534
@@ -889,7 +889,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84126,
-        "endereco": "R. Manoel Arão, 62 - Espinheiro, Recife - PE, 52020-100, Brasil",
+        "endereco": "R.+Manoel+Arão,+62+-+Espinheiro,+Recife+-+PE,+52020-100,+Brasil",
         "position": {
           "lat": -8.0455803,
           "lng": -34.8916232
@@ -908,7 +908,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84401,
-        "endereco": "Av. Prof. José dos Anjos, 1376-1708 - Arruda, Recife - PE, Brasil",
+        "endereco": "Av.+Prof.+José+dos+Anjos,+1376-1708+-+Arruda,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0280798,
           "lng": -34.8927851
@@ -927,7 +927,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84388,
-        "endereco": "R. Artur Vanderlei, 520 - Várzea, Recife - PE, Brasil",
+        "endereco": "R.+Artur+Vanderlei,+520+-+Várzea,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0451445,
           "lng": -34.9492824
@@ -946,7 +946,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83866,
-        "endereco": "R. Joaquim Bandeira, 374 - Imbiribeira, Recife - PE, Brasil",
+        "endereco": "R.+Joaquim+Bandeira,+374+-+Imbiribeira,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1106652,
           "lng": -34.908854
@@ -965,7 +965,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 85294,
-        "endereco": "Av. Senador Robert Kennedy, 345 - Ipsep, Recife - PE, 51190-570, Brasil",
+        "endereco": "Av.+Senador+Robert+Kennedy,+345+-+Ipsep,+Recife+-+PE,+51190-570,+Brasil",
         "position": {
           "lat": -8.1175108,
           "lng": -34.9185412
@@ -984,7 +984,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84645,
-        "endereco": "Av. Boa Viagem, 560 - Pina, Recife - PE, 51011-000, Brasil",
+        "endereco": "Av.+Boa+Viagem,+560+-+Pina,+Recife+-+PE,+51011-000,+Brasil",
         "position": {
           "lat": -8.0964628,
           "lng": -34.8835823
@@ -1003,7 +1003,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83789,
-        "endereco": "Av. Gov. Agamenon Magalhães, 2887 - Santo Amaro, Recife - PE, Brasil",
+        "endereco": "Av.+Gov.+Agamenon+Magalhães,+2887+-+Santo+Amaro,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0394325,
           "lng": -34.8789873
@@ -1022,7 +1022,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83786,
-        "endereco": "Av. Central, 153-251 - Mangueira, Recife - PE, Brasil",
+        "endereco": "Av.+Central,+153-251+-+Mangueira,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0734046,
           "lng": -34.8953354
@@ -1041,7 +1041,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83780,
-        "endereco": "R. Dep. Cunha Rabêlo, 273 - Várzea, Recife - PE, 50740-400, Brasil",
+        "endereco": "R.+Dep.+Cunha+Rabêlo,+273+-+Várzea,+Recife+-+PE,+50740-400,+Brasil",
         "position": {
           "lat": -8.0454171,
           "lng": -34.9490043
@@ -1060,7 +1060,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83652,
-        "endereco": "R. Albacora, 187 - Brasília Teimosa, Recife - PE, Brasil",
+        "endereco": "R.+Albacora,+187+-+Brasília+Teimosa,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0856045,
           "lng": -34.8797726
@@ -1079,7 +1079,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83503,
-        "endereco": "R. Alcídes Cerardi, 38 - Curado, Recife - PE, Brasil",
+        "endereco": "R.+Alcídes+Cerardi,+38+-+Curado,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0799917,
           "lng": -34.9689845
@@ -1098,7 +1098,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83260,
-        "endereco": "R. Tijuca, 896-1056 - Águas Compridas, Olinda - PE, Brasil",
+        "endereco": "R.+Tijuca,+896-1056+-+Águas+Compridas,+Olinda+-+PE,+Brasil",
         "position": {
           "lat": -7.9818416,
           "lng": -34.8960686
@@ -1117,7 +1117,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83233,
-        "endereco": "R. Dr. Vilas Bôas, 280-286 - Areias, Recife - PE, 50780-020, Brasil",
+        "endereco": "R.+Dr.+Vilas+Bôas,+280-286+-+Areias,+Recife+-+PE,+50780-020,+Brasil",
         "position": {
           "lat": -8.0945271,
           "lng": -34.9387865
@@ -1136,7 +1136,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83807,
-        "endereco": "Rua da Harmonia, 187 - Casa Amarela, Recife - PE, 52051-390, Brasil",
+        "endereco": "Rua+da+Harmonia,+187+-+Casa+Amarela,+Recife+-+PE,+52051-390,+Brasil",
         "position": {
           "lat": -8.0253505,
           "lng": -34.9130255
@@ -1155,7 +1155,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83940,
-        "endereco": "R. Souza Bandeira, 402-446 - Torre, Recife - PE, 50711-050, Brasil",
+        "endereco": "R.+Souza+Bandeira,+402-446+-+Torre,+Recife+-+PE,+50711-050,+Brasil",
         "position": {
           "lat": -8.0479764,
           "lng": -34.9175203
@@ -1174,7 +1174,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83046,
-        "endereco": "PE-008, 6397 - Imbiribeira, Recife - PE, Brasil",
+        "endereco": "PE-008,+6397+-+Imbiribeira,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.1036952,
           "lng": -34.9107302
@@ -1193,7 +1193,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83055,
-        "endereco": "Pte. Estácio Coimbra, 106-304 - Madalena, Recife - PE, 50720-535, Brasil",
+        "endereco": "Pte.+Estácio+Coimbra,+106-304+-+Madalena,+Recife+-+PE,+50720-535,+Brasil",
         "position": {
           "lat": -8.0584468,
           "lng": -34.9022548
@@ -1212,7 +1212,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 82982,
-        "endereco": "Condomínio do Edifício Antibes - R. Prof. Antônio Coelho, 934 - Várzea, Recife - PE, 50740-020, Brasil",
+        "endereco": "Condomínio+do+Edifício+Antibes+-+R.+Prof.+Antônio+Coelho,+934+-+Várzea,+Recife+-+PE,+50740-020,+Brasil",
         "position": {
           "lat": -8.0459703,
           "lng": -34.9466742
@@ -1231,7 +1231,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 82950,
-        "endereco": "R. Prof. Cláudio Selva, 610 - Dois Irmãos, Recife - PE, Brasil",
+        "endereco": "R.+Prof.+Cláudio+Selva,+610+-+Dois+Irmãos,+Recife+-+PE,+Brasil",
         "position": {
           "lat": -8.0103421,
           "lng": -34.9537782
@@ -1250,7 +1250,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 83248,
-        "endereco": "R. da Estação, 236-284 - Pontezinha, Cabo de Santo Agostinho - PE, Brasil",
+        "endereco": "R.+da+Estação,+236-284+-+Pontezinha,+Cabo+de+Santo+Agostinho+-+PE,+Brasil",
         "position": {
           "lat": -8.223494,
           "lng": -34.9653112
@@ -1269,7 +1269,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 82886,
-        "endereco": "Avenida De Sao Leopoldo, 601, Engenho do Meio",
+        "endereco": "Avenida+De+Sao+Leopoldo,+601,+Engenho+do+Meio",
         "position": {
           "lat": -8.05828848203782,
           "lng": -34.9459833119088
@@ -1288,7 +1288,7 @@ export class CoordinatesProvider {
       },
       {
         "id": 84674,
-        "endereco": "R. da Santa Cruz, 100 - Boa Vista, Recife - PE, 50060-230, Brasil",
+        "endereco": "R.+da+Santa+Cruz,+100+-+Boa+Vista,+Recife+-+PE,+50060-230,+Brasil",
         "position": {
           "lat": -8.0626917,
           "lng": -34.8885918
@@ -1306,6 +1306,7 @@ export class CoordinatesProvider {
         "user_id": null
       }
     ]
+
   }
 
 }
