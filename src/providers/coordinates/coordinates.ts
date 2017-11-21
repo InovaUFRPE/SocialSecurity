@@ -2,27 +2,23 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the CoordinatesProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class CoordinatesProvider {
 
   constructor(public http: Http) {
-    console.log('Hello CoordinatesProvider Provider');
   }
 
   public getCoordinates() {
     return [
       {
+        "id":85760,
+        "endereco":"R. Estado de Israel, 140-228 - Ilha do Leite, Recife - PE, 50070-420, Brasil",
         "position": {
           "lat": -8.0645935,
           "lng": -34.8942482
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, 
+        "icon": "./img/starbucks.png",
         "created_at": "2017-11-01T08:54:36.716-02:00",
         "updated_at": "2017-11-01T08:54:36.716-02:00",
         "tipo_assalto_id": 2,

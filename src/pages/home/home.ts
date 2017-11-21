@@ -8,7 +8,7 @@ export class HomePage {
 
   options: any = {
     controls: {
-      compass: true,
+      compass: false,
       myLocationButton: true,
       indoorPicker: true,
       zoom: true

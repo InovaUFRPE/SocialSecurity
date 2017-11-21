@@ -1,35 +1,33 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { MovieProvider } from '../../providers/movie/movie';
+import { CoordinatesProvider } from '../../providers/coordinates/coordinates';
 
 @IonicPage()
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html',
   providers: [
-    MovieProvider
-  ]
+    CoordinatesProvider  ]
 })
 export class FeedPage {
   public list_movies = new Array<any>();
 
   constructor(
-    public navCtrl: NavController,
+    public navCtrl: NavController,                                                                                                                   
+    public loadingCtrl: LoadingController,
     public navParams: NavParams,
-    private movitProvider: MovieProvider) {
+    private movitProvider: CoordinatesProvider) {
   }
-
-  ionViewDidLoad() {
-    this.movitProvider.getLikes().subscribe(
-      data => {
-        const response = (data as any);
-        const object_return = JSON.parse(response._body)
-        console.log(object_return.posts.data);
-        this.list_movies = object_return.posts.data[3].likes.data;
-      },
-      error => {
-        console.log(error);
-        
-      })
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Carregando...",
+      duration: 3000
+    });
+    loader.present();
+  }
+  ionViewDidEnter() {
+    this.presentLoading();
+    this.list_movies = this.movitProvider.getCoordinates();
   }
 }
