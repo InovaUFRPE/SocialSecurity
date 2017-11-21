@@ -42,6 +42,6 @@ export class MyApp {
 
 private openHomePage(splashScreen: SplashScreen) {
   splashScreen.hide();
-  this.rootPage = OccurrencesPage;
+  this.rootPage = IntroPage;
   }
 }
