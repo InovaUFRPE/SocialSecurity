@@ -12,6 +12,7 @@ import { IntroPage } from '../pages/intro/intro';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { BeforeLoginPage } from '../pages/before-login/before-login';
+import { OccurrencesPage } from '../pages/occurrences/occurrences';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,7 +30,7 @@ import { GoogleMapComponent } from "../components/google-map/google-map";
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/coordinates/coordinates';
-import { OccurrencesPage } from '../pages/occurrences/occurrences';
+import { OcurrencePersistenceProvider } from '../providers/ocurrence-persistence/ocurrence-persistence';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { OccurrencesPage } from '../pages/occurrences/occurrences';
     SQLite,
     Toast,
     DatabaseProvider,
-    CoordinatesProvider
+    CoordinatesProvider,
+    OcurrencePersistenceProvider
   ]
 })
 export class AppModule {}
