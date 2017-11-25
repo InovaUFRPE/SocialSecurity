@@ -23,6 +23,6 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   public toBeforePage(): void {
-    this.navCtrl.push(BeforeLoginPage)
+    this.navCtrl.pop();
   }
 }

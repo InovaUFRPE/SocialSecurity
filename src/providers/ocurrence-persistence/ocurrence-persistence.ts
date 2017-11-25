@@ -1,36 +1,36 @@
-import { Injectable }       from '@angular/core';
+import { Injectable } from '@angular/core';
 import { DatabaseProvider } from '../database/database';
-import { SQLiteObject }     from '@ionic-native/sqlite';
-import { DateTime }         from 'ionic-angular/components/datetime/datetime';
+import { SQLiteObject } from '@ionic-native/sqlite';
+import { DateTime } from 'ionic-angular/components/datetime/datetime';
 
 @Injectable()
 export class OcurrencePersistenceProvider {
-  constructor( private dbProvider: DatabaseProvider ){}
+	constructor(private dbProvider: DatabaseProvider) { }
 }
 
 export class Ocurrence {
-	private codigo_usuario:         number;
+	private codigo_usuario: number;
 	private codigo_tipo_ocorrencia: number;
-	private titulo_ocorrencia:      string;
-	private endereco_ocorrencia:    string;
-	private posicao_ocorrencia:     string;
-	private data_ocorrencia:        string;
-	private hora_ocorrencia:        string;
-	private boletim_ocorrencia:     boolean;
+	private titulo_ocorrencia: string;
+	private endereco_ocorrencia: string;
+	private posicao_ocorrencia: string;
+	private data_ocorrencia: string;
+	private hora_ocorrencia: string;
+	private boletim_ocorrencia: boolean;
 
 
-	public createOcurrence(element){
-	this.setboletim_ocorrencia(element.registrou_bo);
-	this.setcodigo_usuario(element.codigo_usuario);
-	this.setcodigo_tipo_ocorrencia(element.boletim_ocorrencia);
-	this.settitulo_ocorrencia(element.boletim_ocorrencia);
-	this.setendereco_ocorrencia(element.boletim_ocorrencia);
-	this.setposicao_ocorrencia(element.position);
-	this.setdata_ocorrencia(element.data);
-	this.sethora_ocorrencia(element.hora);
+	public createOcurrence(element) {
+		this.setboletim_ocorrencia(element.registrou_bo);
+		this.setcodigo_usuario(element.codigo_usuario);
+		this.setcodigo_tipo_ocorrencia(element.tipo_assalto_id);
+		this.settitulo_ocorrencia(element.titulo);
+		this.setendereco_ocorrencia(element.endereco);
+		this.setposicao_ocorrencia(element.position);
+		this.setdata_ocorrencia(element.data);
+		this.sethora_ocorrencia(element.hora);
 	}
 
-	
+
 	public getcodigo_usuario(): number {
 		return this.codigo_usuario;
 	}

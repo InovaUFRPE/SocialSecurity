@@ -1,6 +1,6 @@
+import { Ocurrence } from '../ocurrence-persistence/ocurrence-persistence';
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import { Ocurrence } from '../ocurrence-persistence/ocurrence-persistence';
 import { CoordinatesProvider } from '../coordinates/coordinates';
 
 
@@ -8,13 +8,12 @@ import { CoordinatesProvider } from '../coordinates/coordinates';
 export class DatabaseProvider {
 
   constructor(
-    private sqlite:      SQLite,
-    private coordinates: CoordinatesProvider) {}
-
+    private sqlite: SQLite,
+    private coordinates: CoordinatesProvider) { }
 
   public getDB() {
     return this.sqlite.create({
-      name:     'database.db',
+      name: 'database.db',
       location: 'default'
     });
   }
@@ -88,12 +87,12 @@ export class DatabaseProvider {
       })
       .catch(e => console.error('Erro ao consultar os tipos_de_ocorrencia', e));
   }
-  
+
 
   private initOcurrences() {
     const points = this.coordinates.getCoordinates();
     points.forEach(element => {
-      let ocurrence = new Ocurrence;
+      let ocurrence: Ocurrence;
       ocurrence.createOcurrence(element);
       this.insertOcurrence(ocurrence);
     });
@@ -102,7 +101,7 @@ export class DatabaseProvider {
 
   private insertDefaultItems(db: SQLiteObject) {
     this.initTypesOcurrences(db);
-    this.initOcurrences()
+    //this.initOcurrences()
   }
 
 }
