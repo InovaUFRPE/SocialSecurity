@@ -445,7 +445,7 @@ export class CoordinatesProvider {
         "tipo_assalto_id": 9,
         "sexo": 1,
         "registrou_bo": false,
-        "titulo": "Assalto   fiat palio hyv 7248 cor cinza metálico ",
+        "titulo": "Assalto fiat palio hyv 7248 cor cinza metálico ",
         "data": "2017-09-15",
         "hora": "2000-01-01T10:00:00.000Z",
         "bairro": "Encruzilhada",
