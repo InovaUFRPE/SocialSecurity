@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Toast } from '@ionic-native/toast';
 
 import { MovieProvider } from '../providers/movie/movie';
 import { UsersProvider } from '../providers/users/users';
@@ -71,6 +72,7 @@ import { OccurrencesPage } from '../pages/occurrences/occurrences';
     UsersProvider,
     MapsProvider,
     SQLite,
+    Toast,
     DatabaseProvider,
     CoordinatesProvider
   ]

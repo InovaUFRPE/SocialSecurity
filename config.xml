@@ -94,4 +94,5 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Using to find danger zones" />
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.1.2" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
 </widget>

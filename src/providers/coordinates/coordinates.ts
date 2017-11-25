@@ -12,7 +12,7 @@ export class CoordinatesProvider {
     return [
       {
         "id":85760,
-        "endereco": "R.+Estado+de+Israel,+140-228+-+Ilha+do+Leite,+Recife+-+PE,+50070-420,+Brasil",
+        "endereco":"https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=R.+Estado+de+Israel,+140-228+-+Ilha+do+Leite,+Recife+-+PE,+50070-420,+Brasil",
         "position": {
           "lat": -8.0645935,
           "lng": -34.8942482
@@ -56,7 +56,8 @@ export class CoordinatesProvider {
           "lat": -8.0510999,
           "lng": -34.9020686
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, 
+        "icon": "./img/starbucks.png",
         "created_at": "2017-10-29T19:31:05.879-02:00",
         "updated_at": "2017-10-29T19:31:05.879-02:00",
         "tipo_assalto_id": 3,

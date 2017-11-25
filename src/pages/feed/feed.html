@@ -6,15 +6,19 @@
 -->
 <ion-content padding>
   <ion-card class="ion-card" *ngFor="let movie of list_movies">
-    <iframe
-      width="600"
+
+    <!--<iframe
+      width="400"
       height="200"
       frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira&center=-7.9903739,-34.8602918" allowfullscreen>
-    </iframe>
+      [src]="videoUrl" 
+      allowfullscreen>
+    </iframe>-->
+
     <ion-item> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
       <h2>{{movie.titulo}}</h2>
+      <p>{{movie.endereco}}</p>
     </ion-item>
     <ion-item>
       <ion-icon name="ios-time-outline" item-start large></ion-icon>

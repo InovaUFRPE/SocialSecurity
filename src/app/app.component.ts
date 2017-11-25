@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 
 import { TabsPage } from '../pages/tabs/tabs';
+
 import { IntroPage } from '../pages/intro/intro';
 import { LoginPage } from '../pages/login/login';
 import { DatabaseProvider } from '../providers/database/database';
@@ -42,6 +43,6 @@ export class MyApp {
 
 private openHomePage(splashScreen: SplashScreen) {
   splashScreen.hide();
-  this.rootPage = IntroPage;
+  this.rootPage = TabsPage;
   }
 }

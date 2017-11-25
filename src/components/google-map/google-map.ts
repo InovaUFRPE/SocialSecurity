@@ -1,7 +1,7 @@
 import { Component, Input, Renderer, OnInit, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Platform } from "ionic-angular";
 import {
-  GoogleMap, GoogleMapsEvent, HtmlInfoWindow, GoogleMaps, LatLng, GoogleMapOptions,
+  GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions,
 } from "@ionic-native/google-maps";
 import { CoordinatesProvider } from '../../providers/coordinates/coordinates';
 
@@ -310,10 +310,12 @@ export class GoogleMapComponent implements AfterViewInit {
             }
           ]
         });
+
+        
         this.map.setMyLocationEnabled(true);
         let location = this.map.getMyLocation();
         location.then((res) => {
-          this.myLocation = new LatLng(res.latLng.lat, res.latLng.lng);
+          this.myLocation = new LatLng(res.latLng.lat, res.latLng.lng);          
           this.map.animateCamera({
             target: this.myLocation,
             zoom: 15,
