@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { BeforeLoginPage } from '../pages/before-login/before-login';
 import { OccurrencesPage } from '../pages/occurrences/occurrences';
+import { RegisterPage } from './../pages/register/register';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -43,7 +44,8 @@ import { OcurrencePersistenceProvider } from '../providers/ocurrence-persistence
     LoginPage,
     BeforeLoginPage,
     GoogleMapComponent,
-    OccurrencesPage
+    OccurrencesPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { OcurrencePersistenceProvider } from '../providers/ocurrence-persistence
     IntroPage,
     LoginPage,
     BeforeLoginPage,
-    OccurrencesPage
+    OccurrencesPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

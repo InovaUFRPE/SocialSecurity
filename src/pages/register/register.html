@@ -1,0 +1,46 @@
+<ion-content padding>
+    <div class="content">
+      <div class="btn-skip">
+        <div>
+            <ion-icon (click)="toBeforePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+            
+        </div>
+        <div style="text-align:center">
+            <img src="assets/images/icons/icon.png" alt="">
+            
+        </div>
+      </div>
+      <div class="inputs">
+        <ion-list inset>
+  
+          <ion-item>
+            <ion-label>Nome</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Password</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Sexo</ion-label>
+              <ion-select [(ngModel)]="Sexo">
+                <ion-option value="feminino">Feminino</ion-option>
+                <ion-option value="masculino">Masculino</ion-option>
+                <ion-option value="naoInformado">Prefiro não informar</ion-option>
+              </ion-select>
+            </ion-item>
+          
+        </ion-list>
+      </div>
+      <div class="btns">
+        <button text-center ion-button round outline>CADASTRAR</button>
+      </div>
+    </div>
+  </ion-content>

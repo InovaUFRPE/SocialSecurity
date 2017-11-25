@@ -1,20 +1,19 @@
+import { BeforeLoginPage } from './../before-login/before-login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BeforeLoginPage } from '../before-login/before-login';
-
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-register',
+  templateUrl: 'register.html',
 })
-export class LoginPage {
+export class RegisterPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad RegisterPage');
   }
   public toBeforePage(): void {
     this.navCtrl.push(BeforeLoginPage)
