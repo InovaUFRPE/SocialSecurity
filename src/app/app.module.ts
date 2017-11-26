@@ -23,15 +23,14 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
 
-import { MovieProvider } from '../providers/movie/movie';
-import { UsersProvider } from '../providers/users/users';
-import { MapsProvider } from '../providers/maps/maps';
+import { Users } from '../providers/usuario/users/users';
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../providers/database/database';
-import { CoordinatesProvider } from '../providers/coordinates/coordinates';
-import { OcurrencePersistenceProvider } from '../providers/ocurrence-persistence/ocurrence-persistence';
+import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordinates';
+import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { UsersController } from '../providers/usuario/users-controller/users-controller';
 
 @NgModule({
   declarations: [
@@ -72,14 +71,13 @@ import { OcurrencePersistenceProvider } from '../providers/ocurrence-persistence
     Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MovieProvider,
-    UsersProvider,
-    MapsProvider,
+    Users,
     SQLite,
     Toast,
     DatabaseProvider,
     CoordinatesProvider,
-    OcurrencePersistenceProvider
+    OcurrenceController,
+    UsersController
   ]
 })
 export class AppModule {}

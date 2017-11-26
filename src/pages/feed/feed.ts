@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { CoordinatesProvider } from '../../providers/coordinates/coordinates';
+import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';

@@ -3,7 +3,7 @@ import { Platform } from "ionic-angular";
 import {
   GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions,
 } from "@ionic-native/google-maps";
-import { CoordinatesProvider } from '../../providers/coordinates/coordinates';
+import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
 
 declare var google: any;
 

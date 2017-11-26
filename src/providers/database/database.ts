@@ -1,7 +1,7 @@
-import { Ocurrence } from '../ocurrence-persistence/ocurrence-persistence';
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import { CoordinatesProvider } from '../coordinates/coordinates';
+import { CoordinatesProvider } from '../ocorrencias/coordinates/coordinates';
+import { Ocurrence } from '../ocorrencias/ocurrence/ocurrence';
 
 
 @Injectable()
@@ -19,18 +19,7 @@ export class DatabaseProvider {
   }
 
 
-  public insertOcurrence(ocurrence: Ocurrence) {
-    return this.getDB()
-      .then((db: SQLiteObject) => {
-        let sql = 'insert into ocorrencias (codigo_usuario, codigo_tipo_ocorrencia, titulo_ocorrencia, endereco_ocorrencia, posicao_ocorrencia, data_ocorrencia, hora_ocorrencia, boletim_ocorrencia) values (?, ?, ?, ?, ?, ?, ?, ?)';
-        let data = [ocurrence.getcodigo_usuario(), ocurrence.getcodigo_tipo_ocorrencia(), ocurrence.gettitulo_ocorrencia(), ocurrence.getendereco_ocorrencia(), ocurrence.getposicao_ocorrencia(), ocurrence.getdata_ocorrencia(), ocurrence.gethora_ocorrencia(), ocurrence.getboletim_ocorrencia() ? 1 : 0];
-
-        return db.executeSql(sql, data)
-          .catch((e) => console.error(e));
-      })
-      .catch((e) => console.error(e));
-  }
-
+ 
 
   public createDatabase() {
     return this.getDB()
@@ -94,7 +83,7 @@ export class DatabaseProvider {
     points.forEach(element => {
       let ocurrence: Ocurrence;
       ocurrence.createOcurrence(element);
-      this.insertOcurrence(ocurrence);
+      //this.insertOcurrence(ocurrence);
     });
   }
 

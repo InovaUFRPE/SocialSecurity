@@ -15,18 +15,18 @@
 
         <ion-item>
           <ion-label>Username</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input id="username" type="text" [(ngModel)]="userData.username"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input id="password" type="password" [(ngModel)]="userData.password"></ion-input>
         </ion-item>
 
       </ion-list>
     </div>
     <div class="btns">
-      <button text-center ion-button round outline>L O G I N</button>
+      <button id="btn_login" (click)="login()" text-center ion-button round outline>L O G I N</button>
     </div>
   </div>
 </ion-content>

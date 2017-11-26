@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
-import { DatabaseProvider } from '../database/database';
-import { SQLiteObject } from '@ionic-native/sqlite';
-import { DateTime } from 'ionic-angular/components/datetime/datetime';
 
 @Injectable()
-export class OcurrencePersistenceProvider {
-	constructor(private dbProvider: DatabaseProvider) { }
-}
-
 export class Ocurrence {
 	private codigo_usuario: number;
 	private codigo_tipo_ocorrencia: number;
