@@ -15,7 +15,7 @@ export class Ocurrence {
 	public createOcurrence(element) {
 		this.setboletim_ocorrencia(element.registrou_bo);
 		this.setcodigo_usuario(element.codigo_usuario);
-		this.setcodigo_tipo_ocorrencia(element.tipo_assalto_id);
+		this.setcodigo_tipo_ocorrencia(element.codigo_tipo_ocorrencia);
 		this.settitulo_ocorrencia(element.titulo);
 		this.setendereco_ocorrencia(element.endereco);
 		this.setposicao_ocorrencia(element.position);

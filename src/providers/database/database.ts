@@ -49,32 +49,8 @@ export class DatabaseProvider {
   }
 
 
-  private initTypesOcurrences(db: SQLiteObject) {
-    db.executeSql('select COUNT(codigo_tipo_ocorrencia) as qtd from tipos_de_ocorrencia', {})
-      .then((data: any) => {
-        //Se não existe nenhum registro
-        if (data.rows.item(0).qtd == 0) {
-
-          // Criando as tabelas
-          db.sqlBatch([
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Furto']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Roubo']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Assalto a grupo']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Sequestro Relâmpago']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Arrombamento Veicular']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Arrombamento Domiciliar']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Arrombamento Loja Comercial']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Saidinha Bancária']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Roubo de Veículo']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Arrastão']],
-            ['insert into tipos_de_ocorrencia (descricao_ocorrencia) values (?)', ['Tentativa de Assalto']]
-          ])
-            .then(() => console.log('Dados padrões incluídos'))
-            .catch(e => console.error('Erro ao incluir dados padrões', e));
-
-        }
-      })
-      .catch(e => console.error('Erro ao consultar os tipos_de_ocorrencia', e));
+  private initTypesOcurrences() {
+   
   }
 
 
@@ -89,7 +65,7 @@ export class DatabaseProvider {
 
 
   private insertDefaultItems(db: SQLiteObject) {
-    this.initTypesOcurrences(db);
+    //this.initTypesOcurrences(db);
     //this.initOcurrences()
   }
 
