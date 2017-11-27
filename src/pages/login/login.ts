@@ -39,8 +39,8 @@ export class LoginPage {
     this.navCtrl.push(TabsPage)
   }
   login() {
-    let email_usuario = this.userData.email;
-    let senha_usuario = this.userData.password;
+    let email_usuario = this.userData.email.toString();
+    let senha_usuario = this.userData.password.toString();
     
     let response = this.userController.login(email_usuario,senha_usuario).then((res) => {
       let data = JSON.parse(JSON.stringify(res)).data;
@@ -52,6 +52,8 @@ export class LoginPage {
             console.log(toast);
         });
       }
+    }).catch( err => {
+      alert(err)
     });
   }
 }

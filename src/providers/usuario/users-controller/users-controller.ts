@@ -34,7 +34,7 @@ export class UsersController {
 				'email_usuario': email,
 				'senha_usuario': pass
 			};
-			this.http.get(this.API_REQRES_URL + 'login/'+ data)
+			this.http.get(this.API_REQRES_URL + 'login/'+ JSON.stringify(data))
 				.subscribe((result: any) => {
 					resolve(result.json())
 				},
