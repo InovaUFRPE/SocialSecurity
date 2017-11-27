@@ -1,4 +1,4 @@
-import { Component, Input, Renderer, OnInit, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
+import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Platform } from "ionic-angular";
 import {
   GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions,

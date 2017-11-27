@@ -31,16 +31,15 @@ export class UsersController {
 	login(email: string, pass: string) {
 		return new Promise((resolve, reject) => {
 			var data = {
-				email: email,
-				pass: pass
+				'email_usuario': email,
+				'senha_usuario': pass
 			};
-
-			this.http.post(this.API_REQRES_URL + 'login', data)
+			this.http.get(this.API_REQRES_URL + 'login/'+ data)
 				.subscribe((result: any) => {
 					resolve(result.json())
 				},
 				(error) => {
-					reject(error.json())
+					reject(error)
 				});
 		});
 	}
@@ -50,10 +49,10 @@ export class UsersController {
 			let url = this.API_REQRES_URL + 'users?per_page=10&page=' + page;
 			this.http.get(url)
 				.subscribe((result: any) => {
-					resolve(result.json())
+					resolve(result)
 				},
 				(error) => {
-					reject(error.json())
+					reject(error)
 				});
 		});
 	}
