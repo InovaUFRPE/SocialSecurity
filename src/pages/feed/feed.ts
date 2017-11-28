@@ -53,7 +53,7 @@ export class FeedPage {
       Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c;
-    return d <= 3;
+    return d <= 5;
   }
 
 
@@ -68,21 +68,16 @@ export class FeedPage {
         }
       });
 
-    })
+    })    
     return result;
   }
 
-
   presentLoading() {
-
     this.loader = this.loadingCtrl.create({
       content: "Carregando...",
     });
-
     this.loader.present();
-
   }
-
 
   outLoading() {
     this.loader.dismiss();
@@ -90,42 +85,30 @@ export class FeedPage {
 
   ionViewDidEnter() {
     this.presentLoading();
-    setTimeout(function () {
-      this.outLoading();
-    }, 5000);
-    this.checkFeeder();
-  }
 
 
-  checkFeeder() {
-    let cont = 0
-    setInterval(function () {
-      cont++;
-      this.presentLoading();
-      let promise = new Promise((resolve, reject) => {
-        let result = this.getInBoundPoints();
-        if (result.length <= 0) {
-          setTimeout(() => {
-            this.outLoading();
-          }, 1000)
-          setTimeout(() => {
-            this.toast.showLongCenter("Nenhuma ocorrência perto de você" + cont).subscribe(
-              toast => {
-                console.log(toast);
-              });
-          }, 1500)
-
-        } else {
-          this.presentLoading();
-          resolve(this.list_movies = this.getInBoundPoints());
-        }
-      })
-      promise.then(() => {
+    let promise = new Promise((resolve, reject) => {
+      let result = this.getInBoundPoints();
+      if (result.length <= 0) {
         setTimeout(() => {
           this.outLoading();
-        }, 2000)
-      }).catch((err) => { alert(err) });
-    }, 10000);
-  }
+        }, 1000)
+        setTimeout(() => {
+          this.toast.showLongCenter("Nenhuma ocorrência perto de você").subscribe(
+            toast => {
+              console.log(toast);
+            });
+        }, 1500)
 
+      } else {
+        this.presentLoading();
+        resolve(this.list_movies = this.getInBoundPoints());
+      }
+    })
+    promise.then(() => {
+      setTimeout(() => {
+        this.outLoading();
+      }, 2000)
+    }).catch((err) => { alert(err) });
+  }
 }
