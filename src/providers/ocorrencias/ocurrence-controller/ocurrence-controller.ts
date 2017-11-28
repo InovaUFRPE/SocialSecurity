@@ -23,6 +23,7 @@ export class OcurrenceController {
 export class OcurrenceController {
 	private API_REQRES_URL = 'http://socialsecurity.herokuapp.com/api/';
 
+	
 	constructor(public http: Http) { }
 
 	getOcurrences() {
@@ -63,7 +64,18 @@ export class OcurrenceController {
 				});
 		});
 	}
-
+	getOcurrencePerType(id: number){
+		return new Promise((resolve, reject) => {
+			let url = this.API_REQRES_URL + 'ocurrences/getType/'+ id;
+			this.http.get(url)
+				.subscribe((result: any) => {
+					resolve(result)
+				},
+				(error) => {
+					reject(error)
+				});
+		});
+	}
 	insetOcurrence(ocurrence: any) {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'ocurrences';
