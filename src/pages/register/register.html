@@ -15,32 +15,32 @@
   
           <ion-item>
             <ion-label>Nome</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input [(ngModel)]="userData.nome_usuario" type="text"></ion-input>
           </ion-item>
   
           <ion-item>
             <ion-label>Email</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input [(ngModel)]="userData.email_usuario" type="email"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label>Password</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input [(ngModel)]="userData.senha_usuario" type="password"></ion-input>
           </ion-item>
 
           <ion-item>
               <ion-label>Sexo</ion-label>
-              <ion-select [(ngModel)]="Sexo">
-                <ion-option value="feminino">Feminino</ion-option>
-                <ion-option value="masculino">Masculino</ion-option>
-                <ion-option value="naoInformado">Prefiro não informar</ion-option>
+              <ion-select [(ngModel)]="userData.sexo">
+                <ion-option value="0">Feminino</ion-option>
+                <ion-option value="1">Masculino</ion-option>
+                <ion-option value="2">Prefiro não informar</ion-option>
               </ion-select>
             </ion-item>
           
         </ion-list>
       </div>
       <div class="btns">
-        <button text-center ion-button round outline>CADASTRAR</button>
+        <button text-center (click)="register()" ion-button round outline>CADASTRAR</button>
       </div>
     </div>
   </ion-content>

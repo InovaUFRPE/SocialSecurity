@@ -18,8 +18,6 @@ export class LoginPage {
   constructor(private toast: Toast,private userController: UsersController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
-
-
   private getUser() {
     this.userController.getUser(1).then((res) => {
       return new Promise((resolve, reject) => {
@@ -27,7 +25,6 @@ export class LoginPage {
       });
     })
   };
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
@@ -43,6 +40,7 @@ export class LoginPage {
     let senha_usuario = this.userData.password.toString();
     
     let response = this.userController.login(email_usuario,senha_usuario).then((res) => {
+      alert(JSON.stringify(res));
       let data = JSON.parse(JSON.stringify(res)).data;
       if(data.length > 0){
         this.toTabsPage()

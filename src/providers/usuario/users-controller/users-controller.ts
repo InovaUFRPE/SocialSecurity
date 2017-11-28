@@ -1,8 +1,5 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { DatabaseProvider } from '../../database/database';
-import { SQLiteObject } from '@ionic-native/sqlite';
-import { DateTime } from 'ionic-angular/components/datetime/datetime';
 
 @Injectable()
 export class UsersController {
@@ -11,14 +8,9 @@ export class UsersController {
 	constructor(public http: Http) { }
 
 
-	createAccount(email: string, pass: string) {
+	createAccount(data) {
 		return new Promise((resolve, reject) => {
-			var data = {
-				email: email,
-				pass: pass
-			};
-
-			this.http.post(this.API_REQRES_URL + 'register', data)
+			this.http.post(this.API_REQRES_URL + 'users', data)
 				.subscribe((result: any) => {
 					resolve(result.json())
 				},
@@ -59,7 +51,7 @@ export class UsersController {
 
 	getUser(id: number) {
 		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users/:' + id;
+			let url = this.API_REQRES_URL + 'users/' + id;
 			this.http.get(url)
 				.subscribe((result: any) => {
 					resolve(result.json())
