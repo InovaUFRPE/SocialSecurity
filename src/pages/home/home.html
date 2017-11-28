@@ -7,9 +7,22 @@
   </ion-chip>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
   <google-map (mapClick)="onMapClick($event)" (mapReady)="onMapReady($event)" [options]="options"></google-map>
+
+  <ion-fab right bottom>
+    <button ion-fab color="dark">
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="toRegisterPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>
 
 <ion-menu [content]="content">
+
   <ion-content>
     <ion-list>
       <button ion-item (click)="openLoginPage()">

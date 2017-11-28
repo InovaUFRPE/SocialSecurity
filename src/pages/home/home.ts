@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { OccurrencesPage } from '../occurrences/occurrences';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
 export class HomePage {
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   options: any = {
     controls: {
@@ -23,4 +28,7 @@ export class HomePage {
     console.log('map is ready', e);
   }
 
+  public toRegisterPage(): void {
+    this.navCtrl.push(OccurrencesPage)
+  }
 }
