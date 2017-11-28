@@ -46,6 +46,10 @@ export class LoginPage {
       let data = JSON.parse(JSON.stringify(res)).data;
       if(data.length > 0){
         this.toTabsPage()
+        this.toast.showLongBottom("Bem vindo "+data[0].nome_usuario).subscribe(
+          toast => {
+            console.log(toast);
+        });
       }else{
         this.toast.showLongCenter("Email ou senha inválidos").subscribe(
           toast => {

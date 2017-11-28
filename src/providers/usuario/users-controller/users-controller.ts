@@ -46,7 +46,7 @@ export class UsersController {
 
 	getUsers(page: number) {
 		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users?per_page=10&page=' + page;
+			let url = this.API_REQRES_URL + 'users';
 			this.http.get(url)
 				.subscribe((result: any) => {
 					resolve(result)
@@ -83,29 +83,4 @@ export class UsersController {
 		});
 	}
 
-	updateUser(user: any) {
-		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users/id' + user.id;
-			this.http.put(url, user)
-				.subscribe((result: any) => {
-					resolve(result.json())
-				},
-				(error) => {
-					reject(error.json())
-				});
-		});
-	}
-
-	removeUser(id: number) {
-		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users/id' + id;
-			this.http.delete(url)
-				.subscribe((result: any) => {
-					resolve(result.json())
-				},
-				(error) => {
-					reject(error.json())
-				});
-		});
-	}
 }
