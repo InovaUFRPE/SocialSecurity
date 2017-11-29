@@ -32,8 +32,9 @@ export class OccurrencesPage {
   }
 
   register() {
-    let coordinate = '{"lat": "-8.0645935", "lng": "-34.8942482"}'
+    let coordinate = '{lat: -8.0645935, lng: -34.8942482}'
     this.ocurrenceData.posicao_ocorrencia = coordinate;
+    this.ocurrenceData.endereco_ocorrencia = this.ocurrenceData.endereco_ocorrencia.replace(/ /g, "+");
     console.log(JSON.stringify(this.ocurrenceData));
     this.ocurrenceController.insertOcurrence(this.ocurrenceData).then((res) => {
       this.toHomePage()
