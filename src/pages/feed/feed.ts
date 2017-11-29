@@ -14,7 +14,7 @@ import { Toast } from '@ionic-native/toast';
 })
 
 export class FeedPage {
-
+  
   public list_movies = new Array<any>();
 
   private dangerousVideoUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira';

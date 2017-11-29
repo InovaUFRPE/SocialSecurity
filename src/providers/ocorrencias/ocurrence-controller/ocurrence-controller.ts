@@ -23,6 +23,7 @@ export class OcurrenceController {
 export class OcurrenceController {
 	private API_REQRES_URL = 'http://socialsecurity.herokuapp.com/api/';
 
+	
 	constructor(public http: Http) { }
 
 	getOcurrences() {

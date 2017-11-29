@@ -36,7 +36,7 @@ export class UsersController {
 		});
 	}
 
-	getUsers(page: number) {
+	getUsers() {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'users';
 			this.http.get(url)
