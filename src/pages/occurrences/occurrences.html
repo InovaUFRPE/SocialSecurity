@@ -12,54 +12,54 @@
 <ion-list>
   <ion-item>
     <ion-label>Ocorrências</ion-label>
-    <ion-select [(ngModel)]="ocurrences" interface="action-sheet">
-      <ion-option value="Furto">Furto</ion-option>
-      <ion-option value="Roubo">Roubo</ion-option>
-      <ion-option value="Assalto a grupo">Assalto a grupo</ion-option>
-      <ion-option value="Sequestro Relâmpago">Sequestro Relâmpago</ion-option>
-      <ion-option value="Arrombamento Veicular">Arrombamento Veicular</ion-option>
-      <ion-option value="Arrombamento Domiciliar">Arrombamento Domiciliar</ion-option>
-      <ion-option value="Arrombamento Loja Comercial">Arrombamento Loja Comercial</ion-option>
-      <ion-option value="Saidinha Bancária">Saidinha Bancária</ion-option>
-      <ion-option value="Roubo de Veículo">Roubo de Veículo</ion-option>
-      <ion-option value="Arrastão">Arrastão</ion-option>
-      <ion-option value="Tentativa de Assalto">Tentativa de Assalto</ion-option>
+    <ion-select [(ngModel)]="ocurrenceData.codigo_tipo_ocorrencia" interface="action-sheet">
+      <ion-option value="1">Furto</ion-option>
+      <ion-option value="2">Roubo</ion-option>
+      <ion-option value="3">Assalto a grupo</ion-option>
+      <ion-option value="4">Sequestro Relâmpago</ion-option>
+      <ion-option value="5">Arrombamento Veicular</ion-option>
+      <ion-option value="6">Arrombamento Domiciliar</ion-option>
+      <ion-option value="7">Arrombamento Loja Comercial</ion-option>
+      <ion-option value="8">Saidinha Bancária</ion-option>
+      <ion-option value="9">Roubo de Veículo</ion-option>
+      <ion-option value="10">Arrastão</ion-option>
+      <ion-option value="11">Tentativa de Assalto</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <ion-list>
   <ion-item>
-    <ion-input type="text" placeholder="Título"></ion-input>
+    <ion-input [(ngModel)]="ocurrenceData.titulo_ocorrencia" type="text" placeholder="Título"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" placeholder="Endereço"></ion-input>
+    <ion-input [(ngModel)]="ocurrenceData.endereco_ocorrencia" type="text" placeholder="Endereço"></ion-input>
   </ion-item>
 </ion-list>
 
 <ion-list>
   <ion-item>
     <ion-label>Data</ion-label>
-    <ion-datetime displayFormat="MMM DD YYYY"></ion-datetime>
+    <ion-datetime [(ngModel)]="ocurrenceData.data_ocorrencia" displayFormat="DD-MM-YYYY"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label>Hora</ion-label>
-    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+    <ion-datetime [(ngModel)]="ocurrenceData.hora_ocorrencia" displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
   </ion-item>
 </ion-list>
 
 <ion-list>
   <ion-item>
     <ion-label>Boletim</ion-label>
-    <ion-select [(ngModel)]="ocurrences" interface="action-sheet">
-      <ion-option value="Registrado">Registrado</ion-option>
-      <ion-option value="Não registrado">Não registrado</ion-option>
+    <ion-select [(ngModel)]="ocurrenceData.boletim_ocorrencia" interface="action-sheet">
+      <ion-option value="true">Registrado</ion-option>
+      <ion-option value="false">Não registrado</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
-<button ion-button color="secondary">Resgistrar</button>
-<button ion-button color="danger">Cancelar</button>
+<button ion-button (click)="register()" color="secondary">Resgistrar</button>
+<button ion-button (click)="toBeforePage()" color="danger">Cancelar</button>
 
 </ion-content>

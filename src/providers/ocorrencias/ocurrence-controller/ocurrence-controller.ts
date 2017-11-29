@@ -64,7 +64,7 @@ export class OcurrenceController {
 		});
 	}
 
-	insetOcurrence(ocurrence: any) {
+	insertOcurrence(ocurrence: any) {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'ocurrences';
 			this.http.post(url, ocurrence)
