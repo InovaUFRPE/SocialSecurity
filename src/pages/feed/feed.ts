@@ -1,3 +1,4 @@
+import { OcurrenceController } from './../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
@@ -15,7 +16,7 @@ import { Toast } from '@ionic-native/toast';
 
 export class FeedPage {
   
-  public list_movies = new Array<any>();
+  public list_type_ocurrence = new Array<any>();
 
   private dangerousVideoUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira';
   private videoUrl: SafeResourceUrl;
@@ -25,13 +26,25 @@ export class FeedPage {
     public loadingCtrl: LoadingController,
     public navParams: NavParams,
     private movitProvider: CoordinatesProvider,
+    private ocurrenceController: OcurrenceController,
     private sanitizer: DomSanitizer,
     private position: Geolocation,
     private toast: Toast) {
     this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
 
   }
-
+  filter = {
+    "codigo_tipo_ocorrencia":""
+  };
+  
+  ocurrenceFilter(){
+    let codigo = parseInt(this.filter.codigo_tipo_ocorrencia);
+    let response = this.ocurrenceController.getOcurrencePerType(codigo).then((res) => {
+      alert(JSON.stringify(res))
+    }).catch((err)=>{
+      alert(err)
+    })
+  }
 
   private toRad(Value) {
     return Value * Math.PI / 180;
@@ -102,7 +115,7 @@ export class FeedPage {
 
       } else {
         this.presentLoading();
-        resolve(this.list_movies = this.getInBoundPoints());
+        resolve(this.list_type_ocurrence = this.getInBoundPoints());
       }
     })
     promise.then(() => {

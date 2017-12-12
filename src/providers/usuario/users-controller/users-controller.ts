@@ -62,7 +62,7 @@ export class UsersController {
 		});
 	}
 
-	insetUser(user: any) {
+	insertUser(user: any) {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'users';
 			this.http.post(url, user)

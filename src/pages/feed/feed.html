@@ -1,10 +1,32 @@
 <ion-content padding>
-  <ion-card class="ion-card" *ngFor="let movie of list_movies">
+  <div>
+      <ion-list>
+          <ion-item>
+            <ion-label>Ocorrências</ion-label>
+            <ion-select [(ngModel)]="filter.codigo_tipo_ocorrencia" interface="action-sheet" (ionChange)="ocurrenceFilter()"> 
+              <ion-option value="1">Furto</ion-option>
+              <ion-option value="2">Roubo</ion-option>
+              <ion-option value="3">Assalto a grupo</ion-option>
+              <ion-option value="4">Sequestro Relâmpago</ion-option>
+              <ion-option value="5">Arrombamento Veicular</ion-option>
+              <ion-option value="6">Arrombamento Domiciliar</ion-option>
+              <ion-option value="7">Arrombamento Loja Comercial</ion-option>
+              <ion-option value="8">Saidinha Bancária</ion-option>
+              <ion-option value="9">Roubo de Veículo</ion-option>
+              <ion-option value="10">Arrastão</ion-option>
+              <ion-option value="11">Tentativa de Assalto</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+  </div>
+  <ion-card class="ion-card" *ngFor="let fOcurrence of list_type_ocurrence">
 
     <ion-item> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
-      <h2>{{movie.titulo}}</h2>
-      <p>{{movie.endereco}}</p>
+      <h2>{{fOcurrence.titulo}}</h2>
+      <p>{{fOcurrence.endereco}}</p>
+      <p>{{fOcurrence.hora}}</p>
+      <p>{{fOcurrence.data}}</p>
     </ion-item>
     <ion-item>
       <ion-icon name="ios-time-outline" item-start large></ion-icon>
@@ -15,5 +37,5 @@
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
       <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>''
+    </ion-infinite-scroll>
 </ion-content>

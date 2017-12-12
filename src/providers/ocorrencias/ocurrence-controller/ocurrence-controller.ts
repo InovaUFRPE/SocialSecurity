@@ -52,7 +52,20 @@ export class OcurrenceController {
 		});
 	}
 
-	getOcurrenceTypes(){
+	getOcurrencePerType(type:number){
+		return new Promise((resolve,reject)=> {
+			let url = this.API_REQRES_URL + 'ocurrences/getType/' + type;
+			this.http.get(url)
+				.subscribe((result: any)=>{
+					resolve(result.json())
+				},
+			(error)=> {
+				reject(error.json())
+			});
+		});
+	}
+
+	getOcurrenceTypes(ocurrence){
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'ocurrence-types';
 			this.http.get(url)
