@@ -19,23 +19,16 @@
           </ion-item>
         </ion-list>
   </div>
-  <ion-card class="ion-card" *ngFor="let fOcurrence of list_type_ocurrence">
+  <ion-card class="ion-card" *ngFor="let ocurrence of list_ocurrence">
 
     <ion-item> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
-      <h2>{{fOcurrence.titulo}}</h2>
-      <p>{{fOcurrence.endereco}}</p>
-      <p>{{fOcurrence.hora}}</p>
-      <p>{{fOcurrence.data}}</p>
+      <h2>{{ocurrence.titulo_ocorrencia}}</h2>      
     </ion-item>
     <ion-item>
       <ion-icon name="ios-time-outline" item-start large></ion-icon>
-      <span item-right>18 min</span>
+      <span item-right>{{ocurrence.data_ocorrencia}}</span>
     </ion-item>
 
   </ion-card>
-
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
 </ion-content>

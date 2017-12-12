@@ -1,7 +1,6 @@
-import { OcurrenceController } from './../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import {OcurrenceController} from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
@@ -11,12 +10,12 @@ import { Toast } from '@ionic-native/toast';
   selector: 'page-feed',
   templateUrl: 'feed.html',
   providers: [
-    CoordinatesProvider]
+    OcurrenceController]
 })
 
 export class FeedPage {
   
-  public list_type_ocurrence = new Array<any>();
+  public list_ocurrence = new Array<any>();
 
   private dangerousVideoUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira';
   private videoUrl: SafeResourceUrl;
@@ -25,7 +24,6 @@ export class FeedPage {
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
     public navParams: NavParams,
-    private movitProvider: CoordinatesProvider,
     private ocurrenceController: OcurrenceController,
     private sanitizer: DomSanitizer,
     private position: Geolocation,
@@ -33,29 +31,64 @@ export class FeedPage {
     this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
 
   }
+
   filter = {
     "codigo_tipo_ocorrencia":""
   };
   
   ocurrenceFilter(){
+    this.list_ocurrence = []
+    this.presentLoading();
     let codigo = parseInt(this.filter.codigo_tipo_ocorrencia);
-    let response = this.ocurrenceController.getOcurrencePerType(codigo).then((res) => {
-      alert(JSON.stringify(res))
-    }).catch((err)=>{
-      alert(err)
-    })
+    this.position.getCurrentPosition().then((position) => {
+      this.ocurrenceController.getOcurrencePerType(codigo).then((res) => {
+        this.loadOcurrences(res, position);
+      }).catch((err)=>{
+        this.outLoading();
+        this.toast.showLongCenter("Problema ao carregar as ocorrências, favor recarregar a página").subscribe(
+          toast => {
+            console.log(toast);
+        });     
+      })
+    }).catch( err => {
+      this.toast.showLongCenter("Localização indsponivel").subscribe(
+        toast => {
+          console.log(toast);
+      });      
+    });
+  }
+
+  loadOcurrences(ocurrence, position){
+    let result = [];
+    let lst_ocurrences = JSON.parse(JSON.stringify(ocurrence)).data;
+    lst_ocurrences.forEach(element => {
+      if (this.getInBound(
+        parseInt(element.posicao_ocorrencia.split(",")[0].split(":")[1]), 
+        parseInt(element.posicao_ocorrencia.split(",")[1].split(":")[1]), 
+        position.coords.latitude, 
+        position.coords.longitude)) {
+          result.push(element);
+      }          
+    });
+    if(result.length > 0){
+      this.list_ocurrence = result;
+      this.outLoading();
+    }else{
+      this.outLoading();
+      
+      this.toast.showLongCenter("Sem ococrências próximas a você").subscribe(
+        toast => {
+          console.log(toast);
+      });  
+    }
   }
 
   private toRad(Value) {
     return Value * Math.PI / 180;
   }
 
-
   private getInBound(lat1, lon1, lat2, lon2) {
-
-    let pointsToCheckInBound = this.movitProvider.getCoordinates();
     //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
-
     var R = 6371; // km
     var dLat = this.toRad(lat2 - lat1);
     var dLon = this.toRad(lon2 - lon1);
@@ -67,22 +100,7 @@ export class FeedPage {
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c;
     return d <= 5;
-  }
-
-
-  getInBoundPoints() {
-    let result = []
-    let listToCalculate = this.movitProvider.getCoordinates();
-    this.position.getCurrentPosition().then((res) => {
-
-      listToCalculate.forEach(element => {
-        if (this.getInBound(element.position.lat, element.position.lng, res.coords.latitude, res.coords.longitude)) {
-          result.push(element);
-        }
-      });
-
-    })    
-    return result;
+    //return d > 0;
   }
 
   presentLoading() {
@@ -98,30 +116,21 @@ export class FeedPage {
 
   ionViewDidEnter() {
     this.presentLoading();
-
-
-    let promise = new Promise((resolve, reject) => {
-      let result = this.getInBoundPoints();
-      if (result.length <= 0) {
-        setTimeout(() => {
-          this.outLoading();
-        }, 1000)
-        setTimeout(() => {
-          this.toast.showLongCenter("Nenhuma ocorrência perto de você").subscribe(
-            toast => {
-              console.log(toast);
-            });
-        }, 1500)
-
-      } else {
-        this.presentLoading();
-        resolve(this.list_type_ocurrence = this.getInBoundPoints());
-      }
-    })
-    promise.then(() => {
-      setTimeout(() => {
+    this.position.getCurrentPosition().then((position) => {
+      this.ocurrenceController.getOcurrences().then( (ocurrence) => {
+        this.loadOcurrences(ocurrence, position);
+      }).catch( err => {
         this.outLoading();
-      }, 2000)
-    }).catch((err) => { alert(err) });
+        this.toast.showLongCenter("Problema ao carregar as ocorrências, favor recarregar a página").subscribe(
+          toast => {
+            console.log(toast);
+        });      
+      });;
+    }).catch( err => {
+      this.toast.showLongCenter("Localização indsponivel").subscribe(
+        toast => {
+          console.log(toast);
+      });      
+    });
   }
 }

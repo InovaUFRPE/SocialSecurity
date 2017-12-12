@@ -11,6 +11,7 @@ import { UsersController } from '../../providers/usuario/users-controller/users-
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  
   userData = {"email_usuario": "", "senha_usuario": "","sexo":"","nome_usuario":"" };
   
   constructor(

@@ -30,8 +30,8 @@ export class OcurrenceController {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'ocurrences';
 			this.http.get(url)
-				.subscribe((result: any) => {
-					resolve(result)
+				.subscribe((result) => {
+					resolve(result.json())
 				},
 				(error) => {
 					reject(error)
