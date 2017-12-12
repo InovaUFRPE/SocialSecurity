@@ -14,6 +14,7 @@ import { LoginPage } from '../pages/login/login';
 import { BeforeLoginPage } from '../pages/before-login/before-login';
 import { OccurrencesPage } from '../pages/occurrences/occurrences';
 import { RegisterPage } from './../pages/register/register';
+import { AlertPage } from '../pages/alert/alert';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,10 +28,12 @@ import { Users } from '../providers/usuario/users/users';
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
 import { SQLite } from '@ionic-native/sqlite';
+import { Vibration } from '@ionic-native/vibration';
 import { DatabaseProvider } from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordinates';
 import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { UsersController } from '../providers/usuario/users-controller/users-controller';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     BeforeLoginPage,
     GoogleMapComponent,
     OccurrencesPage,
-    RegisterPage
+    RegisterPage,
+    AlertPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     LoginPage,
     BeforeLoginPage,
     OccurrencesPage,
-    RegisterPage
+    RegisterPage,
+    AlertPage
   ],
   providers: [
     StatusBar,
@@ -77,7 +82,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     DatabaseProvider,
     CoordinatesProvider,
     OcurrenceController,
-    UsersController
+    UsersController,
+    Vibration
   ]
 })
 export class AppModule {}

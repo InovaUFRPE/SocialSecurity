@@ -95,4 +95,5 @@
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.1.2" />
     <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
+    <plugin name="cordova-plugin-vibration" spec="^2.1.6" />
 </widget>
