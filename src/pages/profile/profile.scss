@@ -1,0 +1,30 @@
+page-profile {
+    .content{
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        position: relative;
+        align-items: center;
+        flex-shrink: 0;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+    }
+    .content-profile{
+        margin-top: 75px;
+        display: block;
+        vertical-align: middle;
+    }
+    .text{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin-top: 1.8rem;
+        font-size: 2.4rem;
+    }
+    .content-profile img{
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+}
