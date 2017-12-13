@@ -1,9 +1,23 @@
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar Contato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="content-contact">
+      <ion-item>
+        <ion-input type="text" value="" placeholder="Nome contato"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input type="text" value="" placeholder="Número contato"></ion-input>
+      </ion-item>
+      <div class="btn">
+        <button (click)="toProfilePage()" ion-button color="light" outline round>Cancelar</button>
+        <button (click)="saveContact()" ion-button color="light" outline round>Salvar Contato</button>
+      </div>
+  </div>
 </ion-content>
