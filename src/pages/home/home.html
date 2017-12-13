@@ -1,11 +1,11 @@
 <ion-content>
-  <!--<ion-chip menuToggle>
+  <ion-chip menuToggle>
     <ion-avatar>
-        <img src="assets/images/icons/marcio.png" alt="">        
+        <img src="assets/images/icons/user.png" alt="">        
     </ion-avatar>
     <ion-label>Entrar</ion-label>
   </ion-chip>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
   <google-map (mapClick)="onMapClick($event)" (mapReady)="onMapReady($event)" [options]="options"></google-map>
 
   <ion-fab left bottom>
@@ -25,9 +25,12 @@
 
   <ion-content>
     <ion-list>
-      <button ion-item (click)="openLoginPage()">
-        Login
-      </button>
+      <ion-item>
+        <button ion-button color="light" clear (click)="openLoginPage()">Login</button>
+      </ion-item>
+      <ion-item>
+        <button ion-button color="light" clear (click)="toProfilePage()">Perfil</button>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>

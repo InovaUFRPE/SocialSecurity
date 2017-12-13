@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { DatabaseProvider } from '../providers/database/database';
 import { OccurrencesPage } from '../pages/occurrences/occurrences';
 import { AlertPage } from '../pages/alert/alert';
+import { ProfilePage } from '../pages/profile/profile';
 
 
 @Component({
