@@ -1,3 +1,19 @@
 page-contact {
+    .content{
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        position: relative;
+        align-items: center;
+        flex-shrink: 0;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+    }
+    .content-contact{
+        margin-top: 75px;
+    }
+    .btn{
+        margin-top: 30px;
+    }
 
 }

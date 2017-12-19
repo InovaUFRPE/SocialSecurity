@@ -12,4 +12,11 @@ page-home {
   .chip-ios {
     top: 8%;
   }
+  .content .list{
+    border: none;
+  }
+  .content .list .item{
+    border: none;
+    background: transparent;
+  }
 }

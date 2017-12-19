@@ -15,7 +15,7 @@ import { BeforeLoginPage } from '../pages/before-login/before-login';
 import { OccurrencesPage } from '../pages/occurrences/occurrences';
 import { RegisterPage } from './../pages/register/register';
 import { AlertPage } from '../pages/alert/alert';
-
+import { ProfilePage } from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,7 +34,6 @@ import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordi
 import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { UsersController } from '../providers/usuario/users-controller/users-controller';
 
-
 @NgModule({
   declarations: [
     MyApp,
@@ -48,7 +47,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     GoogleMapComponent,
     OccurrencesPage,
     RegisterPage,
-    AlertPage
+    AlertPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +68,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     BeforeLoginPage,
     OccurrencesPage,
     RegisterPage,
-    AlertPage
+    AlertPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

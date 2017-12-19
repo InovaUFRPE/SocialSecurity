@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OccurrencesPage } from '../occurrences/occurrences';
+import { ProfilePage } from '../profile/profile';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -30,5 +32,13 @@ export class HomePage {
 
   public toRegisterPage(): void {
     this.navCtrl.push(OccurrencesPage)
+  }
+
+  public toProfilePage():void{
+    this.navCtrl.push(ProfilePage)
+  }
+
+  public openLoginPage():void{
+    this.navCtrl.push(LoginPage)
   }
 }
