@@ -8,7 +8,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { IntroPage } from '../pages/intro/intro';
 import { LoginPage } from '../pages/login/login';
 import { DatabaseProvider } from '../providers/database/database';
-import { OccurrencesPage } from '../pages/occurrences/occurrences';
 import { AlertPage } from '../pages/alert/alert';
 import { ProfilePage } from '../pages/profile/profile';
 

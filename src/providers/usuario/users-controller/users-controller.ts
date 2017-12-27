@@ -8,6 +8,7 @@ export class UsersController {
 
 	constructor(public http: Http) { }
 
+
 	createAccount(data) {
 		return new Promise((resolve, reject) => {
 			this.http.post(this.API_REQRES_URL + 'users', data)
@@ -31,7 +32,7 @@ export class UsersController {
 					resolve(result.json())
 				},
 				(error) => {
-					reject(error)
+					reject(error.json())
 				});
 		});
 	}
@@ -64,6 +65,19 @@ export class UsersController {
 				},
 				(error) => {
 					reject(error);
+				});
+		});
+	}
+
+	getUser(id: number) {
+		return new Promise((resolve, reject) => {
+			let url = this.API_REQRES_URL + 'users/' + id;
+			this.http.get(url)
+				.subscribe((result: any) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error.json())
 				});
 		});
 	}

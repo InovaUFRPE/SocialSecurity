@@ -1,11 +1,7 @@
 import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Platform } from "ionic-angular";
-import {
-  GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions,
-} from "@ionic-native/google-maps";
+import {GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions} from "@ionic-native/google-maps";
 import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
-
-declare var google: any;
 
 @Component({
   selector: 'google-map',

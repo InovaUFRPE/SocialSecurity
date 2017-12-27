@@ -25,7 +25,6 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
-import { Users } from '../providers/usuario/users/users';
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
 import { SQLite } from '@ionic-native/sqlite';
@@ -78,7 +77,6 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Users,
     SQLite,
     UniqueDeviceID,
     Toast,
