@@ -1,7 +1,7 @@
 import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Platform } from "ionic-angular";
 import {
-  GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions,
+  GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions, MarkerCluster,Marker,GoogleMapsAnimation
 } from "@ionic-native/google-maps";
 import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
 
@@ -323,6 +323,7 @@ export class GoogleMapComponent implements AfterViewInit {
             duration: 3000
           });
         });
+        
         // Add Cluster Marker
         var label = document.getElementById("label");
         this.map.addMarkerCluster({
@@ -340,6 +341,14 @@ export class GoogleMapComponent implements AfterViewInit {
                 label.innerHTML = "&lt;b&gt;zoom = " + self.get("zoom").toFixed(0) + ", resolution = " + self.get("resolution") + "&lt;/b&gt;";
             });
             markerCluster.trigger("resolution_changed");
+            markerCluster.on(GoogleMapsEvent.MARKER_CLICK).subscribe((params)=> {
+              let latLng:LatLng = params[0];
+              let marker:Marker = params[1];
+
+
+              alert("foi");
+              marker.setAnimation(GoogleMapsAnimation.BOUNCE);
+            })
         });
       });
     });
