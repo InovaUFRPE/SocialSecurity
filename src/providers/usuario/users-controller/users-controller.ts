@@ -1,12 +1,12 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { filterQueryId } from '@angular/core/src/view/util';
 
 @Injectable()
 export class UsersController {
 	private API_REQRES_URL = 'http://socialsecurity.herokuapp.com/api/';
 
 	constructor(public http: Http) { }
-
 
 	createAccount(data) {
 		return new Promise((resolve, reject) => {
@@ -20,13 +20,13 @@ export class UsersController {
 		});
 	}
 
-	login(email: string, pass: string) {
+	verifyUser(email: string, pass: string) {
 		return new Promise((resolve, reject) => {
 			var data = {
 				'email_usuario': email,
 				'senha_usuario': pass
 			};
-			this.http.get(this.API_REQRES_URL + 'login/'+ JSON.stringify(data))
+			this.http.get(this.API_REQRES_URL + 'users/validate/user/'+ JSON.stringify(data))
 				.subscribe((result: any) => {
 					resolve(result.json())
 				},
@@ -36,41 +36,34 @@ export class UsersController {
 		});
 	}
 
-	getUsers() {
+	verifyDevice(device: string) {
 		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users';
-			this.http.get(url)
-				.subscribe((result: any) => {
-					resolve(result)
+			this.http.get(this.API_REQRES_URL + 'device/validate/'+ device.toString())
+				.subscribe((result: any) => {					
+					resolve(result.json())
 				},
 				(error) => {
-					reject(error)
+					let body = {"cod_device":device.toString()}
+					this.http.post(this.API_REQRES_URL + 'device',body).subscribe(
+						(result: any) => {
+							resolve(result.json())
+						},
+						(error) => {
+							reject(error)
+						});
 				});
 		});
 	}
 
-	getUser(id: number) {
+	login(cod_user,cod_device){
 		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users/' + id;
-			this.http.get(url)
-				.subscribe((result: any) => {
+			let body = { "cod_usuario": cod_user}
+			this.http.put(this.API_REQRES_URL + 'users/login/'+ cod_device.toString(),body)
+				.subscribe((result: any) => {					
 					resolve(result.json())
 				},
 				(error) => {
-					reject(error.json())
-				});
-		});
-	}
-
-	insertUser(user: any) {
-		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'users';
-			this.http.post(url, user)
-				.subscribe((result: any) => {
-					resolve(result.json())
-				},
-				(error) => {
-					reject(error.json())
+					reject(error);
 				});
 		});
 	}

@@ -23,6 +23,7 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 import { Users } from '../providers/usuario/users/users';
 import { GoogleMapComponent } from "../components/google-map/google-map";
@@ -79,6 +80,7 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Users,
     SQLite,
+    UniqueDeviceID,
     Toast,
     DatabaseProvider,
     CoordinatesProvider,
