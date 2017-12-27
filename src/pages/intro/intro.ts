@@ -25,8 +25,12 @@ export class IntroPage {
 
   public toNextPage(): void {
     this.uniqueDeviceID.get().then((udid: any) => {
-      this.userController.verifyDevice(udid).then( res => {
-        this.navCtrl.push(TabsPage)
+      this.userController.verifyDevice(udid).then( (res: any) => {
+        if(res.data.status_log == "logged"){
+          this.navCtrl.push(TabsPage)
+        }else{
+          this.navCtrl.push(BeforeLoginPage)
+        }
       }).catch( err => {
         this.navCtrl.push(BeforeLoginPage)
       })
