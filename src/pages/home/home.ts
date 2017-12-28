@@ -3,16 +3,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OccurrencesPage } from '../occurrences/occurrences';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
 export class HomePage {
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {
+    name: "Entrar"
   }
-
   options: any = {
     controls: {
       compass: false,
@@ -21,6 +22,20 @@ export class HomePage {
       zoom: true
     }
   };
+
+  constructor(
+    private navCtrl: NavController,
+    private navParams: NavParams,
+    private uniqueDeviceID: UniqueDeviceID,
+    private userController: UsersController) {
+      this.uniqueDeviceID.get().then( udid => {
+        this.userController.verifyDevice(udid).then( (res: any) => {
+          this.userController.getUser(res.data.cod_usuario).then( (res: any) => {
+            this.user.name = res.data.nome_usuario.split(" ")[0]
+          })
+        })
+      })
+  }
 
   onMapClick(e) {
     console.log('map was clicked', e);

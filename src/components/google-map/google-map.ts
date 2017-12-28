@@ -1,6 +1,6 @@
 import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Platform } from "ionic-angular";
-import {GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions} from "@ionic-native/google-maps";
+import {GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions, MarkerCluster} from "@ionic-native/google-maps";
 import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
 
 @Component({
@@ -16,7 +16,6 @@ export class GoogleMapComponent implements AfterViewInit {
   map: GoogleMap;
   myLocation: LatLng;
   private isInit: boolean = false;
-
   _height: string = '100%';
   @Input()
   set height(val: string) {
@@ -305,9 +304,7 @@ export class GoogleMapComponent implements AfterViewInit {
               ]
             }
           ]
-        });
-
-        
+        });        
         this.map.setMyLocationEnabled(true);
         let location = this.map.getMyLocation();
         location.then((res) => {
