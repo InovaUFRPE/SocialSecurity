@@ -82,7 +82,7 @@ export class HomePage {
   }
 
   public toBeforeLoginPage():void{
-    this.navCtrl.push(BeforeLoginPage)
+    this.navCtrl.setRoot(BeforeLoginPage)
   }
 
   public logout():void{
