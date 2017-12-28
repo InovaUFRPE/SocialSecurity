@@ -5,6 +5,7 @@ import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
+import { Toast } from '@ionic-native/toast';
 
 @Component({
   selector: 'page-home',
@@ -25,6 +26,7 @@ export class HomePage {
 
   constructor(
     private navCtrl: NavController,
+    private toast: Toast,
     private navParams: NavParams,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController) {
@@ -48,7 +50,26 @@ export class HomePage {
   }
 
   public toRegisterPage(): void {
-    this.navCtrl.push(OccurrencesPage)
+    this.uniqueDeviceID.get().then( udid => {
+      this.userController.verifyDevice(udid).then( (res: any) => {
+        if(res.data.status_log == "logged"){
+          this.navCtrl.push(OccurrencesPage)
+        }
+        else{
+          this.toast.showLongBottom("Por favor, antes de inserir uma ocorrência realize o login").subscribe(
+            toast => {
+              console.log(toast);
+          });
+        }
+      }).catch( err => {
+        this.toast.showLongBottom("Por favor, antes de inserir uma ocorrência realize o login").subscribe(
+          toast => {
+            console.log(toast);
+        });
+      })
+    })
+
+
   }
 
   public toProfilePage():void{
