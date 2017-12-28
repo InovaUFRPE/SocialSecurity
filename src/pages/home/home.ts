@@ -30,9 +30,11 @@ export class HomePage {
     private userController: UsersController) {
       this.uniqueDeviceID.get().then( udid => {
         this.userController.verifyDevice(udid).then( (res: any) => {
-          this.userController.getUser(res.data.cod_usuario).then( (res: any) => {
-            this.user.name = res.data.nome_usuario.split(" ")[0]
-          })
+          if(res.data.status_log == "logged"){
+            this.userController.getUser(res.data.cod_usuario).then( (res: any) => {
+              this.user.name = res.data.nome_usuario.split(" ")[0]
+            })
+          }
         })
       })
   }
