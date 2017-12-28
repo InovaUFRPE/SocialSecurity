@@ -27,12 +27,12 @@ export class IntroPage {
     this.uniqueDeviceID.get().then((udid: any) => {
       this.userController.verifyDevice(udid).then( (res: any) => {
         if(res.data.status_log == "logged"){
-          this.navCtrl.push(TabsPage)
+          this.navCtrl.setRoot(TabsPage)
         }else{
-          this.navCtrl.push(BeforeLoginPage)
+          this.navCtrl.setRoot(BeforeLoginPage)
         }
       }).catch( err => {
-        this.navCtrl.push(BeforeLoginPage)
+        this.navCtrl.setRoot(BeforeLoginPage)
       })
     });
   }

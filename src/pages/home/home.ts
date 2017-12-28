@@ -6,6 +6,7 @@ import { LoginPage } from '../login/login';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { Toast } from '@ionic-native/toast';
+import { BeforeLoginPage } from '../before-login/before-login';
 
 @Component({
   selector: 'page-home',
@@ -78,5 +79,16 @@ export class HomePage {
 
   public openLoginPage():void{
     this.navCtrl.push(LoginPage)
+  }
+
+  public toBeforeLoginPage():void{
+    this.navCtrl.push(BeforeLoginPage)
+  }
+
+  public logout():void{
+    this.uniqueDeviceID.get().then((udid: any) => {
+      this.userController.logout(udid);
+      this.toBeforeLoginPage();
+    });
   }
 }

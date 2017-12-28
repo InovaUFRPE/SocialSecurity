@@ -69,6 +69,18 @@ export class UsersController {
 		});
 	}
 
+	logout(cod_device){
+		return new Promise((resolve, reject) => {
+			this.http.put(this.API_REQRES_URL + 'users/logout/'+ cod_device.toString(),null)
+				.subscribe((result: any) => {					
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error);
+				});
+		});
+	}
+
 	getUser(id: number) {
 		return new Promise((resolve, reject) => {
 			let url = this.API_REQRES_URL + 'users/' + id;

@@ -1,6 +1,6 @@
 import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
-import {LoadingController, IonicPage,  NavController,  NavParams} from 'ionic-angular';
+import { LoadingController, IonicPage,  NavController,  NavParams} from 'ionic-angular';
 import { BeforeLoginPage } from '../before-login/before-login';
 import { Toast } from '@ionic-native/toast';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
@@ -30,11 +30,13 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
+
   public toBeforePage(): void {
-    this.navCtrl.push(BeforeLoginPage)
+    this.navCtrl.pop()
   }
+
   public toTabsPage(): void {
-    this.navCtrl.push(TabsPage)
+    this.navCtrl.setRoot(TabsPage);
   }
  
   private validateninputsLogin(email_usuario): any {
