@@ -117,7 +117,7 @@ export class FeedPage {
   ionViewDidEnter() {
     this.presentLoading();
     this.position.getCurrentPosition().then((position) => {
-      this.ocurrenceController.getOcurrences().then( (ocurrence) => {
+      this.ocurrenceController.getOcurrencesFeed().then( (ocurrence) => {
         this.loadOcurrences(ocurrence, position);
       }).catch( err => {
         this.outLoading();
