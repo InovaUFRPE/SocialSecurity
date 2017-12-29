@@ -32,44 +32,28 @@ export class OccurrencesPage {
   }
 
   register() {
-    let coordinate = '{lat: -8.0645935, lng: -34.8942482}'
-    this.ocurrenceData.posicao_ocorrencia = coordinate;
-    this.ocurrenceData.endereco_ocorrencia = this.ocurrenceData.endereco_ocorrencia.replace(/ /g, "+");
-    console.log(JSON.stringify(this.ocurrenceData));
-    this.ocurrenceController.insertOcurrence(this.ocurrenceData).then((res) => {
-      this.toHomePage()
-      this.toast.showLongBottom("Ocorrência cadastrada com sucesso").subscribe(
-        toast => {
-          console.log(toast);
-        });
-    }).catch(err => {
-      console.log(err)
-    });
-   /* this.position.getCurrentPosition().then((res) => {
-      console.log(res);
+   this.position.getCurrentPosition().then((res) => {
+
       let lat = res.coords.latitude;
       let long = res.coords.longitude;
       let coordinate = '{"lat": ' + lat + ', "lng": ' + long + '}'
       this.ocurrenceData.posicao_ocorrencia = coordinate;
-      console.log(JSON.stringify(this.ocurrenceData));
+
       this.ocurrenceController.insertOcurrence(this.ocurrenceData).then((res) => {
         this.toHomePage()
         this.toast.showLongBottom("Ocorrência cadastrada com sucesso").subscribe(
           toast => {
             console.log(toast);
           });
-      }).catch(err => {
-        alert(err)
-      });
-    });*/
+
+      }).catch(err => { console.log(err) });
+    });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OccurrencesPage');
-  }
+  ionViewDidLoad() {  }
 
   public toHomePage(): void{
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 
   public toBeforePage(): void {

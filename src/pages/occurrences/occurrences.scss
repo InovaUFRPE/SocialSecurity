@@ -1,3 +1,16 @@
 page-occurrences {
-
+    .content .btn-skip {
+        text-align: left;
+        flex: 1;
+      }
+      .content .btn-skip ion-icon{
+        top: 0;
+      }
+      .content .btn-skip img{
+        width: 80%;
+      }
+      .ion-ios-arrow-dropleft-circle {
+        color: #fff;
+        font-size: 30px;
+      }
 }
