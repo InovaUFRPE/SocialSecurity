@@ -329,7 +329,7 @@ export class GoogleMapComponent implements AfterViewInit {
         });
         // Add Cluster Marker
         var label = document.getElementById("label");
-        this.ocurrenceController.getOcurrences().then( (res:any) => {
+        this.ocurrenceController.getOcurrencesMap().then( (res:any) => {
           this.map.addMarkerCluster({
             boundsDraw: true,
             markers: res.data,
