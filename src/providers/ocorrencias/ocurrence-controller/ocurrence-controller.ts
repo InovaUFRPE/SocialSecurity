@@ -10,9 +10,22 @@ export class OcurrenceController {
 	
 	constructor(public http: Http) { }
 
-	getOcurrences() {
+	getOcurrencesMap() {
 		return new Promise((resolve, reject) => {
-			let url = this.API_REQRES_URL + 'ocurrences';
+			let url = this.API_REQRES_URL + 'ocurrences/map';
+			this.http.get(url)
+				.subscribe((result) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error)
+				});
+		});
+	}
+  
+	getOcurrencesFeed() {
+		return new Promise((resolve, reject) => {
+			let url = this.API_REQRES_URL + 'ocurrences/feed';
 			this.http.get(url)
 				.subscribe((result) => {
 					resolve(result.json())
