@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { OccurrencesPage } from '../occurrences/occurrences';
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
@@ -26,6 +26,7 @@ export class HomePage {
   };
 
   constructor(
+    public app: App,
     private navCtrl: NavController,
     private toast: Toast,
     private navParams: NavParams,
@@ -82,7 +83,7 @@ export class HomePage {
   }
 
   public toBeforeLoginPage():void{
-    this.navCtrl.setRoot(BeforeLoginPage)
+    this.app.getRootNav().setRoot(BeforeLoginPage)
   }
 
   public logout():void{
