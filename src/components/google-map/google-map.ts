@@ -1,52 +1,61 @@
-import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit } from '@angular/core';
-import { Platform } from "ionic-angular";
-import {GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions, MarkerCluster} from "@ionic-native/google-maps";
+import { Platform }            from "ionic-angular";
 import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
+import { OcurrenceController } from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { Component, Input, Renderer, ElementRef, Output, EventEmitter, AfterViewInit }    from '@angular/core';
+import { GoogleMap, GoogleMapsEvent, GoogleMaps, LatLng, GoogleMapOptions, MarkerCluster} from "@ionic-native/google-maps";
+
 
 @Component({
   selector: 'google-map',
   template: '<ng-content></ng-content>',
   providers: [
+
+    OcurrenceController,
     CoordinatesProvider,
+
   ]
 })
 
+
 export class GoogleMapComponent implements AfterViewInit {
-  private mapContainer: HTMLElement;
-  map: GoogleMap;
-  myLocation: LatLng;
-  private isInit: boolean = false;
-  _height: string = '100%';
+
+  private mapContainer : HTMLElement;
+  private map          : GoogleMap;
+  private myLocation   : LatLng;
+  private isInit       : boolean = false;
+  private _height      : string = '100%';
+  private _width       : string = '100%';
+
+
   @Input()
   set height(val: string) {
     this._height = val;
     this.isInit && this.setHeight();
   }
 
-  get height(): string {
-    return this._height;
-  }
 
-  _width: string = '100%';
   @Input()
   set width(val: string) {
     this._width = val;
     this.isInit && this.setWidth();
   }
 
+
   get width() {
     return this._width;
   }
 
-  @Input()
-  options: GoogleMapOptions = {
-  };
 
-  @Output()
-  mapClick: EventEmitter<LatLng> = new EventEmitter<any>();
+  get height(): string {
+    return this._height;
+  }
 
-  @Output()
-  mapReady: EventEmitter<GoogleMap> = new EventEmitter<GoogleMap>();
+
+  @Input()  options : GoogleMapOptions = {};
+
+
+  @Output() mapClick: EventEmitter<LatLng> = new EventEmitter<any>();
+  @Output() mapReady: EventEmitter<GoogleMap> = new EventEmitter<GoogleMap>();
 
 
   constructor(
@@ -54,7 +63,9 @@ export class GoogleMapComponent implements AfterViewInit {
     private renderer: Renderer,
     private el: ElementRef,
     private googleMaps: GoogleMaps,
-    private coordinates: CoordinatesProvider
+    private coordinates: CoordinatesProvider,
+    private ocurrenceController: OcurrenceController
+
   ) {
     this.mapContainer = el.nativeElement;
   }
@@ -318,22 +329,27 @@ export class GoogleMapComponent implements AfterViewInit {
         });
         // Add Cluster Marker
         var label = document.getElementById("label");
-        this.map.addMarkerCluster({
-          boundsDraw: true,
-          markers: this.coordinates.getCoordinates(),
-          icons: [
-              {min: 2, max: 10, url: "assets/icon/blue.png", anchor: {x: 16, y: 16}},
-              {min: 10, max: 20, url: "assets/icon/yellow.png", anchor: {x: 16, y: 16}},
-              {min: 20, max: 60, url: "assets/icon/red.png", anchor: {x: 24, y: 24}},
-              {min: 60, url: "assets/icon/black.png",anchor: {x: 32,y: 32}}
-          ]
-        }).then ((markerCluster) => {
-            markerCluster.on("resolution_changed", function (prev, newResolution) {
-                var self = this;
-                label.innerHTML = "&lt;b&gt;zoom = " + self.get("zoom").toFixed(0) + ", resolution = " + self.get("resolution") + "&lt;/b&gt;";
-            });
-            markerCluster.trigger("resolution_changed");
-        });
+        this.ocurrenceController.getOcurrences().then( (res:any) => {
+          this.map.addMarkerCluster({
+            boundsDraw: true,
+            markers: res.data,
+            icons: [
+                {min: 2, max: 10, url: "assets/icon/blue.png", anchor: {x: 16, y: 16}},
+                {min: 10, max: 20, url: "assets/icon/yellow.png", anchor: {x: 16, y: 16}},
+                {min: 20, max: 60, url: "assets/icon/red.png", anchor: {x: 24, y: 24}},
+                {min: 60, url: "assets/icon/black.png",anchor: {x: 32,y: 32}}
+            ]
+          }).then ((markerCluster) => {
+              markerCluster.on("resolution_changed", function (prev, newResolution) {
+                  var self = this;
+                  label.innerHTML = "&lt;b&gt;zoom = " + self.get("zoom").toFixed(0) + ", resolution = " + self.get("resolution") + "&lt;/b&gt;";
+              });
+              markerCluster.trigger("resolution_changed");
+          }).catch( err => {
+            alert(err)
+          });
+  
+        })
       });
     });
   }

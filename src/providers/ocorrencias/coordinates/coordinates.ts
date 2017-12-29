@@ -18,7 +18,7 @@ export class CoordinatesProvider {
           "lng": -34.8942482
         },
         "data_hora_registro": null,
-        "icon": "./img/starbucks.png",
+        "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-11-01T08:54:36.716-02:00",
         "updated_at": "2017-11-01T08:54:36.716-02:00",
         "codigo_tipo_ocorrencia": 2,
@@ -37,7 +37,7 @@ export class CoordinatesProvider {
           "lat": -8.0672909,
           "lng": -34.893405
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-11-01T09:51:02.848-02:00",
         "updated_at": "2017-11-01T09:51:02.848-02:00",
         "codigo_tipo_ocorrencia": 2,
@@ -57,7 +57,7 @@ export class CoordinatesProvider {
           "lng": -34.9020686
         },
         "data_hora_registro": null, 
-        "icon": "./img/starbucks.png",
+        "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-29T19:31:05.879-02:00",
         "updated_at": "2017-10-29T19:31:05.879-02:00",
         "codigo_tipo_ocorrencia": 3,
@@ -76,7 +76,7 @@ export class CoordinatesProvider {
           "lat": -8.04515,
           "lng": -34.9019685
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-25T12:13:49.530-02:00",
         "updated_at": "2017-10-25T12:13:49.530-02:00",
         "codigo_tipo_ocorrencia": 11,
@@ -95,7 +95,7 @@ export class CoordinatesProvider {
           "lat": -8.1246401,
           "lng": -34.9052959
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-23T09:51:03.452-02:00",
         "updated_at": "2017-10-23T09:51:03.452-02:00",
         "codigo_tipo_ocorrencia": 5,
@@ -114,7 +114,7 @@ export class CoordinatesProvider {
           "lat": -8.1348201,
           "lng": -34.9060107
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-23T10:15:35.479-02:00",
         "updated_at": "2017-10-23T10:15:35.479-02:00",
         "codigo_tipo_ocorrencia": 1,
@@ -133,7 +133,7 @@ export class CoordinatesProvider {
           "lat": -8.109608,
           "lng": -34.8897369
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-18T20:20:59.443-02:00",
         "updated_at": "2017-10-18T20:20:59.443-02:00",
         "codigo_tipo_ocorrencia": 2,
@@ -153,7 +153,7 @@ export class CoordinatesProvider {
           "lng": -34.9482689
         },
         "data_hora_registro": null,
-        "icon": "./img/starbucks.png",
+        "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-19T08:52:01.145-02:00",
         "updated_at": "2017-10-19T08:52:01.145-02:00",
         "codigo_tipo_ocorrencia": 9,
@@ -173,7 +173,7 @@ export class CoordinatesProvider {
           "lng": -34.9057137
         },
         "data_hora_registro": null,
-        "icon": "./img/starbucks.png",
+        "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-15T14:05:27.514-02:00",
         "updated_at": "2017-10-15T14:05:27.514-02:00",
         "codigo_tipo_ocorrencia": 2,
@@ -192,7 +192,7 @@ export class CoordinatesProvider {
           "lat": -8.1364505,
           "lng": -34.9017016
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-16T00:02:10.622-02:00",
         "updated_at": "2017-10-16T00:02:10.622-02:00",
         "codigo_tipo_ocorrencia": 2,
@@ -211,7 +211,7 @@ export class CoordinatesProvider {
           "lat": -8.0447868,
           "lng": -34.9449109
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-16T10:54:06.547-02:00",
         "updated_at": "2017-10-16T10:54:06.547-02:00",
         "codigo_tipo_ocorrencia": 3,
@@ -230,7 +230,7 @@ export class CoordinatesProvider {
           "lat": -8.0587494,
           "lng": -34.9031148
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-04T11:00:18.441-03:00",
         "updated_at": "2017-10-04T11:00:18.441-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -249,7 +249,7 @@ export class CoordinatesProvider {
           "lat": -8.1265274,
           "lng": -34.9044748
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-05T06:49:20.044-03:00",
         "updated_at": "2017-10-05T06:49:20.044-03:00",
         "codigo_tipo_ocorrencia": 5,
@@ -268,7 +268,7 @@ export class CoordinatesProvider {
           "lat": -8.0546016,
           "lng": -34.9424853
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-28T14:37:55.092-03:00",
         "updated_at": "2017-09-28T14:37:55.092-03:00",
         "codigo_tipo_ocorrencia": 1,
@@ -287,7 +287,7 @@ export class CoordinatesProvider {
           "lat": -8.0783472,
           "lng": -34.90941
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-27T13:11:09.163-03:00",
         "updated_at": "2017-09-27T13:11:09.163-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -306,7 +306,7 @@ export class CoordinatesProvider {
           "lat": -8.0642744,
           "lng": -34.8770196
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-24T00:43:02.004-03:00",
         "updated_at": "2017-09-24T00:43:02.004-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -325,7 +325,7 @@ export class CoordinatesProvider {
           "lat": -8.0515136,
           "lng": -34.8711242
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-17T13:05:56.648-03:00",
         "updated_at": "2017-09-17T13:05:56.648-03:00",
         "codigo_tipo_ocorrencia": 5,
@@ -344,7 +344,7 @@ export class CoordinatesProvider {
           "lat": -8.0468868,
           "lng": -34.9379656
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-18T10:41:26.606-03:00",
         "updated_at": "2017-09-18T10:41:26.606-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -363,7 +363,7 @@ export class CoordinatesProvider {
           "lat": -8.1062242,
           "lng": -34.8883676
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-18T07:01:12.981-03:00",
         "updated_at": "2017-09-18T07:01:12.981-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -382,7 +382,7 @@ export class CoordinatesProvider {
           "lat": -8.0466453,
           "lng": -34.9336566
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-18T10:32:05.232-03:00",
         "updated_at": "2017-09-18T10:32:05.232-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -401,7 +401,7 @@ export class CoordinatesProvider {
           "lat": -8.0418404,
           "lng": -34.9466712
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-18T09:55:08.599-03:00",
         "updated_at": "2017-09-18T09:55:08.599-03:00",
         "codigo_tipo_ocorrencia": 1,
@@ -420,7 +420,7 @@ export class CoordinatesProvider {
           "lat": -8.0643876,
           "lng": -34.8781741
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-30T20:24:17.106-03:00",
         "updated_at": "2017-09-30T20:24:17.106-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -439,7 +439,7 @@ export class CoordinatesProvider {
           "lat": -8.0330858,
           "lng": -34.8975147
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-15T20:04:38.660-03:00",
         "updated_at": "2017-09-15T20:04:38.660-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -458,7 +458,7 @@ export class CoordinatesProvider {
           "lat": -8.0330858,
           "lng": -34.8975147
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-15T20:10:43.856-03:00",
         "updated_at": "2017-09-15T20:10:43.856-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -477,7 +477,7 @@ export class CoordinatesProvider {
           "lat": -8.0313964,
           "lng": -34.9194079
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-16T09:47:56.633-03:00",
         "updated_at": "2017-09-16T09:47:56.633-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -496,7 +496,7 @@ export class CoordinatesProvider {
           "lat": -8.1240374,
           "lng": -34.9007854
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-05T06:44:21.327-03:00",
         "updated_at": "2017-10-05T06:44:21.327-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -515,7 +515,7 @@ export class CoordinatesProvider {
           "lat": -8.0879352,
           "lng": -34.9591161
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-13T00:12:33.426-03:00",
         "updated_at": "2017-09-13T00:12:33.426-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -534,7 +534,7 @@ export class CoordinatesProvider {
           "lat": -8.0946982,
           "lng": -34.938202
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-11T20:48:23.266-03:00",
         "updated_at": "2017-09-11T20:48:23.266-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -553,7 +553,7 @@ export class CoordinatesProvider {
           "lat": -8.0345456,
           "lng": -34.8888178
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-13T21:47:35.817-03:00",
         "updated_at": "2017-09-13T21:47:35.817-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -572,7 +572,7 @@ export class CoordinatesProvider {
           "lat": -8.0743642,
           "lng": -34.928325
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-17T11:37:57.650-03:00",
         "updated_at": "2017-09-17T11:37:57.650-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -591,7 +591,7 @@ export class CoordinatesProvider {
           "lat": -8.05004,
           "lng": -34.897375
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-06T16:48:40.481-03:00",
         "updated_at": "2017-09-06T16:48:40.481-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -610,7 +610,7 @@ export class CoordinatesProvider {
           "lat": -8.1332986,
           "lng": -34.9175418
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-28T13:52:31.915-03:00",
         "updated_at": "2017-09-28T13:52:31.915-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -629,7 +629,7 @@ export class CoordinatesProvider {
           "lat": -8.1111334,
           "lng": -34.8914222
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-02T23:56:47.246-03:00",
         "updated_at": "2017-09-02T23:56:47.246-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -648,7 +648,7 @@ export class CoordinatesProvider {
           "lat": -8.031677,
           "lng": -34.9073605
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-30T20:02:20.827-03:00",
         "updated_at": "2017-08-30T20:02:20.827-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -667,7 +667,7 @@ export class CoordinatesProvider {
           "lat": -8.0459974,
           "lng": -34.9057108
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-18T16:34:04.254-03:00",
         "updated_at": "2017-09-18T16:34:04.254-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -686,7 +686,7 @@ export class CoordinatesProvider {
           "lat": -8.1383322,
           "lng": -34.9687971
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-23T23:04:59.769-03:00",
         "updated_at": "2017-08-23T23:04:59.769-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -705,7 +705,7 @@ export class CoordinatesProvider {
           "lat": -8.1383322,
           "lng": -34.9687971
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-23T23:05:04.733-03:00",
         "updated_at": "2017-08-23T23:05:04.733-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -724,7 +724,7 @@ export class CoordinatesProvider {
           "lat": -8.1320139,
           "lng": -34.8999219
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-23T23:09:07.279-03:00",
         "updated_at": "2017-08-23T23:09:07.279-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -743,7 +743,7 @@ export class CoordinatesProvider {
           "lat": -8.0509902,
           "lng": -34.9345148
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-02T11:01:39.996-03:00",
         "updated_at": "2017-09-02T11:01:39.996-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -762,7 +762,7 @@ export class CoordinatesProvider {
           "lat": -8.0611878,
           "lng": -34.9103656
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-02T09:22:41.536-03:00",
         "updated_at": "2017-09-02T09:22:41.536-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -781,7 +781,7 @@ export class CoordinatesProvider {
           "lat": -8.052463,
           "lng": -34.9160089
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-22T15:56:54.089-03:00",
         "updated_at": "2017-08-22T15:56:54.089-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -800,7 +800,7 @@ export class CoordinatesProvider {
           "lat": -8.1093819,
           "lng": -34.9133959
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-28T11:31:51.225-03:00",
         "updated_at": "2017-08-28T11:31:51.225-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -819,7 +819,7 @@ export class CoordinatesProvider {
           "lat": -8.1182828,
           "lng": -34.8937995
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-20T10:25:04.945-03:00",
         "updated_at": "2017-08-20T10:25:04.945-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -838,7 +838,7 @@ export class CoordinatesProvider {
           "lat": -8.0511245,
           "lng": -34.8855631
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-21T12:00:33.683-03:00",
         "updated_at": "2017-08-21T12:00:33.683-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -857,7 +857,7 @@ export class CoordinatesProvider {
           "lat": -8.1182828,
           "lng": -34.8937995
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-20T10:24:58.922-03:00",
         "updated_at": "2017-08-20T10:24:58.922-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -876,7 +876,7 @@ export class CoordinatesProvider {
           "lat": -8.0494045,
           "lng": -34.9580534
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-24T10:12:54.078-03:00",
         "updated_at": "2017-08-24T10:12:54.078-03:00",
         "codigo_tipo_ocorrencia": 9,
@@ -895,7 +895,7 @@ export class CoordinatesProvider {
           "lat": -8.0455803,
           "lng": -34.8916232
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-20T14:02:27.461-03:00",
         "updated_at": "2017-08-20T14:02:27.461-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -914,7 +914,7 @@ export class CoordinatesProvider {
           "lat": -8.0280798,
           "lng": -34.8927851
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-30T08:43:58.016-03:00",
         "updated_at": "2017-08-30T08:43:58.016-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -933,7 +933,7 @@ export class CoordinatesProvider {
           "lat": -8.0451445,
           "lng": -34.9492824
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-29T19:47:20.978-03:00",
         "updated_at": "2017-08-29T19:47:20.978-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -952,7 +952,7 @@ export class CoordinatesProvider {
           "lat": -8.1106652,
           "lng": -34.908854
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-11T08:11:55.302-03:00",
         "updated_at": "2017-08-11T08:11:55.302-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -971,7 +971,7 @@ export class CoordinatesProvider {
           "lat": -8.1175108,
           "lng": -34.9185412
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-10-08T14:41:12.982-03:00",
         "updated_at": "2017-10-08T14:41:12.982-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -990,7 +990,7 @@ export class CoordinatesProvider {
           "lat": -8.0964628,
           "lng": -34.8835823
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-08T17:11:35.967-03:00",
         "updated_at": "2017-09-08T17:11:35.967-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1009,7 +1009,7 @@ export class CoordinatesProvider {
           "lat": -8.0394325,
           "lng": -34.8789873
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-08T08:28:34.831-03:00",
         "updated_at": "2017-08-08T08:28:34.831-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -1028,7 +1028,7 @@ export class CoordinatesProvider {
           "lat": -8.0734046,
           "lng": -34.8953354
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-08T00:50:30.777-03:00",
         "updated_at": "2017-08-08T00:50:30.777-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1047,7 +1047,7 @@ export class CoordinatesProvider {
           "lat": -8.0454171,
           "lng": -34.9490043
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-07T21:34:14.814-03:00",
         "updated_at": "2017-08-07T21:34:14.814-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1066,7 +1066,7 @@ export class CoordinatesProvider {
           "lat": -8.0856045,
           "lng": -34.8797726
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-02T23:32:45.758-03:00",
         "updated_at": "2017-08-02T23:32:45.758-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1085,7 +1085,7 @@ export class CoordinatesProvider {
           "lat": -8.0799917,
           "lng": -34.9689845
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-28T22:46:52.644-03:00",
         "updated_at": "2017-07-28T22:46:52.644-03:00",
         "codigo_tipo_ocorrencia": 3,
@@ -1104,7 +1104,7 @@ export class CoordinatesProvider {
           "lat": -7.9818416,
           "lng": -34.8960686
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-22T21:27:57.974-03:00",
         "updated_at": "2017-07-22T21:27:57.974-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1123,7 +1123,7 @@ export class CoordinatesProvider {
           "lat": -8.0945271,
           "lng": -34.9387865
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-21T17:56:42.486-03:00",
         "updated_at": "2017-07-21T17:56:42.486-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1142,7 +1142,7 @@ export class CoordinatesProvider {
           "lat": -8.0253505,
           "lng": -34.9130255
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-08T17:27:07.291-03:00",
         "updated_at": "2017-08-08T17:27:07.291-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1161,7 +1161,7 @@ export class CoordinatesProvider {
           "lat": -8.0479764,
           "lng": -34.9175203
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-08-14T15:02:44.010-03:00",
         "updated_at": "2017-08-14T15:02:44.010-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1180,7 +1180,7 @@ export class CoordinatesProvider {
           "lat": -8.1036952,
           "lng": -34.9107302
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-14T15:13:13.284-03:00",
         "updated_at": "2017-07-14T15:13:13.284-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1199,7 +1199,7 @@ export class CoordinatesProvider {
           "lat": -8.0584468,
           "lng": -34.9022548
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-14T22:14:46.779-03:00",
         "updated_at": "2017-07-14T22:14:46.779-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1218,7 +1218,7 @@ export class CoordinatesProvider {
           "lat": -8.0459703,
           "lng": -34.9466742
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-12T20:39:44.062-03:00",
         "updated_at": "2017-07-12T20:39:44.062-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1237,7 +1237,7 @@ export class CoordinatesProvider {
           "lat": -8.0103421,
           "lng": -34.9537782
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-12T07:43:53.893-03:00",
         "updated_at": "2017-07-12T07:43:53.893-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -1256,7 +1256,7 @@ export class CoordinatesProvider {
           "lat": -8.223494,
           "lng": -34.9653112
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-22T11:43:42.930-03:00",
         "updated_at": "2017-07-22T11:43:42.930-03:00",
         "codigo_tipo_ocorrencia": 2,
@@ -1275,7 +1275,7 @@ export class CoordinatesProvider {
           "lat": -8.05828848203782,
           "lng": -34.9459833119088
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-07-11T14:05:30.793-03:00",
         "updated_at": "2017-07-11T14:05:30.793-03:00",
         "codigo_tipo_ocorrencia": 11,
@@ -1294,7 +1294,7 @@ export class CoordinatesProvider {
           "lat": -8.0626917,
           "lng": -34.8885918
         },
-        "data_hora_registro": null, "icon": "./img/starbucks.png",
+        "data_hora_registro": null, "icon": "http://www.ondefuiroubado.com.br/pins/pin_8.png",
         "created_at": "2017-09-10T16:52:19.878-03:00",
         "updated_at": "2017-09-10T16:52:19.878-03:00",
         "codigo_tipo_ocorrencia": 5,
