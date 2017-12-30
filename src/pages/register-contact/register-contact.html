@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="getContato()">Cadastrar Contato</ion-title>
+    <ion-title *ngIf="!getContato()">Editar Contato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="content-contact">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="contato.nome_contato" value="{{ contato.nome_contato }}" placeholder="Nome contato"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="contato.numero_contato" value="{{ contato.numero_contato }}" placeholder="Número contato"></ion-input>
+    </ion-item>
+    <div class="btn">
+      <button (click)="toContactPage()" ion-button color="light" outline round>Cancelar</button>
+      <button *ngIf="getContato()" (click)="newContact()" ion-button color="light" outline round>Salvar</button>
+      <button *ngIf="!getContato()" (click)="saveContact()" ion-button color="light" outline round>Editar</button>
+    </div>
+  </div>
+</ion-content>
