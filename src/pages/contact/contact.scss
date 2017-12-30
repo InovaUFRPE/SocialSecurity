@@ -9,11 +9,23 @@ page-contact {
         -webkit-box-align: center;
         -webkit-box-pack: center;
     }
-    .content-contact{
+    .content-contato{
         margin-top: 75px;
+        display: block;
+        vertical-align: middle;
+    }
+    .text{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin-top: 1.8rem;
+        font-size: 2.4rem;
     }
     .btn{
         margin-top: 30px;
+    }
+    .tabbar{
+        display: none;
     }
 
 }

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
+import { RegisterContactPage } from '../register-contact/register-contact';
+import { UsersController } from '../../providers/usuario/users-controller/users-controller';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 @Component({
   selector: 'page-contact',
@@ -8,18 +11,42 @@ import { ProfilePage } from '../profile/profile';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
-
+  contato = {
+    nome_contato: "",
+    numero_contato: ""
   }
 
-  public toProfilePage():void{
-    this.navCtrl.pop()
+  constructor(
+    public navCtrl: NavController, 
+    private uniqueDeviceID: UniqueDeviceID,
+    private userController: UsersController) {
+      
   }
 
-  public saveContact():void{
-    /* Aqui função que salva contato */
-    this.navCtrl.pop()
+  ionViewWillEnter(){
+    console.log('ionViewWillEnter ContactPage');
+    this.contatoInfo();
+  }
 
+  public getContato():Boolean{
+    return this.contato.nome_contato == "";
+  }
+
+  public contatoInfo(): void {
+    this.uniqueDeviceID.get().then(udid => {
+      this.userController.verifyDevice(udid).then((res: any) => {
+        if (res.data.status_log == "logged") {
+          this.userController.getContact(res.data.cod_usuario).then((res: any) => {
+            this.contato.nome_contato = res.data.nome_contato.split(" ")[0]
+            this.contato.numero_contato = res.data.numero_contato.split(" ")[0];
+          })
+        }
+      })
+    })
+  }
+
+  public toEditContact():void{
+    this.navCtrl.push(RegisterContactPage);
   }
 
 }
