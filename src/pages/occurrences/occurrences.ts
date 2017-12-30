@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OcurrenceController } from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { HomePage } from '../home/home';
 import { Toast } from '@ionic-native/toast';
 import { Geolocation } from '@ionic-native/geolocation';
+import { MapsProvider } from '../../providers/ocorrencias/maps/maps';
 
 @IonicPage()
 @Component({
@@ -11,7 +12,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   templateUrl: 'occurrences.html',
 })
 export class OccurrencesPage {
-
+  @ViewChild('map') mapRef: ElementRef;
   ocurrenceData = {
     "codigo_tipo_ocorrencia": "",
     "codigo_usuario": 1,
@@ -28,7 +29,8 @@ export class OccurrencesPage {
     public navParams: NavParams,
     private toast: Toast,
     private position: Geolocation,
-    private ocurrenceController: OcurrenceController ) {
+    private ocurrenceController: OcurrenceController,
+    private mapsProvider: MapsProvider ) {
   }
 
   register() {
@@ -50,7 +52,9 @@ export class OccurrencesPage {
     });
   }
 
-  ionViewDidLoad() {  }
+  ionViewDidLoad() {
+   this.mapsProvider.showMap(this.mapRef);
+  }
 
   public toHomePage(): void{
     this.navCtrl.setRoot(HomePage);

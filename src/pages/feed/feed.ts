@@ -1,42 +1,42 @@
-import {OcurrenceController} from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
-import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { OcurrenceController}            from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { Component }   from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Toast } from '@ionic-native/toast';
+import { Toast }       from '@ionic-native/toast';
+
 
 @IonicPage()
 @Component({
+
   selector: 'page-feed',
   templateUrl: 'feed.html',
   providers: [
     OcurrenceController]
+
 })
 
+
 export class FeedPage {
-  
-  public list_ocurrence = new Array<any>();
-
-  private dangerousVideoUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira';
+ 
   private videoUrl: SafeResourceUrl;
-  public loader;
-  constructor(
-    public navCtrl: NavController,
-    public loadingCtrl: LoadingController,
-    public navParams: NavParams,
-    private ocurrenceController: OcurrenceController,
-    private sanitizer: DomSanitizer,
-    private position: Geolocation,
-    private toast: Toast) {
-    this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
+  private list_ocurrence    = new Array<any>();
+  private loader;
+  private filter = { "codigo_tipo_ocorrencia" : "" };
 
+
+  constructor(
+    private ocurrenceController: OcurrenceController,
+    private navCtrl:     NavController,
+    private loadingCtrl: LoadingController,
+    private navParams:   NavParams,
+    private sanitizer:   DomSanitizer,
+    private position:    Geolocation,
+    private toast:       Toast) {
   }
 
-  filter = {
-    "codigo_tipo_ocorrencia":""
-  };
   
-  ocurrenceFilter(){
+  private ocurrenceFilter(){
     this.list_ocurrence = []
     this.presentLoading();
     let codigo = parseInt(this.filter.codigo_tipo_ocorrencia);
@@ -58,7 +58,8 @@ export class FeedPage {
     });
   }
 
-  loadOcurrences(ocurrence, position){
+
+  private loadOcurrences(ocurrence, position){
     let result = [];
     let lst_ocurrences = JSON.parse(JSON.stringify(ocurrence)).data;
     lst_ocurrences.forEach(element => {
@@ -83,9 +84,11 @@ export class FeedPage {
     }
   }
 
+
   private toRad(Value) {
     return Value * Math.PI / 180;
   }
+
 
   private getInBound(lat1, lon1, lat2, lon2) {
     //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
@@ -99,22 +102,25 @@ export class FeedPage {
       Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c;
-    //return d <= 5;
-    return d > 0;
+    return d <= 5;
+    //return d > 0;
   }
 
-  presentLoading() {
+
+  private presentLoading() {
     this.loader = this.loadingCtrl.create({
       content: "Carregando...",
     });
     this.loader.present();
   }
 
-  outLoading() {
+
+  private outLoading() {
     this.loader.dismiss();
   }
 
-  ionViewDidEnter() {
+
+  private ionViewDidEnter() {
     this.presentLoading();
     this.position.getCurrentPosition().then((position) => {
       this.ocurrenceController.getOcurrencesFeed().then( (ocurrence) => {
@@ -133,4 +139,6 @@ export class FeedPage {
       });      
     });
   }
+
+
 }

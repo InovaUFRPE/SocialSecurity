@@ -1,21 +1,22 @@
-import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { Component }       from '@angular/core';
 import { OccurrencesPage } from '../occurrences/occurrences';
-import { ProfilePage } from '../profile/profile';
-import { LoginPage } from '../login/login';
-import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { ProfilePage }     from '../profile/profile';
+import { LoginPage }       from '../login/login';
+import { UniqueDeviceID }  from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
-import { Toast } from '@ionic-native/toast';
+import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
+
+
 export class HomePage {
-  user = {
-    name: "Entrar"
-  }
+  private user = { name: "Entrar" }
   options: any = {
     controls: {
       compass: false,
@@ -25,6 +26,7 @@ export class HomePage {
     }
   };
 
+
   constructor(
     public app: App,
     private navCtrl: NavController,
@@ -32,28 +34,36 @@ export class HomePage {
     private navParams: NavParams,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController) {
-      this.uniqueDeviceID.get().then( udid => {
-        this.userController.verifyDevice(udid).then( (res: any) => {
+      this.uniqueDeviceID.get()
+      .then( udid => {
+        this.userController.verifyDevice(udid)
+        .then( (res: any) => {
           if(res.data.status_log == "logged"){
             this.userController.getUser(res.data.cod_usuario).then( (res: any) => {
               this.user.name = res.data.nome_usuario.split(" ")[0]
             })
           }
-        })
-      })
+          })
+    })
   }
 
-  onMapClick(e) {
-    console.log('map was clicked', e);
-  }
 
-  onMapReady(e) {
-    console.log('map is ready', e);
-  }
+  onMapClick(e) { console.log('map was clicked', e) }
+  onMapReady(e) { console.log('map is ready',    e) }
+
 
   public getNome():Boolean{
     return this.user.name == "Entrar";
   }
+
+
+  private needLogin(){
+    this.toast.showLongBottom("Por favor, antes de inserir uma ocorrência realize o login").subscribe(
+      toast => {
+        console.log(toast);
+    });
+  }
+
 
   public toRegisterPage(): void {
     this.uniqueDeviceID.get().then( udid => {
@@ -62,35 +72,26 @@ export class HomePage {
           this.navCtrl.push(OccurrencesPage)
         }
         else{
-          this.toast.showLongBottom("Por favor, antes de inserir uma ocorrência realize o login").subscribe(
-            toast => {
-              console.log(toast);
-          });
+          this.needLogin()
         }
       }).catch( err => {
-        this.toast.showLongBottom("Por favor, antes de inserir uma ocorrência realize o login").subscribe(
-          toast => {
-            console.log(toast);
-        });
+        this.needLogin()
       })
     })
 
 
   }
 
+
   public toProfilePage():void{
     this.navCtrl.push(ProfilePage)
   }
 
-  /*
-  public openLoginPage():void{
-    this.navCtrl.push(LoginPage)
-  }
-  */
 
   public toBeforeLoginPage():void{
     this.app.getRootNav().setRoot(BeforeLoginPage)
   }
+
 
   public logout():void{
     this.uniqueDeviceID.get().then((udid: any) => {
@@ -98,4 +99,6 @@ export class HomePage {
       this.toBeforeLoginPage();
     });
   }
+
+
 }

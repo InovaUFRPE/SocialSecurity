@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { IntroPage } from '../pages/intro/intro';
@@ -34,12 +33,13 @@ import { Vibration } from '@ionic-native/vibration';
 import { DatabaseProvider } from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordinates';
 import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { MapsProvider } from '../providers/ocorrencias/maps/maps';
+import { MapsStyles } from '../providers/ocorrencias/maps/mapsStyles';
 import { UsersController } from '../providers/usuario/users-controller/users-controller';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -63,7 +63,6 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -89,6 +88,8 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     DatabaseProvider,
     CoordinatesProvider,
     OcurrenceController,
+    MapsProvider,
+    MapsStyles,
     UsersController,
     Vibration
   ]
