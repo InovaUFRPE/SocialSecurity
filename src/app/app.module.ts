@@ -16,6 +16,8 @@ import { OccurrencesPage } from '../pages/occurrences/occurrences';
 import { RegisterPage } from './../pages/register/register';
 import { AlertPage } from '../pages/alert/alert';
 import { ProfilePage } from '../pages/profile/profile';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
+import { RegisterContactPage } from '../pages/register-contact/register-contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,7 +50,9 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     OccurrencesPage,
     RegisterPage,
     AlertPage,
-    ProfilePage
+    ProfilePage,
+    EditProfilePage,
+    RegisterContactPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,9 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     OccurrencesPage,
     RegisterPage,
     AlertPage,
-    ProfilePage
+    ProfilePage,
+    EditProfilePage,
+    RegisterContactPage
   ],
   providers: [
     StatusBar,

@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { DatabaseProvider } from '../providers/database/database';
 import { AlertPage } from '../pages/alert/alert';
 import { ProfilePage } from '../pages/profile/profile';
+import { BeforeLoginPage } from '../pages/before-login/before-login';
 
 
 @Component({

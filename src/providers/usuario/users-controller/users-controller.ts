@@ -94,4 +94,53 @@ export class UsersController {
 		});
 	}
 
+	updateUser(id: number, user: any) {
+		return new Promise((resolve, reject) => {
+			this.http.put(this.API_REQRES_URL + 'users/update/' + id, user)
+				.subscribe((result: any) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error);
+				});
+		});
+	}
+
+	createContact(data){
+		return new Promise((resolve, reject) => {
+			this.http.post(this.API_REQRES_URL + 'contact', data)
+				.subscribe((result: any) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error.json())
+				});
+		});
+	}
+
+	getContact(id: number) {
+		return new Promise((resolve, reject) => {
+			let url = this.API_REQRES_URL + 'contact/' + id;
+			this.http.get(url)
+				.subscribe((result: any) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error.json())
+				});
+		});
+	}
+
+	updateContact(id: number, contact: any){
+		return new Promise((resolve, reject) => {
+			this.http.put(this.API_REQRES_URL + 'contact/update/' + id, contact)
+				.subscribe((result: any) => {
+					resolve(result.json())
+				},
+				(error) => {
+					reject(error);
+				});
+		});
+	}
+
 }
