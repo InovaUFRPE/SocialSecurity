@@ -51,6 +51,10 @@ export class HomePage {
     console.log('map is ready', e);
   }
 
+  public getNome():Boolean{
+    return this.user.name == "Entrar";
+  }
+
   public toRegisterPage(): void {
     this.uniqueDeviceID.get().then( udid => {
       this.userController.verifyDevice(udid).then( (res: any) => {
@@ -78,9 +82,11 @@ export class HomePage {
     this.navCtrl.push(ProfilePage)
   }
 
+  /*
   public openLoginPage():void{
     this.navCtrl.push(LoginPage)
   }
+  */
 
   public toBeforeLoginPage():void{
     this.app.getRootNav().setRoot(BeforeLoginPage)
