@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -18,9 +12,9 @@
   <div class="content-profile">
     <img src="assets/images/icons/user.png" alt="">
     
-    <h3 class="text">Nome usuário</h3> <!-- user.nome -->
-    <h3 class="text">usuario@email</h3> <!-- user.email -->
-    <h3 class="text">Nome Contato</h3> <!-- user.contact.nome -->
+    <h3 class="text">{{ user.nome_usuario }}</h3>
+    <h3 class="text">{{ user.email_usuario }}</h3>
+    <button (click)="toEditProfile()" ion-button color="light" outline round>Editar Perfil</button>
     <br />
     <button (click)="toContactPage()" ion-button color="light" outline round>Contato de Segurança</button>
   </div>
