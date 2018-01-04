@@ -5,37 +5,42 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { IntroPage } from '../pages/intro/intro';
-import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login';
-import { BeforeLoginPage } from '../pages/before-login/before-login';
-import { OccurrencesPage } from '../pages/occurrences/occurrences';
-import { RegisterPage } from './../pages/register/register';
-import { AlertPage } from '../pages/alert/alert';
-import { ProfilePage } from '../pages/profile/profile';
-import { EditProfilePage } from '../pages/edit-profile/edit-profile';
+//PAGES
+import { ContactPage }         from '../pages/contact/contact';
+import { HomePage }            from '../pages/home/home';
+import { IntroPage }           from '../pages/intro/intro';
+import { TabsPage }            from '../pages/tabs/tabs';
+import { LoginPage }           from '../pages/login/login';
+import { BeforeLoginPage }     from '../pages/before-login/before-login';
+import { OccurrencesPage }     from '../pages/occurrences/occurrences';
+import { RegisterPage }        from './../pages/register/register';
+import { AlertPage }           from '../pages/alert/alert';
+import { ProfilePage }         from '../pages/profile/profile';
+import { EditProfilePage }     from '../pages/edit-profile/edit-profile';
 import { RegisterContactPage } from '../pages/register-contact/register-contact';
+import { FeedPageModule }      from '../pages/feed/feed.module';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { FeedPageModule } from '../pages/feed/feed.module';
-import { GoogleMaps } from '@ionic-native/google-maps';
-import { Geolocation } from '@ionic-native/geolocation';
-import { Toast } from '@ionic-native/toast';
+//NATIVE
+import { StatusBar }      from '@ionic-native/status-bar';
+import { SplashScreen }   from '@ionic-native/splash-screen';
+import { GoogleMaps }     from '@ionic-native/google-maps';
+import { Geolocation }    from '@ionic-native/geolocation';
+import { Toast }          from '@ionic-native/toast';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { SQLite }         from '@ionic-native/sqlite';
+import { Vibration }      from '@ionic-native/vibration';
 
+//COMPONENTS
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
-import { SQLite } from '@ionic-native/sqlite';
-import { Vibration } from '@ionic-native/vibration';
-import { DatabaseProvider } from '../providers/database/database';
+//PROVIDERS
+import { DatabaseProvider }    from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordinates';
 import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
-import { MapsProvider } from '../providers/ocorrencias/maps/maps';
-import { MapsStyles } from '../providers/ocorrencias/maps/mapsStyles';
-import { UsersController } from '../providers/usuario/users-controller/users-controller';
+import { MapsProvider }        from '../providers/ocorrencias/maps/maps';
+import { MapsStyles }          from '../providers/ocorrencias/maps/mapsStyles';
+import { UsersController }     from '../providers/usuario/users-controller/users-controller';
+import { ExitApp }             from '../providers/utils/exitApp';
 
 @NgModule({
   declarations: [
@@ -90,6 +95,7 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     OcurrenceController,
     MapsProvider,
     MapsStyles,
+    ExitApp,
     UsersController,
     Vibration
   ]

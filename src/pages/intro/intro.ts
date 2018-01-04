@@ -5,6 +5,7 @@ import { TabsPage } from '../tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { ExitApp } from '../../providers/utils/exitApp';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,10 @@ export class IntroPage {
     public navParams: NavParams,
     private statusBar: StatusBar,
     private userController: UsersController,
-    private uniqueDeviceID: UniqueDeviceID) {
+    private uniqueDeviceID: UniqueDeviceID,
+    private exitApp: ExitApp) {
+      this.exitApp.exitApp();
+
   }
 
   ionViewDidLoad() {}

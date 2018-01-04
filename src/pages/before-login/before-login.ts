@@ -3,6 +3,7 @@ import { Component }    from '@angular/core';
 import { LoginPage }    from '../login/login';
 import { TabsPage }     from '../tabs/tabs';
 import { RegisterPage } from './../register/register';
+import { ExitApp }      from '../../providers/utils/exitApp';
 
 
 @IonicPage()
@@ -16,7 +17,10 @@ export class BeforeLoginPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    private exitApp: ExitApp) {
+      this.exitApp.exitApp();
+
   }
 
 
