@@ -10,14 +10,6 @@ export class MapsStyles {
       ]
     },
     {
-      "elementType": "labels",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
       "elementType": "labels.icon",
       "stylers": [
         {
@@ -60,27 +52,11 @@ export class MapsStyles {
       ]
     },
     {
-      "featureType": "administrative.land_parcel",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
       "featureType": "administrative.locality",
       "elementType": "labels.text.fill",
       "stylers": [
         {
           "color": "#bdbdbd"
-        }
-      ]
-    },
-    {
-      "featureType": "administrative.neighborhood",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },

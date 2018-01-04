@@ -34,13 +34,10 @@ export class OccurrencesPage {
   }
 
   register() {
-   this.position.getCurrentPosition().then((res) => {
-
-      let lat = res.coords.latitude;
-      let long = res.coords.longitude;
+      let lat  = this.mapsProvider.getPosition().lat();
+      let long = this.mapsProvider.getPosition().lng();
       let coordinate = '{"lat": ' + lat + ', "lng": ' + long + '}'
       this.ocurrenceData.posicao_ocorrencia = coordinate;
-
       this.ocurrenceController.insertOcurrence(this.ocurrenceData).then((res) => {
         this.toHomePage()
         this.toast.showLongBottom("Ocorrência cadastrada com sucesso").subscribe(
@@ -49,7 +46,6 @@ export class OccurrencesPage {
           });
 
       }).catch(err => { console.log(err) });
-    });
   }
 
   ionViewDidLoad() {
