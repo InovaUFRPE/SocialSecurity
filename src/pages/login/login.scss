@@ -1,27 +1,14 @@
 page-login {
+  .content .inputs {
+    border: none;    
+  }
   
-    .content .inputs .list{
-      border: none;    
-    }
-  
-    .content .inputs .list .item, 
-    .content .inputs .list .item-inner{
-      background: transparent;  
-      border: none;    
-      
-    }
-    .item-md.item-input.item-input-has-focus .item-inner,
-    .item-md.item-input.input-has-focus .item-inner {
-      border: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    .list-md .item-input.item-input-has-focus:last-child,
-    .list-md .item-input.input-has-focus:last-child {
-      border: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
+  .content .inputs .item, 
+  .content .inputs .item-inner{
+    background: transparent;  
+    border: none;    
+    
+  }
     .content .btn-skip {
       text-align: left;
       flex: 1;
@@ -49,15 +36,10 @@ page-login {
     }
     .content .btns{
       text-align: center;
-      padding-bottom: 20%;
     }
     .content .btns button{
-      background: rgba(255,255,255,.1);
-      padding-top: 23px;
-      padding-bottom: 23px;
-      font-size: 20px;
-      font-weight: bold;
-      
+      background: rgba(255,255,255,.04);      
+      font-size: 15px;
       color: #fff;
       border: none;
       width: 70%;
@@ -66,4 +48,5 @@ page-login {
     .content .btns button:focus{
       background-color: gray;
     }
+    
   }

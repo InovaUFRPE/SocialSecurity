@@ -1,31 +1,23 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Editar Perfil</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 <ion-content padding>
+    <div class="btn-skip">
+        <div>
+            <ion-icon (click)="toBeforePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+              
+        </div>     
+    </div>
   <div class="content-contact">
     <div class="inputs">
       <ion-list inset>
 
         <ion-item>
-          <ion-label>Nome</ion-label>
-          <ion-input [(ngModel)]="userData.nome_usuario" value="userData.nome_usuario" type="text"></ion-input>
+          <ion-input [(ngModel)]="userData.nome_usuario" value="userData.nome_usuario" placeholder="Nome" type="text"></ion-input>
         </ion-item>
-        <br />
         <ion-item>
-          <ion-label>Email</ion-label>
-          <ion-input [(ngModel)]="userData.email_usuario" value="userData.email_usuario" type="email"></ion-input>
+          <ion-input [(ngModel)]="userData.email_usuario" value="userData.email_usuario" placeholder="Email "type="email"></ion-input>
         </ion-item>
-        <br />
         <ion-item>
-          <ion-label>Password</ion-label>
-          <ion-input [(ngModel)]="userData.senha_usuario" value="userData.senha_usuario" type="password"></ion-input>
+          <ion-input [(ngModel)]="userData.senha_usuario" value="userData.senha_usuario" placeholder="Senha" type="password"></ion-input>
         </ion-item>
-        <br />
       </ion-list>
     </div>
     <div class="btn">

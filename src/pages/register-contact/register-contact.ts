@@ -69,5 +69,8 @@ export class RegisterContactPage {
     this.userController.updateContact(this.contato_usurario.cod_usuario,this.contato);
     this.navCtrl.pop()
   }
+  public toBeforePage(): void {
+    this.navCtrl.pop();
+  }
 
 }

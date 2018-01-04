@@ -10,7 +10,7 @@ page-profile {
         -webkit-box-pack: center;
     }
     .content-profile{
-        margin-top: 75px;
+        margin-top: 50px;
         display: block;
         vertical-align: middle;
     }
@@ -32,4 +32,26 @@ page-profile {
         height: auto;
         max-height: 100%;
     }
+    .content-profile button{
+        text-decoration: none;
+        background: rgba(255,255,255,.04);
+        color: #fff;
+        border: none;
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+        font-size: 15px;
+    }
+    .content .btn-skip {
+        text-align: left;
+        flex: 1;
+      }
+      .content .btn-skip ion-icon{
+        top: 0;
+      }
+      .content .btn-skip img{
+        width: 80%;
+      }
+      .ion-ios-arrow-dropleft-circle {
+        color: #fff;
+        font-size: 30px;
+      }
 }

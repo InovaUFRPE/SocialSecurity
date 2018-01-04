@@ -50,4 +50,7 @@ export class EditProfilePage {
     this.userController.updateUser(this.user.codigo_usuario, this.userData)
     this.navCtrl.pop()
   }
+  public toBeforePage():void{
+    this.navCtrl.pop();
+  }
 }

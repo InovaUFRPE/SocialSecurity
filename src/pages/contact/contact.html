@@ -1,19 +1,18 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Contato</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
-
-  <div class="content-contato">
+<ion-content padding>
+    <div class="btn-skip">
+        <div>
+            <ion-icon (click)="toBeforePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+              
+        </div>     
+    </div>
+    <div class="text-cima">
+        
+    </div>
+<div class="content-contato">
     <h3 class="text">{{ contato.nome_contato }}</h3>
     <h3 class="text">{{ contato.numero_contato }}</h3>
     <button *ngIf="!getContato()" (click)="toEditContact()" ion-button color="light" outline round>Editar Contato</button>
     <button *ngIf="getContato()" (click)="toEditContact()" ion-button color="light" outline round>Cadastrar Contato</button>
-  </div>
+</div>
 
 </ion-content>

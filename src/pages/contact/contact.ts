@@ -48,5 +48,7 @@ export class ContactPage {
   public toEditContact():void{
     this.navCtrl.push(RegisterContactPage);
   }
-
+  public toBeforePage(): void {
+    this.navCtrl.pop();
+  }
 }

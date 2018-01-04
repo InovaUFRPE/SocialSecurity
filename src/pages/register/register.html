@@ -7,38 +7,36 @@
         </div>
         <div style="text-align:center">
             <img src="assets/images/icons/icon.png" alt="">
-            
+       
         </div>
       </div>
       <div class="inputs">
-        <ion-list inset>
-  
+        <ion-list>
           <ion-item>
-            <ion-label>Nome</ion-label>
-            <ion-input [(ngModel)]="userData.nome_usuario" type="text"></ion-input>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Email</ion-label>
-            <ion-input [(ngModel)]="userData.email_usuario" type="email"></ion-input>
+            <ion-input [(ngModel)]="userData.nome_usuario" type="text" placeholder="Nome"></ion-input>
           </ion-item>
 
+  
           <ion-item>
-            <ion-label>Password</ion-label>
-            <ion-input [(ngModel)]="userData.senha_usuario" type="password"></ion-input>
+            <ion-input [(ngModel)]="userData.email_usuario" type="email" placeholder="Email"></ion-input> 
           </ion-item>
+  
 
           <ion-item>
-              <ion-label>Sexo</ion-label>
-              <ion-select [(ngModel)]="userData.sexo">
+            <ion-input [(ngModel)]="userData.senha_usuario" type="password" placeholder="Senha"></ion-input>         
+          </ion-item>
+  
+
+          <ion-item>
+              <ion-select [(ngModel)]="userData.sexo" placeholder="Sexo">
                 <ion-option value="0">Feminino</ion-option>
                 <ion-option value="1">Masculino</ion-option>
                 <ion-option value="2">Prefiro não informar</ion-option>
               </ion-select>
             </ion-item>
-          
-        </ion-list>
+          </ion-list>
       </div>
+
       <div class="btns">
         <button text-center (click)="register()" ion-button round outline>CADASTRAR</button>
       </div>

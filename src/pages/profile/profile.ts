@@ -51,5 +51,8 @@ export class ProfilePage {
   public toContactPage():void{
     this.navCtrl.push(ContactPage);
   }
+  public toBeforePage():void{
+    this.navCtrl.pop();
+  }
 
 }
