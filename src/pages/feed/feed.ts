@@ -63,13 +63,17 @@ export class FeedPage {
     let result = [];
     let lst_ocurrences = JSON.parse(JSON.stringify(ocurrence)).data;
     lst_ocurrences.forEach(element => {
+      alert(element.posicao_ocorrencia.split(",")[0].split(":")[1]);
+      alert(element.posicao_ocorrencia.split(",")[1].split(":")[1].split("}")[0]);
+
       if (this.getInBound(
-        parseInt(element.posicao_ocorrencia.split(",")[0].split(":")[1]), 
-        parseInt(element.posicao_ocorrencia.split(",")[1].split(":")[1]), 
-        position.coords.latitude, 
-        position.coords.longitude)) {
-          result.push(element);
-      }          
+            position.coords.latitude, 
+            position.coords.longitude,
+            element.posicao_ocorrencia.split(",")[0].split(":")[1], 
+            element.posicao_ocorrencia.split(",")[1].split(":")[1].split("}")[0]
+            )) {
+                result.push(element);
+            }          
     });
     if(result.length > 0){
       this.list_ocurrence = result;
@@ -92,18 +96,16 @@ export class FeedPage {
 
   private getInBound(lat1, lon1, lat2, lon2) {
     //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
-    var R = 6371; // km
-    var dLat = this.toRad(lat2 - lat1);
-    var dLon = this.toRad(lon2 - lon1);
-    var lat1_ = this.toRad(lat1);
-    var lat2_ = this.toRad(lat2);
-
-    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var d = R * c;
-    return d <= 5;
-    //return d > 0;
+    var radlat1 = Math.PI * lat1/180
+    var radlat2 = Math.PI * lat2/180
+    var theta = lon1-lon2
+    var radtheta = Math.PI * theta/180
+    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    dist = Math.acos(dist)
+    dist = dist * 180/Math.PI
+    dist = dist * 60 * 1.1515
+    dist = dist * 1.609344 
+    return dist <= 5;
   }
 
 

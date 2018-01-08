@@ -20,8 +20,9 @@
         </ion-list>
   </div>
   <ion-card class="ion-card" *ngFor="let ocurrence of list_ocurrence">
-
-    <ion-item> 
+    
+    <div></div>
+    <ion-item  (click)="openMap()"> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
       <h2>{{ocurrence.titulo_ocorrencia}}</h2>      
     </ion-item>
