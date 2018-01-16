@@ -63,9 +63,6 @@ export class FeedPage {
     let result = [];
     let lst_ocurrences = JSON.parse(JSON.stringify(ocurrence)).data;
     lst_ocurrences.forEach(element => {
-      alert(element.posicao_ocorrencia.split(",")[0].split(":")[1]);
-      alert(element.posicao_ocorrencia.split(",")[1].split(":")[1].split("}")[0]);
-
       if (this.getInBound(
             position.coords.latitude, 
             position.coords.longitude,
