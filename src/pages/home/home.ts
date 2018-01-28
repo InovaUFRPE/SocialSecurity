@@ -43,6 +43,18 @@ export class HomePage {
      this.exitApp.exitApp();
   }
 
+  /*
+
+  //tentar atualizar a pagina de home
+
+  ionViewWillEnter(){
+    setTimeout(function () {
+      this.appCtrl.getRootNav().setRoot(this);
+      window.location.reload();
+    }, 5000);
+  }
+  */
+  
 
   private getUDID(){
     this.uniqueDeviceID.get()
