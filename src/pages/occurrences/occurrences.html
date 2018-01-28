@@ -1,7 +1,7 @@
 <ion-content padding>
     <ion-list >
       <ion-item no-lines>
-        <ion-select cancelText="Cancelar" [(ngModel)]="ocurrenceData.codigo_tipo_ocorrencia" interface="action-sheet" placeholder="Ocorrências">
+        <ion-select cancelText="Cancelar" doneText="Confirmar" [(ngModel)]="ocurrenceData.codigo_tipo_ocorrencia" interface="action-sheet" placeholder="Ocorrências">
           <ion-option value="1">Furto</ion-option>
           <ion-option value="2">Roubo</ion-option>
           <ion-option value="3">Assalto a grupo</ion-option>
@@ -19,13 +19,13 @@
         <ion-input [(ngModel)]="ocurrenceData.titulo_ocorrencia" type="text" placeholder="Título"></ion-input>
       </ion-item>
       <ion-item no-lines >
-        <ion-datetime cancelText="Cancelar" [(ngModel)]="ocurrenceData.data_ocorrencia" displayFormat="DD/MM/YYYY" placeholder="Data"></ion-datetime>
+        <ion-datetime cancelText="Cancelar" doneText="Confirmar" [(ngModel)]="ocurrenceData.data_ocorrencia" displayFormat="DD/MM/YYYY" placeholder="Data"></ion-datetime>
       </ion-item>
       <ion-item no-lines >
-        <ion-datetime cancelText="Cancelar" [(ngModel)]="ocurrenceData.hora_ocorrencia" displayFormat="h:mm A" pickerFormat="h mm A" placeholder="Hora"></ion-datetime>
+        <ion-datetime cancelText="Cancelar" doneText="Confirmar" [(ngModel)]="ocurrenceData.hora_ocorrencia" displayFormat="h:mm A" pickerFormat="h mm A" placeholder="Hora"></ion-datetime>
       </ion-item>
       <ion-item>
-        <ion-select cancelText="Cancelar" [(ngModel)]="ocurrenceData.boletim_ocorrencia" interface="action-sheet" placeholder="Boletim de Ocorrência">
+        <ion-select cancelText="Cancelar" doneText="Confirmar" [(ngModel)]="ocurrenceData.boletim_ocorrencia" interface="action-sheet" placeholder="Boletim de Ocorrência">
           <ion-option value="true">Registrado</ion-option>
           <ion-option value="false">Não registrado</ion-option>
         </ion-select>
