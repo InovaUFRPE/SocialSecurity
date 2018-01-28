@@ -18,6 +18,7 @@
     <ion-fab-list *ngIf="getNome()" side="bottom">
       <button ion-fab (click)="toBeforeLoginPage()">
         <ion-icon name="log-in"></ion-icon>
+        <div class="label" dir="ltr">Entrar</div>
       </button> 
     </ion-fab-list>
     <ion-fab-list *ngIf="!getNome()" side="bottom">
@@ -27,7 +28,7 @@
       </button>
       <button ion-fab (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
-        <div class="label" dir="ltr">Logout</div>
+        <div class="label" dir="ltr">Sair</div>
       </button>
 
     </ion-fab-list>

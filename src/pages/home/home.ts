@@ -8,6 +8,7 @@ import { UsersController } from '../../providers/usuario/users-controller/users-
 import { ExitApp }         from '../../providers/utils/exitApp';
 import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
+import { Refresher } from 'ionic-angular/components/refresher/refresher';
 
 
 @Component({
@@ -42,7 +43,7 @@ export class HomePage {
      this.exitApp.exitApp();
   }
 
-  
+
   private getUDID(){
     this.uniqueDeviceID.get()
     .then( udid => {
