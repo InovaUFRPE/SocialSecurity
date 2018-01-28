@@ -42,7 +42,7 @@ export class HomePage {
      this.exitApp.exitApp();
   }
 
-
+  
   private getUDID(){
     this.uniqueDeviceID.get()
     .then( udid => {
