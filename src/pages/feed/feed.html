@@ -14,7 +14,7 @@
       <ion-list>
           <ion-item>
             <ion-label>Ocorrências</ion-label>
-            <ion-select [(ngModel)]="filter.codigo_tipo_ocorrencia" interface="action-sheet" (ionChange)="ocurrenceFilter()"> 
+            <ion-select cancelText="Cancelar" [(ngModel)]="filter.codigo_tipo_ocorrencia" interface="action-sheet" (ionChange)="ocurrenceFilter()"> 
               <ion-option value="1">Furto</ion-option>
               <ion-option value="2">Roubo</ion-option>
               <ion-option value="3">Assalto a grupo</ion-option>
