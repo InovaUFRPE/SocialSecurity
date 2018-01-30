@@ -33,14 +33,19 @@
   <ion-card class="ion-card" *ngFor="let ocurrence of list_ocurrence">
     
     <div></div>
+    <ion-item>
+        <ion-icon name="ios-megaphone-outline" item-start large></ion-icon>
+        <span item-left>{{ocurrence.descricao_ocorrencia}}</span>
+      </ion-item>
     <ion-item  (click)="openMap()"> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
-      <h2>{{ocurrence.titulo_ocorrencia}}</h2>      
+      <span item-left>{{ocurrence.titulo_ocorrencia}}</span>      
     </ion-item>
     <ion-item>
       <ion-icon name="ios-time-outline" item-start large></ion-icon>
-      <span item-right>{{ocurrence.data_ocorrencia}}</span>
+      <span item-left>{{ocurrence.data_ocorrencia}}</span>
     </ion-item>
+
 
   </ion-card>
 </ion-content>

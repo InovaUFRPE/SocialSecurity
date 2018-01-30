@@ -78,6 +78,10 @@ export class FeedPage {
             }          
     });
     if(result.length > 0){
+      for(let i in result){
+        let data = result[i].data_ocorrencia.split("-");
+        result[i].data_ocorrencia = data[2] + "/" + data[1] + "/" + data[0];
+      }
       this.list_ocurrence = result;
       this.outLoading();
     }else{
