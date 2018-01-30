@@ -4,23 +4,25 @@ import { BeforeLoginPage } from '../before-login/before-login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
-import { ExitApp } from '../../providers/utils/exitApp';
+import { ExitApp } from '../../providers/utils/exit-app';
 import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
   selector: 'page-intro',
   templateUrl: 'intro.html',
+  providers: [
+    ExitApp]
 })
 export class IntroPage {
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
+    private navCtrl: NavController,
+    private navParams: NavParams,
     private statusBar: StatusBar,
     private userController: UsersController,
     private uniqueDeviceID: UniqueDeviceID,
-    private exitApp: ExitApp) {
+    private exitApp: ExitApp,) {
       this.exitApp.exitApp();
 
   }
@@ -31,12 +33,12 @@ export class IntroPage {
     this.uniqueDeviceID.get().then((udid: any) => {
       this.userController.verifyDevice(udid).then( (res: any) => {
         if(res.data.status_log == "logged"){
-          this.navCtrl.setRoot(HomePage)
+          this.navCtrl.setRoot(HomePage);
         }else{
-          this.navCtrl.setRoot(BeforeLoginPage)
+          this.navCtrl.setRoot(BeforeLoginPage);
         }
       }).catch( err => {
-        this.navCtrl.setRoot(BeforeLoginPage)
+        this.navCtrl.setRoot(BeforeLoginPage);
       })
     });
   }

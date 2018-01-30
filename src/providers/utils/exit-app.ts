@@ -22,6 +22,15 @@ export class ExitApp {
   
   }
 
+  public doNothing(){
+    this.platform.ready().then(() => {
+      this.platform.registerBackButtonAction(() => {
+        return true;
+      });
+    });
+  
+  }
+
 
   private showMessage(){
     let confirm = this.alertCtrl.create({

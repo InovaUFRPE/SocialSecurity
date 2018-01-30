@@ -5,6 +5,7 @@ import { HomePage } from '../home/home';
 import { Toast } from '@ionic-native/toast';
 import { Geolocation } from '@ionic-native/geolocation';
 import { MapsProvider } from '../../providers/ocorrencias/maps/maps';
+import { ExitApp } from '../../providers/utils/exit-app';
 
 @IonicPage()
 @Component({
@@ -28,9 +29,11 @@ export class OccurrencesPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     private toast: Toast,
+    private exitApp: ExitApp,
     private position: Geolocation,
     private ocurrenceController: OcurrenceController,
     private mapsProvider: MapsProvider ) {
+      this.exitApp.doNothing();
   }
 
   register() {
@@ -53,11 +56,7 @@ export class OccurrencesPage {
   }
 
   public toHomePage(): void{
-    this.navCtrl.setRoot(HomePage);
-  }
-
-  public toBeforePage(): void {
-    this.toHomePage()
+    this.navCtrl.setRoot(HomePage)
   }
 
 }

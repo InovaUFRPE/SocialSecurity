@@ -11,6 +11,7 @@ import { HomePage } from '../home/home';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
+  providers: []
 })
 export class LoginPage {
   private loader;
@@ -22,9 +23,9 @@ export class LoginPage {
     private toast: Toast,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController, 
-    public navCtrl: NavController, 
-    public navParams: NavParams,
-    public loadingCtrl: LoadingController) {
+    private navCtrl: NavController, 
+    private navParams: NavParams,
+    private loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -35,7 +36,7 @@ export class LoginPage {
     this.navCtrl.pop()
   }
 
-  public toTabsPage(): void {
+  public toHomePage(): void {
     this.navCtrl.setRoot(HomePage);
   }
  
@@ -67,7 +68,7 @@ export class LoginPage {
               let codigo_usuario = res.data.codigo_usuario;
              this.userController.login(codigo_usuario,udid).then( res => {
                this.outLoading();
-                this.toTabsPage()
+                this.toHomePage()
                 this.toast.showLongBottom("Bem vindo").subscribe(
                   toast => {
                     console.log(toast);

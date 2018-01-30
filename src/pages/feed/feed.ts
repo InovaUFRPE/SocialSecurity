@@ -1,9 +1,11 @@
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { OcurrenceController}            from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { IonicPage, LoadingController } from 'ionic-angular';
+import { OcurrenceController} from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
 import { Component }   from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast }       from '@ionic-native/toast';
+import { ExitApp } from '../../providers/utils/exit-app';
+import { HomePage } from '../home/home';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
 
 
 @IonicPage()
@@ -12,14 +14,12 @@ import { Toast }       from '@ionic-native/toast';
   selector: 'page-feed',
   templateUrl: 'feed.html',
   providers: [
-    OcurrenceController]
-
+    OcurrenceController,]
 })
 
 
 export class FeedPage {
  
-  private videoUrl: SafeResourceUrl;
   private list_ocurrence    = new Array<any>();
   private loader;
   private filter = { "codigo_tipo_ocorrencia" : "" };
@@ -27,20 +27,16 @@ export class FeedPage {
 
   constructor(
     private ocurrenceController: OcurrenceController,
-    private navCtrl:     NavController,
     private loadingCtrl: LoadingController,
-    private navParams:   NavParams,
-    private sanitizer:   DomSanitizer,
     private position:    Geolocation,
+    private exitApp:     ExitApp,
+    private navCtrl: NavController,
     private toast:       Toast) {
-  }
+      this.exitApp.doNothing()}
 
   /* Refresher */
   doRefresh(refresher) {
-    console.log('Begin async operation', refresher);
-
     setTimeout(() => {
-      console.log('Async operation has ended');
       refresher.complete();
     }, 2000);
   }
@@ -66,7 +62,6 @@ export class FeedPage {
       });      
     });
   }
-
 
   private loadOcurrences(ocurrence, position){
     let result = [];
@@ -95,12 +90,6 @@ export class FeedPage {
     }
   }
 
-
-  private toRad(Value) {
-    return Value * Math.PI / 180;
-  }
-
-
   private getInBound(lat1, lon1, lat2, lon2) {
     //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
     var radlat1 = Math.PI * lat1/180
@@ -115,7 +104,6 @@ export class FeedPage {
     return dist <= 5;
   }
 
-
   private presentLoading() {
     this.loader = this.loadingCtrl.create({
       content: "Carregando...",
@@ -123,11 +111,13 @@ export class FeedPage {
     this.loader.present();
   }
 
-
   private outLoading() {
     this.loader.dismiss();
   }
 
+  private toHomePage(){
+    this.navCtrl.setRoot(HomePage);
+  }
 
   private ionViewDidEnter() {
     this.presentLoading();
@@ -148,6 +138,5 @@ export class FeedPage {
       });      
     });
   }
-
 
 }

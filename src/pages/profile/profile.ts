@@ -5,6 +5,8 @@ import { EditProfilePage } from '../edit-profile/edit-profile';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { RegisterContactPage } from '../register-contact/register-contact';
+import { ExitApp } from '../../providers/utils/exit-app';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -19,11 +21,12 @@ export class ProfilePage {
   }
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
+    private navCtrl: NavController, 
+    private navParams: NavParams,
+    private exitApp: ExitApp,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController) {
-      
+      this.exitApp.doNothing();
   }
 
   ionViewWillEnter() {
@@ -52,7 +55,7 @@ export class ProfilePage {
     this.navCtrl.push(ContactPage);
   }
   public toBeforePage():void{
-    this.navCtrl.pop();
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

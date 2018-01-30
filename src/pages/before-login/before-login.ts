@@ -2,7 +2,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Component }    from '@angular/core';
 import { LoginPage }    from '../login/login';
 import { RegisterPage } from './../register/register';
-import { ExitApp }      from '../../providers/utils/exitApp';
+import { ExitApp }      from '../../providers/utils/exit-app';
 import { HomePage } from '../home/home';
 
 
@@ -10,6 +10,8 @@ import { HomePage } from '../home/home';
 @Component({
   selector: 'page-before-login',
   templateUrl: 'before-login.html',
+  providers: [
+    ExitApp]
 })
 
 

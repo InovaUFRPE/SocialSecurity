@@ -32,41 +32,10 @@
       </ion-item>
 
     </ion-list>
-
-  <!--  <ion-list>
-      <ion-item>
-        <ion-input [(ngModel)]="ocurrenceData.titulo_ocorrencia" type="text" placeholder="Título"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input [(ngModel)]="ocurrenceData.endereco_ocorrencia" type="text" placeholder="Endereço"></ion-input>
-      </ion-item>
-    </ion-list> -->
-  <!-- 
-    <ion-list>
-      <ion-item>
-        <ion-label>Data</ion-label>
-        <ion-datetime [(ngModel)]="ocurrenceData.data_ocorrencia" displayFormat="DD-MM-YYYY"></ion-datetime>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Hora</ion-label>
-        <ion-datetime [(ngModel)]="ocurrenceData.hora_ocorrencia" displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
-      </ion-item>
-    </ion-list> -->
-
-    <!-- <ion-list>
-      <ion-item>
-        <ion-label>Boletim</ion-label>
-        <ion-select [(ngModel)]="ocurrenceData.boletim_ocorrencia" interface="action-sheet">
-          <ion-option value="true">Registrado</ion-option>
-          <ion-option value="false">Não registrado</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list> -->
     <div #map id="map" style="height:35%; margin-left: 5%;margin-right: 5%;"></div>
     <br>
     <div class="btns">
-      <button ion-button color="mainColor"(click)="toBeforePage()" round >Cancelar</button>
+      <button ion-button color="mainColor"(click)="toHomePage()" round >Cancelar</button>
       <button ion-button  color="greenRegister" (click)="register()">Registrar</button>
     </div>
 </ion-content>

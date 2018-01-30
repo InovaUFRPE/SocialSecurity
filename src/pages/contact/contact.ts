@@ -4,10 +4,11 @@ import { ProfilePage } from '../profile/profile';
 import { RegisterContactPage } from '../register-contact/register-contact';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { ExitApp } from '../../providers/utils/exit-app';
 
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html'
+  templateUrl: 'contact.html',
 })
 export class ContactPage {
 
@@ -17,9 +18,11 @@ export class ContactPage {
   }
 
   constructor(
-    public navCtrl: NavController, 
+    private navCtrl:        NavController, 
     private uniqueDeviceID: UniqueDeviceID,
-    private userController: UsersController) {
+    private userController: UsersController,
+    private exitApp: ExitApp,) {
+      this.exitApp.doNothing();
       
   }
 

@@ -5,16 +5,16 @@ import { ProfilePage }     from '../profile/profile';
 import { LoginPage }       from '../login/login';
 import { UniqueDeviceID }  from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
-import { ExitApp }         from '../../providers/utils/exitApp';
+import { ExitApp }         from '../../providers/utils/exit-app';
 import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
-import { Refresher } from 'ionic-angular/components/refresher/refresher';
-import { FeedPage } from '../feed/feed';
-
+import { FeedPage }        from '../feed/feed';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
+  providers: [
+    ExitApp]
 })
 
 
@@ -31,30 +31,18 @@ export class HomePage {
   
 
   constructor(
-    public  app: App,
-    private navCtrl: NavController,
-    private toast: Toast,
-    private navParams: NavParams,
+    private app           : App,
+    private navCtrl       : NavController,
+    private toast         : Toast,
+    private navParams     : NavParams,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController,
-    private platform: Platform,
-    private alertCtrl: AlertController,
-    private exitApp: ExitApp    ) {
+    private platform      : Platform,
+    private alertCtrl     : AlertController,
+    private exitApp       : ExitApp) {
      this.getUDID();
      this.exitApp.exitApp();
   }
-
-  /*
-
-  //tentar atualizar a pagina de home
-
-  ionViewWillEnter(){
-    setTimeout(function () {
-      this.appCtrl.getRootNav().setRoot(this);
-      window.location.reload();
-    }, 5000);
-  }
-  */
   
 
   private getUDID(){

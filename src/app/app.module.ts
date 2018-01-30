@@ -39,7 +39,7 @@ import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controll
 import { MapsProvider }        from '../providers/ocorrencias/maps/maps';
 import { MapsStyles }          from '../providers/ocorrencias/maps/mapsStyles';
 import { UsersController }     from '../providers/usuario/users-controller/users-controller';
-import { ExitApp }             from '../providers/utils/exitApp';
+import { ExitApp }             from '../providers/utils/exit-app';
 
 @NgModule({
   declarations: [

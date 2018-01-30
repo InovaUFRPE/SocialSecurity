@@ -5,7 +5,12 @@
     </ion-refresher-content>
   </ion-refresher>
   
-  <div>
+  <div class="btn-skip">
+    <div>
+        <ion-icon (click)="toHomePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+    </div>     
+  </div>
+  <div style="width: 85%">
       <ion-list>
           <ion-item>
             <ion-label>Ocorrências</ion-label>

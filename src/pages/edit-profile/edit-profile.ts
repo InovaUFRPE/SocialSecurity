@@ -3,11 +3,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { ProfilePage } from '../profile/profile';
+import { ExitApp } from '../../providers/utils/exit-app';
 
 @IonicPage()
 @Component({
   selector: 'page-edit-profile',
   templateUrl: 'edit-profile.html',
+  providers: []
 })
 export class EditProfilePage {
 
@@ -15,11 +17,12 @@ export class EditProfilePage {
   userData = { "email_usuario": "", "senha_usuario": "", "nome_usuario": "" };
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
+    private navCtrl       : NavController, 
+    private navParams     : NavParams,
+    private exitApp       : ExitApp,
     private uniqueDeviceID: UniqueDeviceID,
     private userController: UsersController) {
-      
+      this.exitApp.doNothing();
   }
 
   ionViewWillEnter() {
