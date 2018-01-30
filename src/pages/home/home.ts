@@ -8,6 +8,8 @@ import { UsersController } from '../../providers/usuario/users-controller/users-
 import { ExitApp }         from '../../providers/utils/exitApp';
 import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
+import { Refresher } from 'ionic-angular/components/refresher/refresher';
+import { FeedPage } from '../feed/feed';
 
 
 @Component({
@@ -42,6 +44,18 @@ export class HomePage {
      this.exitApp.exitApp();
   }
 
+  /*
+
+  //tentar atualizar a pagina de home
+
+  ionViewWillEnter(){
+    setTimeout(function () {
+      this.appCtrl.getRootNav().setRoot(this);
+      window.location.reload();
+    }, 5000);
+  }
+  */
+  
 
   private getUDID(){
     this.uniqueDeviceID.get()
@@ -63,7 +77,7 @@ export class HomePage {
 
 
   public getNome():Boolean{
-    return this.user.name == "Entrar";
+    return !(this.user.name == "Entrar");
   }
 
 
@@ -79,7 +93,7 @@ export class HomePage {
     this.uniqueDeviceID.get().then( udid => {
       this.userController.verifyDevice(udid).then( (res: any) => {
         if(res.data.status_log == "logged"){
-          this.navCtrl.push(OccurrencesPage)
+          this.app.getRootNav().setRoot(OccurrencesPage)
         }
         else{
           this.needLogin()
@@ -94,7 +108,7 @@ export class HomePage {
 
 
   public toProfilePage():void{
-    this.navCtrl.push(ProfilePage)
+    this.app.getRootNav().setRoot(ProfilePage)
   }
 
 
@@ -102,6 +116,9 @@ export class HomePage {
     this.app.getRootNav().setRoot(BeforeLoginPage)
   }
 
+  public toFeedPage():void{
+    this.app.getRootNav().setRoot(FeedPage)
+  }
 
   public logout():void{
     this.uniqueDeviceID.get().then((udid: any) => {

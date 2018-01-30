@@ -19,4 +19,29 @@ page-home {
     border: none;
     background: transparent;
   }
+
+.fab {
+      contain: initial;
+    }
+ 
+    ion-fab {
+        ion-fab-list button[ion-fab] {
+            overflow: visible;
+ 
+            div.label {
+              position: absolute;
+              left:48px;
+              background: rgba(0,0,0,0.7);
+              height: 24px;
+              line-height: 16px;
+              padding-left: 8px;
+              padding-right: 8px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              border-radius: 3px;
+              color: #fff;
+              box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+      }
 }

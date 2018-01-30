@@ -1,19 +1,9 @@
 page-before-login {
   
-  .content .btns .btns2 button{
-    text-decoration: none;
-    background: rgba(255,255,255,.04);
-    padding: 10px;
-    border-radius: 25px;
-    color: #fff;
-    border: none;
-    width: 60%;
-    cursor: pointer;
-    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-  }
   .content .before-btns{
     flex: 1;
   }
+
   .content .before-btns img{
     margin-bottom: 50px;
   }
@@ -21,26 +11,16 @@ page-before-login {
     text-align: center;
     padding-bottom: 20%;
   }
-  .content .btns button{
-    background: rgba(255,255,255,.04);
-    padding-top: 23px;
-    padding-bottom: 23px;
-    font-weight: bold;
-    border-radius: 25px;
-    
-    color: #fff;
-    border: none;
-    width: 70%;
-    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-  }
+  
   .content .btns button:focus{
     background-color: gray;
   }
-  .content .btns .btns2 .btns3 button{
+  .content .btns button{
     text-decoration: none;
     background: rgba(255,255,255,.04);
     padding: 10px;
     border-radius: 25px;
+    margin-bottom: 10px;
     color: #fff;
     border: none;
     width: 60%;

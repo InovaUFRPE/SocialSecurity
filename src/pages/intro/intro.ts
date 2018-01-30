@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BeforeLoginPage } from '../before-login/before-login';
-import { TabsPage } from '../tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { ExitApp } from '../../providers/utils/exitApp';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -31,7 +31,7 @@ export class IntroPage {
     this.uniqueDeviceID.get().then((udid: any) => {
       this.userController.verifyDevice(udid).then( (res: any) => {
         if(res.data.status_log == "logged"){
-          this.navCtrl.setRoot(TabsPage)
+          this.navCtrl.setRoot(HomePage)
         }else{
           this.navCtrl.setRoot(BeforeLoginPage)
         }

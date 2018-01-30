@@ -1,10 +1,10 @@
-import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
 import { LoadingController, IonicPage,  NavController,  NavParams} from 'ionic-angular';
 import { BeforeLoginPage } from '../before-login/before-login';
 import { Toast } from '@ionic-native/toast';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -36,7 +36,7 @@ export class LoginPage {
   }
 
   public toTabsPage(): void {
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot(HomePage);
   }
  
   private validateninputsLogin(email_usuario): any {

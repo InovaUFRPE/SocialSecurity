@@ -57,7 +57,7 @@ export class OccurrencesPage {
   }
 
   public toBeforePage(): void {
-    this.navCtrl.pop();
+    this.toHomePage()
   }
 
 }

@@ -91,7 +91,7 @@ export class RegisterPage {
     }
   }
   public toLoginPage(): void {
-    this.navCtrl.push(LoginPage)
+    this.navCtrl.setRoot(LoginPage)
   }
 
   ionViewDidLoad() {

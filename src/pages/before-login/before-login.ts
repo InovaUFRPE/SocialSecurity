@@ -1,9 +1,9 @@
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Component }    from '@angular/core';
 import { LoginPage }    from '../login/login';
-import { TabsPage }     from '../tabs/tabs';
 import { RegisterPage } from './../register/register';
 import { ExitApp }      from '../../providers/utils/exitApp';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -34,7 +34,7 @@ export class BeforeLoginPage {
 
   
   public toTabsPage():void {
-    this.navCtrl.push(TabsPage)
+    this.navCtrl.push(HomePage)
   }
 
 

@@ -9,7 +9,6 @@ import { MyApp } from './app.component';
 import { ContactPage }         from '../pages/contact/contact';
 import { HomePage }            from '../pages/home/home';
 import { IntroPage }           from '../pages/intro/intro';
-import { TabsPage }            from '../pages/tabs/tabs';
 import { LoginPage }           from '../pages/login/login';
 import { BeforeLoginPage }     from '../pages/before-login/before-login';
 import { OccurrencesPage }     from '../pages/occurrences/occurrences';
@@ -47,7 +46,6 @@ import { ExitApp }             from '../providers/utils/exitApp';
     MyApp,
     ContactPage,
     HomePage,
-    TabsPage,
     IntroPage,
     LoginPage,
     BeforeLoginPage,
@@ -70,7 +68,6 @@ import { ExitApp }             from '../providers/utils/exitApp';
     MyApp,
     ContactPage,
     HomePage,
-    TabsPage,
     IntroPage,
     LoginPage,
     BeforeLoginPage,
