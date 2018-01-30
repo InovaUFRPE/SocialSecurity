@@ -28,6 +28,7 @@ import { Toast }          from '@ionic-native/toast';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 import { SQLite }         from '@ionic-native/sqlite';
 import { Vibration }      from '@ionic-native/vibration';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 //COMPONENTS
 import { GoogleMapComponent } from "../components/google-map/google-map";
@@ -94,7 +95,8 @@ import { ExitApp }             from '../providers/utils/exitApp';
     MapsStyles,
     ExitApp,
     UsersController,
-    Vibration
+    Vibration,
+    LocalNotifications
   ]
 })
 export class AppModule {}

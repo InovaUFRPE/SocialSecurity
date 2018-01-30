@@ -10,6 +10,7 @@ import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
 import { Refresher } from 'ionic-angular/components/refresher/refresher';
 import { FeedPage } from '../feed/feed';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 
 @Component({
@@ -39,9 +40,13 @@ export class HomePage {
     private userController: UsersController,
     private platform: Platform,
     private alertCtrl: AlertController,
-    private exitApp: ExitApp    ) {
-     this.getUDID();
-     this.exitApp.exitApp();
+    private exitApp: ExitApp ,   
+    private localNotications: LocalNotifications) {
+      this.getUDID();
+      this.exitApp.exitApp();
+      this.platform.ready().then((rdy) => {
+        this.localNotications.on
+      });
   }
 
   /*
@@ -127,5 +132,14 @@ export class HomePage {
     });
   }
 
+  scheduleNotification(){
+    this.localNotications.schedule({
+      id: 1,
+      title: 'Alert',
+      text: 'Notificação de Crime',
+      at: new Date(new Date().getTime() + 5 * 1000),
+      data: { mydata: 'My hidden message this is' }
+    })
+  }
 
 }
