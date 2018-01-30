@@ -8,8 +8,9 @@ import { UsersController } from '../../providers/usuario/users-controller/users-
 import { ExitApp }         from '../../providers/utils/exitApp';
 import { Toast }           from '@ionic-native/toast';
 import { BeforeLoginPage } from '../before-login/before-login';
-import { Refresher } from 'ionic-angular/components/refresher/refresher';
-import { FeedPage } from '../feed/feed';
+import { Refresher }       from 'ionic-angular/components/refresher/refresher';
+import { FeedPage }        from '../feed/feed';
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
 
 
 @Component({
@@ -39,9 +40,45 @@ export class HomePage {
     private userController: UsersController,
     private platform: Platform,
     private alertCtrl: AlertController,
-    private exitApp: ExitApp    ) {
-     this.getUDID();
-     this.exitApp.exitApp();
+    private exitApp: ExitApp,
+    private push: Push    ) {
+      this.getUDID();
+      this.exitApp.exitApp();
+      this.push.hasPermission()
+        .then((res: any) => {
+
+          if (res.isEnabled) {
+            console.log('Tem permissão');
+
+            const options: PushOptions = {
+              android: {},
+              ios: {
+                alert: 'true',
+                badge: true,
+                sound: 'false'
+              },
+              windows: {},
+              browser: {
+                pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+              }
+            };
+
+            const pushObject: PushObject = this.push.init(options);
+
+            pushObject.on('notification').subscribe((notification: any) => {
+              alert(notification.message);
+            });
+
+            pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));
+
+            pushObject.on('error').subscribe(error => console.error('Error with Push plugin', error));
+
+          } else {
+            console.log('Não tem permissão');
+          }
+
+        });
+     
   }
 
   /*
