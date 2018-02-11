@@ -5,46 +5,57 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { IntroPage } from '../pages/intro/intro';
-import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login';
-import { BeforeLoginPage } from '../pages/before-login/before-login';
-import { OccurrencesPage } from '../pages/occurrences/occurrences';
-import { RegisterPage } from './../pages/register/register';
+//PAGES
+import { ContactPage }         from '../pages/contact/contact';
+import { HomePage }            from '../pages/home/home';
+import { IntroPage }           from '../pages/intro/intro';
+import { LoginPage }           from '../pages/login/login';
+import { BeforeLoginPage }     from '../pages/before-login/before-login';
+import { OccurrencesPage }     from '../pages/occurrences/occurrences';
+import { RegisterPage }        from './../pages/register/register';
+import { AlertPage }           from '../pages/alert/alert';
+import { ProfilePage }         from '../pages/profile/profile';
+import { EditProfilePage }     from '../pages/edit-profile/edit-profile';
+import { RegisterContactPage } from '../pages/register-contact/register-contact';
+import { FeedPageModule }      from '../pages/feed/feed.module';
 
+//NATIVE
+import { StatusBar }      from '@ionic-native/status-bar';
+import { SplashScreen }   from '@ionic-native/splash-screen';
+import { GoogleMaps }     from '@ionic-native/google-maps';
+import { Geolocation }    from '@ionic-native/geolocation';
+import { Toast }          from '@ionic-native/toast';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { SQLite }         from '@ionic-native/sqlite';
+import { Vibration }      from '@ionic-native/vibration';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { FeedPageModule } from '../pages/feed/feed.module';
-import { GoogleMaps } from '@ionic-native/google-maps';
-import { Geolocation } from '@ionic-native/geolocation';
-import { Toast } from '@ionic-native/toast';
-
-import { Users } from '../providers/usuario/users/users';
+//COMPONENTS
 import { GoogleMapComponent } from "../components/google-map/google-map";
 
-import { SQLite } from '@ionic-native/sqlite';
-import { DatabaseProvider } from '../providers/database/database';
+//PROVIDERS
+import { DatabaseProvider }    from '../providers/database/database';
 import { CoordinatesProvider } from '../providers/ocorrencias/coordinates/coordinates';
 import { OcurrenceController } from '../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
-import { UsersController } from '../providers/usuario/users-controller/users-controller';
+import { MapsProvider }        from '../providers/ocorrencias/maps/maps';
+import { MapsStyles }          from '../providers/ocorrencias/maps/mapsStyles';
+import { UsersController }     from '../providers/usuario/users-controller/users-controller';
+import { ExitApp }             from '../providers/utils/exit-app';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     IntroPage,
     LoginPage,
     BeforeLoginPage,
     GoogleMapComponent,
     OccurrencesPage,
-    RegisterPage
+    RegisterPage,
+    AlertPage,
+    ProfilePage,
+    EditProfilePage,
+    RegisterContactPage
   ],
   imports: [
     BrowserModule,
@@ -55,15 +66,17 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     IntroPage,
     LoginPage,
     BeforeLoginPage,
     OccurrencesPage,
-    RegisterPage
+    RegisterPage,
+    AlertPage,
+    ProfilePage,
+    EditProfilePage,
+    RegisterContactPage
   ],
   providers: [
     StatusBar,
@@ -71,13 +84,17 @@ import { UsersController } from '../providers/usuario/users-controller/users-con
     Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Users,
     SQLite,
+    UniqueDeviceID,
     Toast,
     DatabaseProvider,
     CoordinatesProvider,
     OcurrenceController,
-    UsersController
+    MapsProvider,
+    MapsStyles,
+    ExitApp,
+    UsersController,
+    Vibration
   ]
 })
 export class AppModule {}

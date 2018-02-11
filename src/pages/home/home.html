@@ -1,34 +1,70 @@
 <ion-content>
-  <!--<ion-chip menuToggle>
+  <!--
+  <ion-chip menuToggle swipeBackEnabled="true" swipe-back-enabled="true">
     <ion-avatar>
-        <img src="assets/images/icons/marcio.png" alt="">        
+        <img src="assets/images/icons/user.png" alt="">        
     </ion-avatar>
-    <ion-label>Entrar</ion-label>
+    <ion-label>{{user.name}}</ion-label>
   </ion-chip>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+  -->
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
   <google-map (mapClick)="onMapClick($event)" (mapReady)="onMapReady($event)" [options]="options"></google-map>
 
   <ion-fab left bottom>
     <button ion-fab color="vibrant">
-      <ion-icon name="arrow-dropup"></ion-icon>
+      <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-fab-list side="top">
+      
+      <button *ngIf="!getNome()" ion-fab (click)="toBeforeLoginPage()">
+        <ion-icon name="log-in"></ion-icon>
+        <div class="label" dir="ltr">Entrar</div>
+      </button> 
+     
+      <button ion-fab (click)="toFeedPage()">
+        <ion-icon name="paper"></ion-icon>
+        <div class="label" dir="ltr">Feed</div>
+      </button>
+       
+      <button *ngIf="getNome()" ion-fab (click)="toProfilePage()">
+        <ion-icon name="contact"></ion-icon>
+        <div class="label" dir="ltr">Perfil</div>
+      </button>
+     
+      <button *ngIf="getNome()" ion-fab (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+        <div class="label" dir="ltr">Sair</div>
+      </button>
+
+    </ion-fab-list>
+
+    <ion-fab-list *ngIf="getNome()" side="right">
       <button ion-fab (click)="toRegisterPage()">
         <ion-icon name="add"></ion-icon>
+        <div class="label" dir="ltr">Ocorrências</div>
       </button>
     </ion-fab-list>
   </ion-fab>
 
 </ion-content>
 
-<ion-menu [content]="content">
+<!--
+<ion-menu [content]="content" swipeBackEnabled="true" swipe-back-enabled="true">
 
   <ion-content>
     <ion-list>
-      <button ion-item (click)="openLoginPage()">
-        Login
-      </button>
+      <ion-item *ngIf="getNome()">
+        <button ion-button color="light" clear (click)="toBeforeLoginPage()">Entrar</button>
+      </ion-item>
+      <ion-item *ngIf="!getNome()">
+        <button ion-button color="light" clear (click)="toProfilePage()">Perfil</button>
+      </ion-item>
+      <ion-item *ngIf="!getNome()">
+        <button ion-button color="light" clear (click)="logout()">Sair</button>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+<ion-nav id="nav" #content [root]="rootPage" swipeBackEnabled="true" swipe-back-enabled="true"></ion-nav>
+-->

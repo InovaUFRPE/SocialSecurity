@@ -1,19 +1,51 @@
 <ion-content padding>
-  <ion-card class="ion-card" *ngFor="let movie of list_movies">
 
-    <ion-item> 
+  <ion-refresher class="reload-white" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Puxe para atualizar" refreshingSpinner="circles" refreshingText="Atualizando...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="btn-skip">
+    <div>
+        <ion-icon (click)="toHomePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+    </div>     
+  </div>
+  <div style="width: 85%">
+      <ion-list>
+          <ion-item>
+            <ion-label>Ocorrências</ion-label>
+            <ion-select cancelText="Cancelar" [(ngModel)]="filter.codigo_tipo_ocorrencia" interface="action-sheet" (ionChange)="ocurrenceFilter()"> 
+              <ion-option value="1">Furto</ion-option>
+              <ion-option value="2">Roubo</ion-option>
+              <ion-option value="3">Assalto a grupo</ion-option>
+              <ion-option value="4">Sequestro Relâmpago</ion-option>
+              <ion-option value="5">Arrombamento Veicular</ion-option>
+              <ion-option value="6">Arrombamento Domiciliar</ion-option>
+              <ion-option value="7">Arrombamento Loja Comercial</ion-option>
+              <ion-option value="8">Saidinha Bancária</ion-option>
+              <ion-option value="9">Roubo de Veículo</ion-option>
+              <ion-option value="10">Arrastão</ion-option>
+              <ion-option value="11">Tentativa de Assalto</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+  </div>
+  <ion-card class="ion-card" *ngFor="let ocurrence of list_ocurrence">
+    
+    <div></div>
+    <ion-item>
+        <ion-icon name="ios-megaphone-outline" item-start large></ion-icon>
+        <span item-left>{{ocurrence.descricao_ocorrencia}}</span>
+      </ion-item>
+    <ion-item  (click)="openMap()"> 
       <ion-icon name="ios-bookmark-outline" item-start large></ion-icon>
-      <h2>{{movie.titulo}}</h2>
-      <p>{{movie.endereco}}</p>
+      <span item-left>{{ocurrence.titulo_ocorrencia}}</span>      
     </ion-item>
     <ion-item>
       <ion-icon name="ios-time-outline" item-start large></ion-icon>
-      <span item-right>18 min</span>
+      <span item-left>{{ocurrence.data_ocorrencia}}</span>
     </ion-item>
 
-  </ion-card>
 
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>''
+  </ion-card>
 </ion-content>

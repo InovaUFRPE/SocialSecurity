@@ -1,0 +1,18 @@
+<ion-content padding>
+    <div class="btn-skip">
+        <div>
+            <ion-icon (click)="toBeforePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+              
+        </div>     
+    </div>
+  <div class="content-profile">
+    <img src="assets/images/icons/user.png" alt="">
+    
+    <h3 class="text">{{ user.nome_usuario }}</h3>
+    <h3 class="text">{{ user.email_usuario }}</h3>
+    <button (click)="toEditProfile()" ion-button>Editar Perfil</button>
+    <br>
+    <button (click)="toContactPage()" ion-button >Contato de Segurança</button>
+  </div>
+
+</ion-content>

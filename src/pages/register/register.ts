@@ -1,9 +1,10 @@
-import {LoginPage} from '../login/login';
-import {Toast} from '@ionic-native/toast';
-import { BeforeLoginPage } from './../before-login/before-login';
+import { LoginPage } from '../login/login';
+import { Toast } from '@ionic-native/toast';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 import { UsersController } from '../../providers/usuario/users-controller/users-controller';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
+import { ExitApp } from '../../providers/utils/exit-app';
 
 @IonicPage()
 @Component({
@@ -11,17 +12,48 @@ import { UsersController } from '../../providers/usuario/users-controller/users-
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  userData = {"email_usuario": "", "senha_usuario": "","sexo":"","nome_usuario":"" };
   
-  constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
-    private toast: Toast,
-    private userController: UsersController) {
-  }
+  userData = { "email_usuario": "", "senha_usuario": "", "sexo": "", "nome_usuario": "" };
 
-  register(){
-    let response = this.userController.createAccount(this.userData).then((res) => {
+  constructor(
+    private toast: Toast,
+    private userController: UsersController,
+    private navCtrl: NavController,
+    private exitApp: ExitApp,) {
+      this.exitApp.doNothing();
+    }
+  
+  register() {
+    if (this.validarNome() == false){
+      this.toast.showLongBottom("Nome inválido").subscribe(
+        toast => {
+          console.log(toast);
+      });
+      return;
+    }
+    if (this.validarEmail() != true) {
+      this.toast.showLongBottom("Email inválido").subscribe(
+        toast => {
+          console.log(toast);
+      });
+      return;
+    }
+    if (this.validarSenha() == false){
+      this.toast.showLongBottom("Digite uma senha com mais de 5 dígitos").subscribe(
+        toast => {
+          console.log(toast);
+      });
+      return;
+    }
+    
+    if (this.validarSexo() == false){
+      this.toast.showLongBottom("Sexo inválido").subscribe(
+        toast => {
+          console.log(toast);
+      });
+      return;
+    }
+    this.userController.createAccount(this.userData).then((res) => {
       this.toLoginPage()
       this.toast.showLongBottom("Cadastro efetuado com sucesso").subscribe(
         toast => {
@@ -30,12 +62,42 @@ export class RegisterPage {
     }).catch( err => {
       alert(err)
     });
+  
   }
 
-  public toLoginPage():void {
-    this.navCtrl.push(LoginPage)
+  validarEmail(): boolean {
+    var emailUser = this.userData.email_usuario;
+    var regexp = new RegExp('^[a-zA-Z0-9._]+[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$');
+    var test = regexp.test(emailUser);
+    if (test == true) {
+      return true;
+    }
   }
-  
+
+  validarNome(): boolean{
+    var nomeUser = this.userData.nome_usuario;
+    if (nomeUser.length < 3){
+      return false;
+    }
+  }
+
+  validarSexo():boolean{
+    var sexoUser = this.userData.sexo;
+    if (sexoUser == "" || sexoUser == null){
+      return false;
+    }
+  }
+
+  validarSenha():boolean{
+    var senhaUser = this.userData.senha_usuario;
+    if (senhaUser.length < 5){
+      return false;
+    }
+  }
+  public toLoginPage(): void {
+    this.navCtrl.setRoot(LoginPage)
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }

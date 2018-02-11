@@ -1,4 +1,4 @@
-page-contact {
+page-profile {
     .content{
         justify-content: center;
         display: flex;
@@ -9,24 +9,16 @@ page-contact {
         -webkit-box-align: center;
         -webkit-box-pack: center;
     }
-    .content-contato{
-        margin-top: 60px;
+    .content-profile{
+        margin-top: 50px;
         display: block;
         vertical-align: middle;
     }
-    .content button{
-        text-decoration: none;
-        background: rgba(255,255,255,.04);
-        color: #fff;
-        border: none;
-        box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-        font-size: 15px;
-    
+
+    .tabbar{
+        display: none;
     }
-    .content button:focus{
-        background-color: gray;
-      }
-    
+
     .text{
         text-align: center;
         color: rgb(255, 255, 255);
@@ -34,11 +26,21 @@ page-contact {
         margin-top: 1.8rem;
         font-size: 2.4rem;
     }
-    .btn{
-        margin-top: 30px;
+    .content-profile img{
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
     }
-    .tabbar{
-        display: none;
+    .content-profile button{
+        text-decoration: none;
+        background: rgba(255,255,255,.04);
+        color: #fff;
+        border-radius: 25px;
+        border: none;
+        width: 65%;
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+        font-size: 15px;
     }
     .content .btn-skip {
         text-align: left;
@@ -54,5 +56,4 @@ page-contact {
         color: #fff;
         font-size: 30px;
       }
-
 }

@@ -1,114 +1,146 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { CoordinatesProvider } from '../../providers/ocorrencias/coordinates/coordinates';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { IonicPage, LoadingController } from 'ionic-angular';
+import { OcurrenceController} from '../../providers/ocorrencias/ocurrence-controller/ocurrence-controller';
+import { Component }   from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Toast } from '@ionic-native/toast';
+import { Toast }       from '@ionic-native/toast';
+import { ExitApp } from '../../providers/utils/exit-app';
+import { HomePage } from '../home/home';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
+
 
 @IonicPage()
 @Component({
+
   selector: 'page-feed',
   templateUrl: 'feed.html',
   providers: [
-    CoordinatesProvider]
+    OcurrenceController,]
 })
 
+
 export class FeedPage {
-  
-  public list_movies = new Array<any>();
+ 
+  private list_ocurrence    = new Array<any>();
+  private loader;
+  private filter = { "codigo_tipo_ocorrencia" : "" };
 
-  private dangerousVideoUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyC_k7pa4dDmktXNIdn_HiXvc0b3BYr26Vs&q=Rua+José+P.+de+Oliveira';
-  private videoUrl: SafeResourceUrl;
-  public loader;
+
   constructor(
-    public navCtrl: NavController,
-    public loadingCtrl: LoadingController,
-    public navParams: NavParams,
-    private movitProvider: CoordinatesProvider,
-    private sanitizer: DomSanitizer,
-    private position: Geolocation,
-    private toast: Toast) {
-    this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
+    private ocurrenceController: OcurrenceController,
+    private loadingCtrl: LoadingController,
+    private position:    Geolocation,
+    private exitApp:     ExitApp,
+    private navCtrl: NavController,
+    private toast:       Toast) {
+      this.exitApp.doNothing()}
 
+  /* Refresher */
+  doRefresh(refresher) {
+    setTimeout(() => {
+      refresher.complete();
+    }, 2000);
+  }
+  
+  private ocurrenceFilter(){
+    this.list_ocurrence = []
+    this.presentLoading();
+    let codigo = parseInt(this.filter.codigo_tipo_ocorrencia);
+    this.position.getCurrentPosition().then((position) => {
+      this.ocurrenceController.getOcurrencePerType(codigo).then((res) => {
+        this.loadOcurrences(res, position);
+      }).catch((err)=>{
+        this.outLoading();
+        this.toast.showLongCenter("Problema ao carregar as ocorrências, favor recarregar a página").subscribe(
+          toast => {
+            console.log(toast);
+        });     
+      })
+    }).catch( err => {
+      this.toast.showLongCenter("Localização indsponivel").subscribe(
+        toast => {
+          console.log(toast);
+      });      
+    });
   }
 
+  private loadOcurrences(ocurrence, position){
+    let result = [];
+    let lst_ocurrences = JSON.parse(JSON.stringify(ocurrence)).data;
+    lst_ocurrences.forEach(element => {
 
-  private toRad(Value) {
-    return Value * Math.PI / 180;
+      if (this.getInBound(
+            position.coords.latitude, 
+            position.coords.longitude,
+            element.posicao_ocorrencia.split(",")[0].split(":")[1], 
+            element.posicao_ocorrencia.split(",")[1].split(":")[1].split("}")[0]
+            )) {
+                result.push(element);
+            }          
+    });
+    if(result.length > 0){
+      for(let i in result){
+        let data = result[i].data_ocorrencia.split("-");
+        result[i].data_ocorrencia = data[2] + "/" + data[1] + "/" + data[0];
+      }
+      this.list_ocurrence = result;
+      this.outLoading();
+    }else{
+      this.outLoading();
+      
+      this.toast.showLongCenter("Sem ococrências próximas a você").subscribe(
+        toast => {
+          console.log(toast);
+      });  
+    }
   }
-
 
   private getInBound(lat1, lon1, lat2, lon2) {
-
-    let pointsToCheckInBound = this.movitProvider.getCoordinates();
     //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
-
-    var R = 6371; // km
-    var dLat = this.toRad(lat2 - lat1);
-    var dLon = this.toRad(lon2 - lon1);
-    var lat1_ = this.toRad(lat1);
-    var lat2_ = this.toRad(lat2);
-
-    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var d = R * c;
-    return d <= 5;
+    var radlat1 = Math.PI * lat1/180
+    var radlat2 = Math.PI * lat2/180
+    var theta = lon1-lon2
+    var radtheta = Math.PI * theta/180
+    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    dist = Math.acos(dist)
+    dist = dist * 180/Math.PI
+    dist = dist * 60 * 1.1515
+    dist = dist * 1.609344 
+    return dist <= 5;
   }
 
-
-  getInBoundPoints() {
-    let result = []
-    let listToCalculate = this.movitProvider.getCoordinates();
-    this.position.getCurrentPosition().then((res) => {
-
-      listToCalculate.forEach(element => {
-        if (this.getInBound(element.position.lat, element.position.lng, res.coords.latitude, res.coords.longitude)) {
-          result.push(element);
-        }
-      });
-
-    })    
-    return result;
-  }
-
-  presentLoading() {
+  private presentLoading() {
     this.loader = this.loadingCtrl.create({
       content: "Carregando...",
     });
     this.loader.present();
   }
 
-  outLoading() {
+  private outLoading() {
     this.loader.dismiss();
   }
 
-  ionViewDidEnter() {
-    this.presentLoading();
-
-
-    let promise = new Promise((resolve, reject) => {
-      let result = this.getInBoundPoints();
-      if (result.length <= 0) {
-        setTimeout(() => {
-          this.outLoading();
-        }, 1000)
-        setTimeout(() => {
-          this.toast.showLongCenter("Nenhuma ocorrência perto de você").subscribe(
-            toast => {
-              console.log(toast);
-            });
-        }, 1500)
-
-      } else {
-        this.presentLoading();
-        resolve(this.list_movies = this.getInBoundPoints());
-      }
-    })
-    promise.then(() => {
-      setTimeout(() => {
-        this.outLoading();
-      }, 2000)
-    }).catch((err) => { alert(err) });
+  private toHomePage(){
+    this.navCtrl.setRoot(HomePage);
   }
+
+  private ionViewDidEnter() {
+    this.presentLoading();
+    this.position.getCurrentPosition().then((position) => {
+      this.ocurrenceController.getOcurrencesFeed().then( (ocurrence) => {
+        this.loadOcurrences(ocurrence, position);
+      }).catch( err => {
+        this.outLoading();
+        this.toast.showLongCenter("Problema ao carregar as ocorrências, favor recarregar a página").subscribe(
+          toast => {
+            console.log(toast);
+        });      
+      });;
+    }).catch( err => {
+      this.toast.showLongCenter("Localização indsponivel").subscribe(
+        toast => {
+          console.log(toast);
+      });      
+    });
+  }
+
 }

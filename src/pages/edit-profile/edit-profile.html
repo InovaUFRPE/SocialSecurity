@@ -1,0 +1,28 @@
+<ion-content padding>
+    <div class="btn-skip">
+        <div>
+            <ion-icon (click)="toBeforePage()" ios="ios-arrow-dropleft-circle" md="ios-arrow-dropleft-circle"></ion-icon>
+              
+        </div>     
+    </div>
+  <div class="content-contact">
+    <div class="inputs">
+      <ion-list inset>
+
+        <ion-item>
+          <ion-input [(ngModel)]="userData.nome_usuario" value="userData.nome_usuario" placeholder="Nome" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="userData.email_usuario" value="userData.email_usuario" placeholder="Email "type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="userData.senha_usuario" value="userData.senha_usuario" placeholder="Senha" type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="btn">
+      <button ion-button (click)="toProfilePage()" ion-button color="light" outline round>Cancelar</button>
+      <button ion-button (click)="attProfile()" ion-button color="light" outline round>Salvar</button>
+    </div>
+  </div>
+</ion-content>
